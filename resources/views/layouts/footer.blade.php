@@ -1,9 +1,9 @@
   <!-- Map -->
   <section id="contact" class="map">
-    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.421219220931!2d-57.66147204895967!3d-19.00115191494135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9387a091156f16c9%3A0xd88b0545e9b827d5!2sOLIVER%20TUR%20-%20AG%C3%8ANCIA%20DE%20NAVEGA%C3%87%C3%83O%2C%20VIAGENS%20%26%20TURISMO!5e0!3m2!1spt-BR!2sbr!4v1567462077668!5m2!1spt-BR!2sbr"></iframe>
     <br />
     <small>
-      <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+      <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.421219220931!2d-57.66147204895967!3d-19.00115191494135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9387a091156f16c9%3A0xd88b0545e9b827d5!2sOLIVER%20TUR%20-%20AG%C3%8ANCIA%20DE%20NAVEGA%C3%87%C3%83O%2C%20VIAGENS%20%26%20TURISMO!5e0!3m2!1spt-BR!2sbr!4v1567462077668!5m2!1spt-BR!2sbr"></a>
     </small>
   </section>
   
