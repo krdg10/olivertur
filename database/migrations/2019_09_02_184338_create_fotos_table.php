@@ -18,6 +18,7 @@ class CreateFotosTable extends Migration
             $table->string('url');
             $table->string('nome');
             $table->integer('post_id')->unsigned();
+            $table->boolean('thumbnail')->default(0);
             $table->timestamps();
             $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
 
