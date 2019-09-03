@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Foto extends Model
 {
-    public function posts(){
-        return $this->hasMany(\App\Post::class);
+   public function post(){
+        return $this->belongsTo(Post::class);
     }
 }
