@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::post('/novoPost', 'PostsController@store')->name('posts.store');
+Route::get('/blog/{id}', 'PostsController@show')->name('posts.show');

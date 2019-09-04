@@ -10,7 +10,11 @@ class Post extends Model
     public function autor(){
     	return $this->hasOne(\App\User::class, 'id', 'user_id');
     }
-    public function fotos(){
+    public function thumbnail(){
     	return $this->hasOne(Foto::class);
+    }
+    
+    public function fotos(){
+    	return $this->hasMany(Foto::class);
 	}
 }

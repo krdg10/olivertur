@@ -82,7 +82,7 @@
           <div class="card-deck">
             @foreach($posts as $post)
               <div class="card">
-                <img class="card-img-top" src="/storage/{{ $post->fotos->url }}" alt="Card image cap">
+                <img class="card-img-top" src="/storage/{{ $post->thumbnail->url }}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">{{ $post->titulo }}</h5>
                   <p class="card-text"><small class="text-muted">{{ $post->autor->name }}</small></p>

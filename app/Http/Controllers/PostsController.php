@@ -67,4 +67,9 @@ class PostsController extends Controller
         return redirect()->back()->with('message', 'Sucesso ao cadastrar entrada!');
 
     }
+
+    public function show ($id){
+        $post = Post::findOrFail($id);
+        return view('post.show', compact('post'));
+    }
 }
