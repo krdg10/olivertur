@@ -72,4 +72,9 @@ class PostsController extends Controller
         $post = Post::findOrFail($id);
         return view('post.show', compact('post'));
     }
+
+    public function index (){
+        $posts = Post::orderBy('data', 'desc')->paginate(5);
+        return view('post.index', compact('posts'));
+    }
 }

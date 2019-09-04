@@ -2,7 +2,8 @@
 <div class="container">
     <div class="row">
       <!-- Post Content Column -->
-        <div class="col-lg-8">
+      @foreach ($posts as $post)
+        <div class="card col-lg-8">
             <!-- Title -->
             <h1 class="mt-4">{{$post->titulo}}</h1>
             <!-- Author -->
@@ -47,8 +48,12 @@
             <!-- Talvez por Modal -->
             <hr>
             <!-- Post Content -->
-            <p align="justify" class="lead">{{$post->texto}}</p>
+            <p align="justify" class="lead">{{$post->previa}}</p>
            
+        </div>
+        @endforeach
+        <div class="d-flex justify-content-center">
+            {{ $posts->links() }}
         </div>
         <!-- Sidebar Widgets Column -->
         <div class="col-md-4">

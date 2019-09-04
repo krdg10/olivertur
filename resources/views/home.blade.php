@@ -82,12 +82,12 @@
           <div class="card-deck">
             @foreach($posts as $post)
               <div class="card">
-                <img class="card-img-top" src="/storage/{{ $post->thumbnail->url }}" alt="Card image cap">
+                <a href="/blog/{{$post->id}}"><img class="card-img-top" src="/storage/{{ $post->thumbnail->url }}" alt="Card image cap"></a>
                 <div class="card-body">
-                  <h5 class="card-title">{{ $post->titulo }}</h5>
+                  <a href="/blog/{{$post->id}}"><h5 class="card-title">{{ $post->titulo }}</h5></a>
                   <p class="card-text"><small class="text-muted">{{ $post->autor->name }}</small></p>
                   <p class="card-text">{{ $post->previa }}</p>
-                  <p class="card-text"><small class="text-muted">{{ $post->tag }}</small></p>
+                  <!--<p class="card-text"><small class="text-muted">{{ $post->tag }}</small></p>-->
                   <p class="card-text"><small class="text-muted">{{ $post->data }}</small></p>
                 </div>
               </div>
