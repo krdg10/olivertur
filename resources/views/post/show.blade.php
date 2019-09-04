@@ -10,6 +10,11 @@
             by
             <a>{{$post->autor->name}}</a>
             </p>
+            <p class="lead">
+            Categoria
+            <a>{{$post->tag}}</a>
+            </p>
+
             <hr>
             <!-- Date/Time -->
             <p>Posted on {{$post->data}}</p>

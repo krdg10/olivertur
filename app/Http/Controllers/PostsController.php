@@ -77,4 +77,9 @@ class PostsController extends Controller
         $posts = Post::orderBy('data', 'desc')->paginate(5);
         return view('post.index', compact('posts'));
     }
+
+    public function categoria ($categoria){
+        $posts = Post::where('tag', $categoria)->orderBy('data', 'desc')->paginate(5);
+        return view('post.categoria', compact('posts'));
+    }
 }
