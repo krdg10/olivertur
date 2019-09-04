@@ -11,10 +11,12 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
+Route::get('/novoPost', function () {
+    return view('post.create');
+});
 
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::post('/novoPost', 'PostsController@store')->name('posts.store');
