@@ -21,6 +21,7 @@
         <form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data">
             @csrf
             <input type="text" placeholder="Título" name="titulo" class="form-control">
+            <textarea type="text" placeholder="Prévia" name="previa" class="form-control"></textarea>
             <textarea type="text" placeholder="Texto" name="texto" class="form-control"></textarea>
             <input type="text" placeholder="Tag" name="tag" class="form-control">
             <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" multiple />
