@@ -39,6 +39,7 @@ class PostsController extends Controller
         }
         $post->titulo = $request->titulo;
         $post->tag = $request->tag;
+        $post->previa = $request->previa;
         $post->texto = $request->texto;
         $post->data = date('Y-m-d H:i:s');
 
