@@ -5,7 +5,7 @@
       @foreach ($posts as $post)
         <div class="card col-lg-8">
             <!-- Title -->
-            <h1 class="mt-4">{{$post->titulo}}</h1>
+            <a href="/blog/{{$post->id}}"><h1 class="mt-4">{{$post->titulo}}</h1></a>
             <!-- Author -->
             <p class="lead">
             by
@@ -13,7 +13,7 @@
             </p>
             <p class="lead">
             Categoria
-            <a>{{$post->tag}}</a>
+            <a href="/blog/categoria/{{$post->tag}}">{{$post->tag}}</a>
             </p>
             <hr>
             <!-- Date/Time -->
