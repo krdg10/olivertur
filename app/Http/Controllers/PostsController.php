@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Foto;
 use App\Post;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -39,6 +40,7 @@ class PostsController extends Controller
         }
         $post->titulo = $request->titulo;
         $post->tag = $request->tag;
+        $post->previa = $request->previa;
         $post->texto = $request->texto;
         $post->data = date('Y-m-d H:i:s');
 
@@ -65,5 +67,47 @@ class PostsController extends Controller
         }
         return redirect()->back()->with('message', 'Sucesso ao cadastrar entrada!');
 
+    }
+
+    public function show ($id){
+        $post = Post::findOrFail($id);
+        return view('post.show', compact('post'));
+    }
+
+    public function index (){
+        $posts = Post::orderBy('data', 'desc')->paginate(5);
+        $flag = 0; //indicar o primeiro
+        return view('post.index', compact('posts', 'flag'));
+    }
+
+    public function categoria ($categoria){
+        $posts = Post::where('tag', $categoria)->orderBy('data', 'desc')->paginate(5);
+        $flag = 0; //indicar o primeiro
+        return view('post.categoria', compact('posts', 'flag'));
+    }
+
+    public function autor ($autor){
+        $usuario = User::where('name', $autor)->get();
+        $posts = Post::where('user_id', $usuario[0]->id)->orderBy('data', 'desc')->paginate(5);
+        $flag = 0; //indicar o primeiro
+        return view('post.autor', compact('posts', 'flag'));
+    }
+    public function edit ($id){
+        $post = Post::findOrFail($id);
+        return view('post.edit', compact('post'));
+    }
+    public function update (Request $request, $id){
+        $post = Post::findOrFail($id);
+        $post->titulo = $request->titulo;
+        $post->tag = $request->tag;
+        $post->previa = $request->previa;
+        $post->texto = $request->texto;
+        $post->save();
+        return redirect()->back()->with('message', 'Sucesso ao atualizar post!');
+    }
+    public function destroy($id){
+        $post = Post::findOrFail($id);
+        $post->delete();
+        return redirect()->route('posts.index');
     }
 }

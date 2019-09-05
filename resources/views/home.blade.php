@@ -71,6 +71,35 @@
     </div>
   </section>
 
+  <section id="signup" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <h1 class="text-white mb-5">Blog</h1>
+          <h2 class="text-white mb-5">Conheça nossos relatos!</h2>
+
+          <div class="card-deck">
+            @foreach($posts as $post)
+              <div class="card">
+                <a href="/blog/{{$post->id}}"><img class="card-img-top" src="/storage/{{ $post->thumbnail->url }}" alt="Card image cap"></a>
+                <div class="card-body">
+                  <a href="/blog/{{$post->id}}"><h5 class="card-title">{{ $post->titulo }}</h5></a>
+                  <p class="card-text"><small class="text-muted">{{ $post->autor->name }}</small></p>
+                  <p class="card-text">{{ $post->previa }}</p>
+                  <!--<p class="card-text"><small class="text-muted">{{ $post->tag }}</small></p>-->
+                  <p class="card-text"><small class="text-muted">{{ $post->data }}</small></p>
+                </div>
+              </div>
+            
+            @endforeach
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Signup Section -->
   <section id="signup" class="signup-section">
     <div class="container">

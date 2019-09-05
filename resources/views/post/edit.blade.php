@@ -18,17 +18,22 @@
             </span>
         @endif
         <hr>
-        <form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('posts.update', $post->id) }}" enctype="multipart/form-data">
             @csrf
-            <input type="text" placeholder="Título" name="titulo" class="form-control">
-            <textarea type="text" placeholder="Prévia" name="previa" class="form-control"></textarea>
-            <textarea type="text" placeholder="Texto" name="texto" class="form-control"></textarea>
-            <input type="text" placeholder="Tag" name="tag" class="form-control">
-            <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" multiple />
+            @method('put')
+            <input type="text" placeholder="Título" name="titulo" value="{{$post->titulo}}" class="form-control">
+            <input type="text" placeholder="Prévia" name="previa" value="{{$post->previa}}" class="form-control">
+            <input type="text" placeholder="Texto" name="texto" value="{{$post->texto}}" class="form-control">
+            <input type="text" placeholder="Tag" name="tag" value="{{$post->tag}}" class="form-control">
             <div>
-                <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Salvar </button>
+                <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Editar </button>
             </div>
 
+        </form>
+        <form method="POST" action="{{ route('posts.destroy', $post->id) }}" enctype="multipart/form-data">
+            @csrf
+            @method('delete')
+            <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Apagar </button>
         </form>
     </div>
 </div>
