@@ -54,12 +54,14 @@ class PostsController extends Controller
             foreach($files as $file){
                 $filename = $file->getClientOriginalName();
                 $extension = $file->getClientOriginalExtension();
+                $without_extension = basename($filename, ".$extension");
                 $check=in_array($extension,$allowedfileExtension);
 
                 if($check){
                     $filename = $file->store('fotos');
                     Foto::create([
                         'post_id' => $post->id,
+                        'nome' => $without_extension,
                         'url' => $filename
                     ]);
                 }
