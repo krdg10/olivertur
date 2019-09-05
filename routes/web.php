@@ -27,3 +27,5 @@ Route::get('/blog/autor/{autor}', 'PostsController@autor')->name('posts.autor');
 Route::get('/blog/edit/{id}', 'PostsController@edit')->name('posts.edit');
 Route::put('/blog/edit/{id}', 'PostsController@update')->name('posts.update');
 Route::delete('/blog/edit/{id}', 'PostsController@destroy')->name('posts.destroy');
+Route::put('/blog/edit/foto/{id}', 'FotosController@update')->name('fotos.update');
+Route::delete('/blog/edit/foto/{id}', 'FotosController@destroy')->name('fotos.destroy');

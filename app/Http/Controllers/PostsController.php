@@ -94,7 +94,8 @@ class PostsController extends Controller
     }
     public function edit ($id){
         $post = Post::findOrFail($id);
-        return view('post.edit', compact('post'));
+        $fotos = Foto::where('post_id', $id)->get();
+        return view('post.edit', compact('post', 'fotos'));
     }
     public function update (Request $request, $id){
         $post = Post::findOrFail($id);

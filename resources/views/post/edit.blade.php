@@ -35,6 +35,30 @@
             @method('delete')
             <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Apagar </button>
         </form>
+        <div class="card-deck">
+            @foreach($fotos as $foto)
+                    <div class="card">
+                    <img class="card-img-top" src="/storage/{{ $foto->url }}" alt="Card image cap">
+                        <div class="card-body">
+                        <form method="POST" action="{{ route('fotos.update', $foto->id) }}" enctype="multipart/form-data">
+                            @csrf
+                            @method('put')
+                            <input type="text" placeholder="Nome da Foto" name="nomeFoto" value="{{$foto->nome}}" class="form-control">
+                            <input type="text" placeholder="Thumbnail (V ou F)" name="thumbnail" value="{{$foto->thumbnail}}" class="form-control">
+                        </div>
+                        <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Atualizar </button>
+                        </form>
+                        <form method="POST" action="{{ route('fotos.destroy', $foto->id) }}" enctype="multipart/form-data">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Apagar </button>
+                        </form>
+
+                    </div>
+                
+            
+            @endforeach
+          </div>
     </div>
 </div>
 
