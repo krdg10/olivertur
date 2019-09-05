@@ -4,52 +4,9 @@
       <!-- Post Content Column -->
       @foreach ($posts as $post)
         <div class="card col-lg-8">
-            <!-- Title -->
-            <a href="/blog/{{$post->id}}"><h1 class="mt-4">{{$post->titulo}}</h1></a>
-            <!-- Author -->
-            <p class="lead">
-            by
-            <a>{{$post->autor->name}}</a>
-            </p>
-            <p class="lead">
-            Categoria
-            <a href="/blog/categoria/{{$post->tag}}">{{$post->tag}}</a>
-            </p>
-            <hr>
-            <!-- Date/Time -->
-            <p>Posted on {{$post->data}}</p>
-            <hr>
-            <!-- Preview Image -->
-            @php
-                $cont=0;
-            @endphp
-            <div id="demo" class="carousel slide" data-ride="carousel">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        @foreach ($post->fotos as $fotos)
-                            @if($cont==0)
-                                <div class="carousel-item active">
-                                    <img class="img-fluid rounded" style="height: 300px; width: 900px;" src="/storage/{{ $fotos->url }}" alt="Imagem da Câmera">
-                                </div>
-                                @php
-                                    $cont=1;
-                                @endphp
-                            @else
-                                <div class="carousel-item">
-                                    <img class="img-fluid rounded" style="height: 300px; width: 900px;" src="/storage/{{ $fotos->url }}" alt="Imagem da Câmera">
-                                </div>
-                            @endif
-                        @endforeach
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#demo" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-            </div>
-            <!-- Talvez por Modal -->
+            @include('blog.titulo')
+            @include('blog.carrossel')
+
             <hr>
             <!-- Post Content -->
             <p align="justify" class="lead">{{$post->previa}}</p>
