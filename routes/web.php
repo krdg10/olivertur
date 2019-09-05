@@ -24,3 +24,6 @@ Route::get('/blog', 'PostsController@index')->name('posts.index');
 Route::get('/blog/{id}', 'PostsController@show')->name('posts.show');
 Route::get('/blog/categoria/{categoria}', 'PostsController@categoria')->name('posts.categoria');
 Route::get('/blog/autor/{autor}', 'PostsController@autor')->name('posts.autor');
+Route::get('/blog/edit/{id}', 'PostsController@edit')->name('posts.edit');
+Route::put('/blog/edit/{id}', 'PostsController@update')->name('posts.update');
+Route::delete('/blog/edit/{id}', 'PostsController@destroy')->name('posts.destroy');

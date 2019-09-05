@@ -92,4 +92,22 @@ class PostsController extends Controller
         $flag = 0; //indicar o primeiro
         return view('post.autor', compact('posts', 'flag'));
     }
+    public function edit ($id){
+        $post = Post::findOrFail($id);
+        return view('post.edit', compact('post'));
+    }
+    public function update (Request $request, $id){
+        $post = Post::findOrFail($id);
+        $post->titulo = $request->titulo;
+        $post->tag = $request->tag;
+        $post->previa = $request->previa;
+        $post->texto = $request->texto;
+        $post->save();
+        return redirect()->back()->with('message', 'Sucesso ao atualizar post!');
+    }
+    public function destroy($id){
+        $post = Post::findOrFail($id);
+        $post->delete();
+        return redirect()->route('posts.index');
+    }
 }
