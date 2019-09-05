@@ -76,17 +76,20 @@ class PostsController extends Controller
 
     public function index (){
         $posts = Post::orderBy('data', 'desc')->paginate(5);
-        return view('post.index', compact('posts'));
+        $flag = 0; //indicar o primeiro
+        return view('post.index', compact('posts', 'flag'));
     }
 
     public function categoria ($categoria){
         $posts = Post::where('tag', $categoria)->orderBy('data', 'desc')->paginate(5);
-        return view('post.categoria', compact('posts'));
+        $flag = 0; //indicar o primeiro
+        return view('post.categoria', compact('posts', 'flag'));
     }
 
     public function autor ($autor){
         $usuario = User::where('name', $autor)->get();
         $posts = Post::where('user_id', $usuario[0]->id)->orderBy('data', 'desc')->paginate(5);
-        return view('post.autor', compact('posts', 'autor'));
+        $flag = 0; //indicar o primeiro
+        return view('post.autor', compact('posts', 'flag'));
     }
 }
