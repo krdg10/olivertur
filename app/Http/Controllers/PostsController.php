@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Foto;
 use App\Post;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -81,5 +82,11 @@ class PostsController extends Controller
     public function categoria ($categoria){
         $posts = Post::where('tag', $categoria)->orderBy('data', 'desc')->paginate(5);
         return view('post.categoria', compact('posts'));
+    }
+
+    public function autor ($autor){
+        $usuario = User::where('name', $autor)->get();
+        $posts = Post::where('user_id', $usuario[0]->id)->orderBy('data', 'desc')->paginate(5);
+        return view('post.autor', compact('posts', 'autor'));
     }
 }
