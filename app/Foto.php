@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Foto extends Model
 {
-   protected $fillable = ['post_id', 'url', 'nome'];
+   protected $fillable = ['post_id', 'url', 'nome', 'pacote_id'];
 
    public function post(){
         return $this->belongsTo(Post::class);

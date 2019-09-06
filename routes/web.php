@@ -21,6 +21,7 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function () {  
 
     Route::post('/novoPost', 'PostsController@store')->name('posts.store');
+    Route::post('/novoPacote', 'PacotesController@store')->name('pacotes.store');
     Route::get('/blog/edit/{id}', 'PostsController@edit')->name('posts.edit');
     Route::put('/blog/edit/{id}', 'PostsController@update')->name('posts.update');
     Route::delete('/blog/edit/{id}', 'PostsController@destroy')->name('posts.destroy');
@@ -29,5 +30,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/novoPost', function () {
         return view('post.create');
+    });
+    Route::get('/novoPacote', function () {
+        return view('pacote.create');
     });
 });
