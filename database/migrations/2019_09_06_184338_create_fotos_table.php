@@ -16,11 +16,12 @@ class CreateFotosTable extends Migration
         Schema::create('fotos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('url');
-            $table->string('nome')->nullable();;
-            $table->integer('post_id')->unsigned();
-            $table->boolean('thumbnail')->default(0);
+            $table->string('nome')->nullable();
+            $table->integer('post_id')->unsigned()->nullable();
+            $table->integer('pacote_id')->unsigned()->nullable();
             $table->timestamps();
             $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
+            $table->foreign('pacote_id')->references('id')->on('pacotes')->onDelete('cascade');
 
         });
     }
