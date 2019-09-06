@@ -75,5 +75,33 @@ class PacotesController extends Controller
         $pacote = Pacote::findOrFail($id);
         return view('pacote.show', compact('pacote'));
     }
+
+    public function edit ($id){
+        $pacote = Pacote::findOrFail($id);
+        $fotos = Foto::where('pacote_id', $id)->get();
+        return view('pacote.edit', compact('pacote', 'fotos'));
+    }
+    public function update (Request $request, $id){
+        $pacote = Pacote::findOrFail($id);
+        $pacote->nome = $request->nome;
+        $pacote->condicoes = $request->condicoes;
+        $pacote->inclui = $request->inclui;
+        $pacote->n_inclui = $request->n_inclui;
+        $pacote->pagamento = $request->pagamento;
+        $pacote->preco = $request->preco;
+        $pacote->parcelas = $request->parcelas;
+        $pacote->caracteristica1 = $request->caracteristica1;
+        $pacote->caracteristica2 = $request->caracteristica2;
+        $pacote->caracteristica3 = $request->caracteristica3;
+       
+        $pacote->save();
+
+        return redirect()->back()->with('message', 'Sucesso ao atualizar pacote!');
+    }
+    public function destroy($id){
+        $pacote = Pacote::findOrFail($id);
+        $pacote->delete();
+        return redirect()->route('pacotes.index');
+    }
     
 }

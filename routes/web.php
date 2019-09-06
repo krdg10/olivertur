@@ -27,8 +27,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/blog/edit/{id}', 'PostsController@edit')->name('posts.edit');
     Route::put('/blog/edit/{id}', 'PostsController@update')->name('posts.update');
     Route::delete('/blog/edit/{id}', 'PostsController@destroy')->name('posts.destroy');
-    Route::put('/blog/edit/foto/{id}', 'FotosController@update')->name('fotos.update');
-    Route::delete('/blog/edit/foto/{id}', 'FotosController@destroy')->name('fotos.destroy');
+
+    Route::get('/pacotes/edit/{id}', 'PacotesController@edit')->name('pacotes.edit');
+    Route::put('/pacotes/edit/{id}', 'PacotesController@update')->name('pacotes.update');
+    Route::delete('/pacotes/edit/{id}', 'PacotesController@destroy')->name('pacotes.destroy');
+
+
+    Route::put('/edit/foto/{id}', 'FotosController@update')->name('fotos.update');
+    Route::delete('/edit/foto/{id}', 'FotosController@destroy')->name('fotos.destroy');
 
     Route::get('/novoPost', function () {
         return view('post.create');
