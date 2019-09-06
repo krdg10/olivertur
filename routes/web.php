@@ -13,6 +13,7 @@
 Route::get('/','HomeController@index')->name('/'); // INDEX
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/blog', 'PostsController@index')->name('posts.index');
+Route::get('/pacotes', 'PacotesController@index')->name('pacotes.index');
 Route::get('/blog/{id}', 'PostsController@show')->name('posts.show');
 Route::get('/blog/categoria/{categoria}', 'PostsController@categoria')->name('posts.categoria');
 Route::get('/blog/autor/{autor}', 'PostsController@autor')->name('posts.autor');

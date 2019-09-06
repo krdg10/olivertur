@@ -20,6 +20,7 @@
         <hr>
         <form method="POST" action="{{ route('pacotes.store') }}" enctype="multipart/form-data">
             @csrf
+            <input type="text" placeholder="Nome" name="nome" class="form-control">
             <input type="text" placeholder="Condições" name="condicoes" class="form-control">
             <textarea type="text" placeholder="Inclui" name="inclui" class="form-control"></textarea>
             <textarea type="text" placeholder="Não Inclui" name="n_inclui" class="form-control"></textarea>

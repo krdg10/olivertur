@@ -12,4 +12,8 @@ class Foto extends Model
         return $this->belongsTo(Post::class);
        //talvez seja diferente. baseado em vcc foto. qualquer coisa ver vcc entrada
     }
+   public function pacote(){
+      return $this->belongsTo(Pacote::class);
+     //talvez seja diferente. baseado em vcc foto. qualquer coisa ver vcc entrada
+   }   
 }

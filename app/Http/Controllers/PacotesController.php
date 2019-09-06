@@ -28,6 +28,7 @@ class PacotesController extends Controller
         if(isset($error)){
             return redirect()->back()->with('error', $error);
         }
+        $pacote->nome = $request->nome;
         $pacote->condicoes = $request->condicoes;
         $pacote->inclui = $request->inclui;
         $pacote->n_inclui = $request->n_inclui;
@@ -63,4 +64,11 @@ class PacotesController extends Controller
         return redirect()->back()->with('message', 'Sucesso ao cadastrar pacote!');
 
     }
+
+    public function index (){
+        $pacotes = Pacote::orderBy('created_at', 'desc')->paginate(10);
+        //$flag = 0; //indicar o primeiro
+        return view('pacote.index', compact('pacotes'));
+    }
+    
 }
