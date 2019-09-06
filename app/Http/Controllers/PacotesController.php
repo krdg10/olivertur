@@ -70,5 +70,10 @@ class PacotesController extends Controller
         //$flag = 0; //indicar o primeiro
         return view('pacote.index', compact('pacotes'));
     }
+
+    public function show ($id){
+        $pacote = Pacote::findOrFail($id);
+        return view('pacote.show', compact('pacote'));
+    }
     
 }
