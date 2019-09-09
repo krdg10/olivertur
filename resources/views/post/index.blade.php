@@ -3,7 +3,7 @@
     <div class="row">
         <!-- Post Content Column -->
         @foreach ($posts as $post)
-            <div class="card col-lg-8">
+            <div class="card col-lg-8" id="post">
                 @include('blog.titulo')
                 @include('blog.carrossel')
                 <hr>

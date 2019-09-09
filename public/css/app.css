@@ -8025,9 +8025,8 @@
     margin: 1.5rem !important;
   }
   
-  .mt-4,
-  .my-4 {
-    margin-top: 1.5rem !important;
+  #post{
+    margin-bottom: 1.5rem !important;
   }
   
   .mr-4,

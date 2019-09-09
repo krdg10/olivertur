@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
       <!-- Post Content Column -->
-        <div class="col-lg-8 card">
+        <div class="col-lg-8 card" id="post">
             @include('blog.titulo')
             @include('blog.carrossel')
             <hr>
