@@ -1,4 +1,5 @@
 @include('layouts.head')
+@include('layouts.header_mini')
 <div class="container">
     <div class="row">
         <!-- Post Content Column -->

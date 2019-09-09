@@ -2,6 +2,8 @@
 @php
     $cont=0;
 @endphp
+@include('layouts.header_mini')
+<h2>Pacotes</h2>
 <div class="container">
     <div class="row">
       <!-- Post Content Column -->

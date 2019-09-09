@@ -1,4 +1,5 @@
 @include('layouts.head')
+@include('layouts.header_mini')
 <!-- por nav -->
 <div>
     <div>
