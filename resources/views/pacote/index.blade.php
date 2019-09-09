@@ -1,10 +1,12 @@
 @include('layouts.head')
 <div class="container">
+<div class="row">
+        
     
         
-            <div class="card-deck">
+           
                 @foreach($pacotes as $pacote)
-                <div class="card">
+                <div class="card mb-4">
                     <a href="/pacotes/{{$pacote->id}}"><img class="card-img-top" src="/storage/{{ $pacote->thumbnail->url }}" alt="Card image cap"></a>
                     <div class="card-body">
                     <a href="/pacotes/{{$pacote->id}}"><h5 class="card-title">{{ $pacote->nome }}</h5></a>
@@ -17,12 +19,12 @@
                 </div>
                 
                 @endforeach
-            </div>
+            
        
-        <div class="d-flex justify-content-center">
+        <div class="container d-flex justify-content-center">
             {{ $pacotes->links() }}
         </div>
     
-</div>
+</div></div>
 <!-- /.container -->
 @include('layouts.footer')

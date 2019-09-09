@@ -66,7 +66,7 @@ class PacotesController extends Controller
     }
 
     public function index (){
-        $pacotes = Pacote::orderBy('created_at', 'desc')->paginate(10);
+        $pacotes = Pacote::orderBy('created_at', 'desc')->paginate(12);
         //$flag = 0; //indicar o primeiro
         return view('pacote.index', compact('pacotes'));
     }
