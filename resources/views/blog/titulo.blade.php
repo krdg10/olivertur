@@ -1,5 +1,11 @@
 <!-- Title -->
 <a href="/blog/{{$post->id}}"><h1 class="mt-4">{{$post->titulo}}</h1></a>
+@guest
+    @if (Route::has('register'))
+    @endif
+    @else
+    <a href="/blog/edit/{{$post->id}}"><i class="fas fa-edit"></i> Editar/Apagar</a>
+@endguest
 <!-- Author -->
 <p class="lead">
 by

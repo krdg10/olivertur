@@ -12,6 +12,12 @@
                     <p class="card-text"><small class="text-muted">{{ $pacote->caracteristica2 }}</small></p>
                     <p class="card-text"><small class="text-muted">{{ $pacote->caracteristica3 }}</small></p>
                     <p class="card-text">{{$pacote->preco}} em até {{ $pacote->parcelas }}x</p>
+                    @guest
+                        @if (Route::has('register'))
+                        @endif
+                        @else
+                        <a href="/pacotes/edit/{{$pacote->id}}"><i class="fas fa-edit"></i> Editar/Apagar</a>
+                    @endguest
                 </div>
             </div>
         @endforeach

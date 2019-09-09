@@ -7,6 +7,7 @@
     <div class="row">
       <!-- Post Content Column -->
         <div class="col-12 col-sm-12 col-md-5 col-lg-6"> 
+            <a href="/pacotes/edit/{{$pacote->id}}"><i class="fas fa-edit"></i> Editar/Apagar</a>
             Pagamento: <p align="justify" class="lead">{{$pacote->pagamento}}</p>
             Preço: <p align="justify" class="lead">{{$pacote->preco}} em até {{$pacote->parcelas}}</p>
         </div>
