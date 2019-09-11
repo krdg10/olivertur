@@ -8,17 +8,33 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    Destinos <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">
+                        Bonito
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        Peru
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        Bolivia
+                    </a>     
+                </div>
+            </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger" href="{{ url('/pacotes') }}">Pacotes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Sobre Nós</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            <a class="nav-link js-scroll-trigger" href="{{ url('/blog') }}">Blog</a>
           </li>
           @guest
                     @if (Route::has('register'))
@@ -30,6 +46,19 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url('/novoPost') }}">
+                                Novo Post
+                            </a>
+                            <a class="dropdown-item" href="{{ url('/novoPacote') }}">
+                                Criar Pacote
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Lista de Posts
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Lista de Pacotes
+                            </a>
+
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">
