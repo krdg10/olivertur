@@ -26,8 +26,8 @@
                 @csrf
                 @method('put')
                 <input type="text" placeholder="Título do post." name="titulo" value="{{$post->titulo}}" class="form-control" maxlength="30" required>
-                <input type="text" placeholder="Prévia - Textinho que vai ficar na listagem de todos os posts." name="previa" value="{{$post->previa}}" class="form-control" maxlength="250" required>
-                <input type="text" placeholder="Texto - O conteúdo do post." name="texto" value="{{$post->texto}}" class="form-control" required>
+                <textarea type="text" placeholder="Prévia - Textinho que vai ficar na listagem de todos os posts." name="previa" class="form-control" maxlength="250" required rows="10">{{$post->previa}}</textarea>
+                <textarea type="text" placeholder="Texto - O conteúdo do post." name="texto" class="form-control" required rows="10">{{$post->texto}}</textarea>
                 <input type="text" placeholder="Tag - a categoria do post."  name="tag" value="{{$post->tag}}" class="form-control" maxlength="25" required>
                 <div class="d-flex justify-content-center" id="formFooter">
                     <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Editar </button>
