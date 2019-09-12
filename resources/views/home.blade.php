@@ -81,12 +81,14 @@
       <h1 class="text-white mb-5 text-center">Blog</h1>
       <div class="row">
         @foreach($posts as $post)
-          <div class="col-md-4 pacoteCard">
-            <div class="card">
+          <div class="col-md-4 marginCard">
+            <div class="card homeBlogCard">
               <a href="/blog/{{$post->id}}"><img class="card-img-top img-thumbnail img-fluid" src="/storage/{{ $post->thumbnail->url }}" alt="{{ $post->thumbnail->nome }}"></a>
               <div class="card-body">
                 <a href="/blog/{{$post->id}}"><h5 class="card-title">{{ $post->titulo }}</h5></a>
                 <p class="card-text">{{ $post->previa }}</p>
+              </div>
+              <div class="card-footer text-muted">
                 <p class="card-text"><small class="text-muted">{{ $post->data }}</small></p>
               </div>
             </div>

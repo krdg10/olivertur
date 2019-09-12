@@ -25,10 +25,10 @@
             <form method="POST" action="{{ route('posts.update', $post->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('put')
-                <input type="text" placeholder="Título" name="titulo" value="{{$post->titulo}}" class="form-control">
-                <input type="text" placeholder="Prévia" name="previa" value="{{$post->previa}}" class="form-control">
-                <input type="text" placeholder="Texto" name="texto" value="{{$post->texto}}" class="form-control">
-                <input type="text" placeholder="Tag" name="tag" value="{{$post->tag}}" class="form-control">
+                <input type="text" placeholder="Título do post." name="titulo" value="{{$post->titulo}}" class="form-control" maxlength="30" required>
+                <input type="text" placeholder="Prévia - Textinho que vai ficar na listagem de todos os posts." name="previa" value="{{$post->previa}}" class="form-control" maxlength="250" required>
+                <input type="text" placeholder="Texto - O conteúdo do post." name="texto" value="{{$post->texto}}" class="form-control" required>
+                <input type="text" placeholder="Tag - a categoria do post."  name="tag" value="{{$post->tag}}" class="form-control" maxlength="25" required>
                 <div class="d-flex justify-content-center" id="formFooter">
                     <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Editar </button>
                     <button class="fadeIn fourth btn btn-primary" href="{{ route('posts.destroy', $post->id) }}"
@@ -68,7 +68,7 @@
                         <form method="POST" action="{{ route('fotos.update', $foto->id) }}" enctype="multipart/form-data">
                             @csrf
                             @method('put')
-                            <input type="text" placeholder="Nome da Foto" name="nomeFoto" value="{{$foto->nome}}" class="form-control">
+                            <input type="text" placeholder="Nome da Foto - Legenda e Alt da foto." name="nomeFoto" value="{{$foto->nome}}" class="form-control" maxlength="50" required>
                             <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Atualizar </button>
                             <button class="fadeIn fourth btn btn-primary" href="{{ route('fotos.destroy', $foto->id) }}" 
                                 onclick="event.preventDefault();

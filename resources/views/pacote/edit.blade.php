@@ -24,17 +24,18 @@
             <form method="POST" action="{{ route('pacotes.update', $pacote->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('put')
-                <input type="text" placeholder="Nome" name="nome" value="{{ $pacote->nome }}" class="form-control">
-                <input type="text" placeholder="Condições" value="{{ $pacote->condicoes }}" name="condicoes" class="form-control">
-                <input type="text" placeholder="Inclui" value="{{ $pacote->inclui }}" name="inclui" class="form-control">
-                <input type="text" placeholder="Não Inclui" value="{{ $pacote->n_inclui }}" name="n_inclui" class="form-control">
-                <input type="text" placeholder="Pagamento" value="{{ $pacote->pagamento }}" name="pagamento" class="form-control">
-                <input type="text" placeholder="Preço" value="{{ $pacote->preco }}" name="preco" class="form-control">
-                <input type="number" placeholder="Parcelas" value="{{ $pacote->parcelas }}" name="parcelas" class="form-control">
-                <input type="text" placeholder="Data (Exemplo: Toda semana, 24/10/2019 até 24/10/2019, etc.)" value="{{ $pacote->data }}" name="data" class="form-control">
-                <input type="text" placeholder="Característica 1" value="{{ $pacote->caracteristica1 }}" name="caracteristica1" class="form-control">
-                <input type="text" placeholder="Característica 2" value="{{ $pacote->caracteristica2 }}" name="caracteristica2" class="form-control">
-                <input type="text" placeholder="Característica 3" value="{{ $pacote->caracteristica3 }}" name="caracteristica3" class="form-control">
+                <input type="text" placeholder="Nome - Título do Pacote" name="nome" value="{{ $pacote->nome }}" class="form-control" maxlength="30" required>
+                <input type="text" placeholder="Condições - As condições gerais. O que ele tem, vai fazer, etc." value="{{ $pacote->condicoes }}" name="condicoes" class="form-control" maxlength="500" required>
+                <input type="text" placeholder="Inclui - Os benefícios do pacote." value="{{ $pacote->inclui }}" name="inclui" class="form-control" maxlength="500" required>
+                <input type="text" placeholder="Não Inclui - Coisas que ele não tem." value="{{ $pacote->n_inclui }}" name="n_inclui" class="form-control" maxlength="500" required>
+                <input type="text" placeholder="Mais informações - mais informações relacionadas a viagem mas não relacionada ao pacote." value="{{ $pacote->maisinformacoes }}" name="maisinformacoes" class="form-control" maxlength="500" required rows="5">
+                <input type="text" placeholder="Pagamento - Formas: a vista, prazo." value="{{ $pacote->pagamento }}" name="pagamento" class="form-control" maxlength="150">
+                <input type="text" placeholder="Preço - Valor do pacote. Não colocar R$" value="{{ $pacote->preco }}" name="preco" class="form-control" maxlength="25" required>
+                <input type="number" placeholder="Parcelas - Quantia de parcelas." value="{{ $pacote->parcelas }}" name="parcelas" class="form-control" required>
+                <input type="text" placeholder="Data - Toda semana, 24/10/2019 até 24/10/2019, etc." value="{{ $pacote->data }}" name="data" class="form-control" maxlength="50">
+                <input type="text" placeholder="Característica 1 - Que vai ser exibido no card." value="{{ $pacote->caracteristica1 }}" name="caracteristica1" class="form-control" maxlength="30">
+                <input type="text" placeholder="Característica 2 - Que vai ser exibido no card." value="{{ $pacote->caracteristica2 }}" name="caracteristica2" class="form-control" maxlength="30">
+                <input type="text" placeholder="Característica 3 - Que vai ser exibido no card." value="{{ $pacote->caracteristica3 }}" name="caracteristica3" class="form-control" maxlength="30">
                 <div class="d-flex justify-content-center" id="formFooter">
                     <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Editar </button>
                     <button class="fadeIn fourth btn btn-primary" href="{{ route('pacotes.destroy', $pacote->id) }}"
@@ -75,7 +76,7 @@
                         <form method="POST" action="{{ route('fotos.update', $foto->id) }}" enctype="multipart/form-data">
                             @csrf
                             @method('put')
-                            <input type="text" placeholder="Nome da Foto" name="nomeFoto" value="{{$foto->nome}}" class="form-control">
+                            <input type="text" placeholder="Nome da Foto - Legenda e Alt da foto." name="nomeFoto" value="{{$foto->nome}}" class="form-control" maxlength="50" required>
                             <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Atualizar </button>
                             <button class="fadeIn fourth btn btn-primary" href="{{ route('fotos.destroy', $foto->id) }}" 
                                 onclick="event.preventDefault();
