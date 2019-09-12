@@ -19,7 +19,7 @@
     <div class="container">
       <div class="row justify-content-center no-gutters">
         <div class="col-lg-6">
-          <img class="img-fluid" src="https://olvrtur.files.wordpress.com/2019/08/16265191_201476153660524_1764860663924253223_n.jpg" alt="">
+          <img class="img-fluid" src="https://olvrtur.files.wordpress.com/2019/08/16265191_201476153660524_1764860663924253223_n.jpg" alt="" style="min-height:100%;">
         </div>
         <div class="col-lg-6 order-lg-first">
           <div class="bg-black text-center h-100 project">
@@ -38,9 +38,9 @@
       
 
       <!-- Project One Row -->
-      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+      <div class="row justify-content-center no-gutters">
         <div class="col-lg-6">
-          <img class="img-fluid" src="https://olvrtur.files.wordpress.com/2019/08/city-tour-santa-cruz-church.jpg?w=1000&h=" alt="">
+          <img class="img-fluid" src="https://olvrtur.files.wordpress.com/2019/08/city-tour-santa-cruz-church.jpg?w=1000&h=" alt="" style="min-height:100%;">
         </div>
         <div class="col-lg-6">
           <div class="bg-black text-center h-100 project">
@@ -58,7 +58,7 @@
       <!-- Project Two Row -->
       <div class="row justify-content-center no-gutters">
         <div class="col-lg-6">
-          <img class="img-fluid" src="https://olvrtur.files.wordpress.com/2019/08/750_2017626123854857-1.jpg" alt="">
+          <img class="img-fluid" src="https://olvrtur.files.wordpress.com/2019/08/750_2017626123854857-1.jpg" alt="" style="min-height:100%;">
         </div>
         <div class="col-lg-6 order-lg-first">
           <div class="bg-black text-center h-100 project">
@@ -76,37 +76,28 @@
     </div>
   </section>
 
-  <section id="signup" class="signup-section">
+  <section id="signup" class="signup-section bgBlog">
     <div class="container">
+      <h1 class="text-white mb-5 text-center">Blog</h1>
       <div class="row">
-        <div class="col-md-10 col-lg-8 mx-auto text-center">
-
-          <h1 class="text-white mb-5">Blog</h1>
-          <h2 class="text-white mb-5">Conheça nossos relatos!</h2>
-
-          <div class="card-deck">
-            @foreach($posts as $post)
-              <div class="card">
-                <a href="/blog/{{$post->id}}"><img class="card-img-top" src="/storage/{{ $post->thumbnail->url }}" alt="Card image cap"></a>
-                <div class="card-body">
-                  <a href="/blog/{{$post->id}}"><h5 class="card-title">{{ $post->titulo }}</h5></a>
-                  <p class="card-text"><small class="text-muted">{{ $post->autor->name }}</small></p>
-                  <p class="card-text">{{ $post->previa }}</p>
-                  <!--<p class="card-text"><small class="text-muted">{{ $post->tag }}</small></p>-->
-                  <p class="card-text"><small class="text-muted">{{ $post->data }}</small></p>
-                </div>
+        @foreach($posts as $post)
+          <div class="col-md-4 pacoteCard">
+            <div class="card">
+              <a href="/blog/{{$post->id}}"><img class="card-img-top img-thumbnail img-fluid" src="/storage/{{ $post->thumbnail->url }}" alt="{{ $post->thumbnail->nome }}"></a>
+              <div class="card-body">
+                <a href="/blog/{{$post->id}}"><h5 class="card-title">{{ $post->titulo }}</h5></a>
+                <p class="card-text">{{ $post->previa }}</p>
+                <p class="card-text"><small class="text-muted">{{ $post->data }}</small></p>
               </div>
-            
-            @endforeach
+            </div>
           </div>
-
-        </div>
+        @endforeach
       </div>
     </div>
   </section>
 
   <!-- Signup Section -->
-  <section id="signup" class="signup-section">
+  <section id="signup" class="signup-section bgSignUp">
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-lg-8 mx-auto text-center">

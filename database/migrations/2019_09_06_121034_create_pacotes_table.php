@@ -16,15 +16,16 @@ class CreatePacotesTable extends Migration
         Schema::create('pacotes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->string('condicoes');
-            $table->string('inclui');
-            $table->string('n_inclui');
-            $table->string('pagamento');
+            $table->text('condicoes');
+            $table->text('inclui');
+            $table->text('n_inclui');
+            $table->string('pagamento')->nullable();
             $table->string('preco');
             $table->string('parcelas');
-            $table->string('caracteristica1');
-            $table->string('caracteristica2');
-            $table->string('caracteristica3');
+            $table->string('data')->nullable();
+            $table->string('caracteristica1')->nullable();
+            $table->string('caracteristica2')->nullable();
+            $table->string('caracteristica3')->nullable();
             $table->timestamps();
         });
     }
