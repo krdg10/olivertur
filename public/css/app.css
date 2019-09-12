@@ -10088,7 +10088,7 @@
   }
   
   #mainNav .navbar-brand {
-    color: #161616;
+    color: rgb(68, 35, 1);
     font-weight: 700;
     padding: .9rem 0;
   }
@@ -10115,19 +10115,19 @@
     }
     #mainNav .navbar-brand {
       padding: .5rem 0;
-      color: rgba(255, 255, 255, 0.5);
+      color: rgb(68, 35, 1);
     }
     #mainNav .nav-link {
       -webkit-transition: none;
       transition: none;
       padding: 2rem 1.5rem;
-      color: rgba(255, 255, 255, 0.5);
+      color: rgb(68, 35, 1);/*cor nav header home*/
     }
     #mainNav .nav-link:hover {
-      color: rgba(255, 255, 255, 0.75);
+      color: #BD5E00;
     }
     #mainNav .nav-link:active {
-      color: white;
+      color: #BD5E00;
     }
     #mainNav.navbar-shrink {
       background-color: #fff;
@@ -10141,13 +10141,13 @@
       border-bottom: 0.25rem solid transparent;
     }
     #mainNav.navbar-shrink .nav-link:hover {
-      color: #64a19d;
+      color: #BD5E00;
     }
     #mainNav.navbar-shrink .nav-link:active {
-      color: #467370;
+      color: #BD5E00;
     }
     #mainNav.navbar-shrink .nav-link.active {
-      color: #64a19d;
+      color: #BD5E00;
       outline: none;
       border-bottom: 0.25rem solid #64a19d;
     }
@@ -10397,7 +10397,7 @@
     color: black;
 }
 .nav-menu li:hover > a, .nav-menu > .menu-active > a {
-    color: #18d26e;
+    color: #BD5E00;
 }
 .nav-menu a {
     padding: 0 8px 10px 8px;
