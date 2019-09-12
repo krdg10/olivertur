@@ -10,7 +10,7 @@ class PacotesController extends Controller
 {
     public function store(Request $request){
         $pacote = new Pacote;
-        $allowedfileExtension=['jpg','png','gif'];
+        $allowedfileExtension=['jpg','png','gif','jpeg'];
         if(!$request->hasFile('fotos')){
             $error[] =  'Insira pelo menos um arquivo!'; 
         }
@@ -35,6 +35,7 @@ class PacotesController extends Controller
         $pacote->pagamento = $request->pagamento;
         $pacote->preco = $request->preco;
         $pacote->parcelas = $request->parcelas;
+        $pacote->data = $request->data;
         $pacote->caracteristica1 = $request->caracteristica1;
         $pacote->caracteristica2 = $request->caracteristica2;
         $pacote->caracteristica3 = $request->caracteristica3;

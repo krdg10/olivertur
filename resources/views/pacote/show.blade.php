@@ -3,13 +3,20 @@
     $cont=0;
 @endphp
 @include('layouts.header_mini')
-<div class="container">
+<div class="container card">
     <div class="row">
       <!-- Post Content Column -->
         <div class="col-12 col-sm-12 col-md-5 col-lg-6"> 
-            <a href="/pacotes/edit/{{$pacote->id}}"><i class="fas fa-edit"></i> Editar/Apagar</a>
+            <h2>{{$pacote->nome}}</h2>
+            @guest
+                @if (Route::has('register'))
+                @endif
+                @else
+                    <a href="/pacotes/edit/{{$pacote->id}}"><i class="fas fa-edit"></i> Editar/Apagar</a><br>
+                @endguest
             Pagamento: <p align="justify" class="lead">{{$pacote->pagamento}}</p>
             Preço: <p align="justify" class="lead">{{$pacote->preco}} em até {{$pacote->parcelas}}</p>
+            <p align="justify" class="lead">{{$pacote->caracteristica1}} - {{$pacote->caracteristica2}} - {{$pacote->caracteristica3}}</p>
         </div>
         <div class="col-12 col-sm-12 col-md-7 col-lg-6">
             <div id="demo" class="carousel slide" data-ride="carousel">
@@ -54,7 +61,7 @@
         </div>
         <div class="tab-pane fade" id="inclui" role="tabpanel" aria-labelledby="nav-inclui">
             Inclui: <p align="justify" class="lead">{{$pacote->inclui}}</p>
-            N Inclui: <p align="justify" class="lead">{{$pacote->n_inclui}}</p>
+            Não Inclui: <p align="justify" class="lead">{{$pacote->n_inclui}}</p>
         </div>
         <div class="tab-pane fade" id="valores" role="tabpanel" aria-labelledby="nav-valores">
             Pagamento: <p align="justify" class="lead">{{$pacote->pagamento}}</p>

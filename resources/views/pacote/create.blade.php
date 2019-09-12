@@ -22,12 +22,13 @@
         <form method="POST" action="{{ route('pacotes.store') }}" enctype="multipart/form-data">
             @csrf
             <input type="text" placeholder="Nome" name="nome" class="form-control">
-            <input type="text" placeholder="Condições" name="condicoes" class="form-control">
+            <textarea type="text" placeholder="Condições" name="condicoes" class="form-control"></textarea>
             <textarea type="text" placeholder="Inclui" name="inclui" class="form-control"></textarea>
             <textarea type="text" placeholder="Não Inclui" name="n_inclui" class="form-control"></textarea>
             <input type="text" placeholder="Pagamento" name="pagamento" class="form-control">
             <input type="text" placeholder="Preço" name="preco" class="form-control">
             <input type="number" placeholder="Parcelas" name="parcelas" class="form-control">
+            <input type="text" placeholder="Data (Exemplo: Toda semana, 24/10/2019 até 24/10/2019, etc.)" name="data" class="form-control">
             <input type="text" placeholder="Característica 1" name="caracteristica1" class="form-control">
             <input type="text" placeholder="Característica 2" name="caracteristica2" class="form-control">
             <input type="text" placeholder="Característica 3" name="caracteristica3" class="form-control">

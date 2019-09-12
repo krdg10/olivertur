@@ -4666,7 +4666,9 @@
     left: 0;
     padding: 1.25rem;
   }
-  
+  .pacoteCard{
+    margin-bottom: 5px;
+  }  
   .card-img {
     width: 100%;
     border-radius: calc(0.25rem - 1px);

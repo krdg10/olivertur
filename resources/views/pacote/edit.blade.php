@@ -29,6 +29,7 @@
             <input type="text" placeholder="Pagamento" value="{{ $pacote->pagamento }}" name="pagamento" class="form-control">
             <input type="text" placeholder="Preço" value="{{ $pacote->preco }}" name="preco" class="form-control">
             <input type="number" placeholder="Parcelas" value="{{ $pacote->parcelas }}" name="parcelas" class="form-control">
+            <input type="text" placeholder="Data (Exemplo: Toda semana, 24/10/2019 até 24/10/2019, etc.)" value="{{ $pacote->data }}" name="data" class="form-control">
             <input type="text" placeholder="Característica 1" value="{{ $pacote->caracteristica1 }}" name="caracteristica1" class="form-control">
             <input type="text" placeholder="Característica 2" value="{{ $pacote->caracteristica2 }}" name="caracteristica2" class="form-control">
             <input type="text" placeholder="Característica 3" value="{{ $pacote->caracteristica3 }}" name="caracteristica3" class="form-control">
