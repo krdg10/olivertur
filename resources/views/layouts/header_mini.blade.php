@@ -1,7 +1,7 @@
 <header id="header">
     <div class="container">
     <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">
-        OliverTur Viagens e Turismo
+        Exemplo
       </a>
 
       <nav id="nav-menu-container">

@@ -10547,3 +10547,10 @@ body.mobile-nav-active #mobile-nav {
   -webkit-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
 }
+#slidePacote{
+  margin-top:10px;
+}
+#containerPacote{
+  margin-bottom:10px;
+  padding-bottom:10px;
+}

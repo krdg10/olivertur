@@ -19,7 +19,7 @@
     <div class="container">
       <div class="row justify-content-center no-gutters">
         <div class="col-lg-6">
-          <img class="img-fluid" src="https://olvrtur.files.wordpress.com/2019/08/16265191_201476153660524_1764860663924253223_n.jpg" alt="">
+          <img class="img-fluid" src="https://olvrtur.files.wordpress.com/2019/08/16265191_201476153660524_1764860663924253223_n.jpg" alt="" style="min-height:100%;">
         </div>
         <div class="col-lg-6 order-lg-first">
           <div class="bg-black text-center h-100 project">
