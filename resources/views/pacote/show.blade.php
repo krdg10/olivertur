@@ -16,14 +16,14 @@
                 @endguest
                 <div class="row">
                     <div class="col">
-                        <h5>Pagamento:</h5> <p align="justify" class="lead">{{$pacote->pagamento}}</p>
+                        @if($pacote->pagamento)<h5>Pagamento:</h5> <p align="justify" class="lead">{{$pacote->pagamento}}</p>@endif
                         <h5>Preço:</h5> <p align="justify" class="lead">R${{$pacote->preco}} em até {{$pacote->parcelas}}x</p>
-                        <h5>Data:</h5> <p align="justify" class="lead">{{$pacote->data}}</p>
+                        @if($pacote->data)<h5>Data:</h5> <p align="justify" class="lead">{{$pacote->data}}</p>@endif
                     </div>
                     <div class="col col-lg-4">
-                        <p align="justify" class="lead">• {{$pacote->caracteristica1}}</p>
-                        <p align="justify" class="lead">• {{$pacote->caracteristica2}}</p>
-                        <p align="justify" class="lead">• {{$pacote->caracteristica3}}</p>
+                        @if($pacote->caracteristica1)<p align="justify" class="lead">• {{$pacote->caracteristica1}}</p>@endif
+                        @if($pacote->caracteristica2)<p align="justify" class="lead">• {{$pacote->caracteristica2}}</p>@endif
+                        @if($pacote->caracteristica3)<p align="justify" class="lead">• {{$pacote->caracteristica3}}</p>@endif
                     </div>
                 </div>
                 
@@ -74,7 +74,7 @@
             <h5>Não Inclui:</h5> <p align="justify" class="lead">{{$pacote->n_inclui}}</p>
         </div>
         <div class="tab-pane fade" id="valores" role="tabpanel" aria-labelledby="nav-valores">
-            <h5>Pagamento:</h5> <p align="justify" class="lead">{{$pacote->pagamento}}</p>
+            @if($pacote->pagamento)<h5>Pagamento:</h5> <p align="justify" class="lead">{{$pacote->pagamento}}</p>@endif
             <h5>Preço:</h5> <p align="justify" class="lead">R${{$pacote->preco}} em até {{$pacote->parcelas}}x</p>
         </div>
     </div>
