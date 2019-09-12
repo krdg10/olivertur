@@ -32,6 +32,7 @@ class PacotesController extends Controller
         $pacote->condicoes = $request->condicoes;
         $pacote->inclui = $request->inclui;
         $pacote->n_inclui = $request->n_inclui;
+        $pacote->maisinformacoes = $request->maisinformacoes;
         $pacote->pagamento = $request->pagamento;
         $pacote->preco = $request->preco;
         $pacote->parcelas = $request->parcelas;

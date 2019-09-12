@@ -28,10 +28,11 @@
                 <input type="text" placeholder="Condições - As condições gerais. O que ele tem, vai fazer, etc." value="{{ $pacote->condicoes }}" name="condicoes" class="form-control" maxlength="500" required>
                 <input type="text" placeholder="Inclui - Os benefícios do pacote." value="{{ $pacote->inclui }}" name="inclui" class="form-control" maxlength="500" required>
                 <input type="text" placeholder="Não Inclui - Coisas que ele não tem." value="{{ $pacote->n_inclui }}" name="n_inclui" class="form-control" maxlength="500" required>
+                <input type="text" placeholder="Mais informações - mais informações relacionadas a viagem mas não relacionada ao pacote." value="{{ $pacote->maisinformacoes }}" name="maisinformacoes" class="form-control" maxlength="500" required rows="5">
                 <input type="text" placeholder="Pagamento - Formas: a vista, prazo." value="{{ $pacote->pagamento }}" name="pagamento" class="form-control" maxlength="150">
                 <input type="text" placeholder="Preço - Valor do pacote. Não colocar R$" value="{{ $pacote->preco }}" name="preco" class="form-control" maxlength="25" required>
                 <input type="number" placeholder="Parcelas - Quantia de parcelas." value="{{ $pacote->parcelas }}" name="parcelas" class="form-control" required>
-                <input type="text" placeholder="Data (Exemplo: Toda semana, 24/10/2019 até 24/10/2019, etc.)" value="{{ $pacote->data }}" name="data" class="form-control" maxlength="50">
+                <input type="text" placeholder="Data - Toda semana, 24/10/2019 até 24/10/2019, etc." value="{{ $pacote->data }}" name="data" class="form-control" maxlength="50">
                 <input type="text" placeholder="Característica 1 - Que vai ser exibido no card." value="{{ $pacote->caracteristica1 }}" name="caracteristica1" class="form-control" maxlength="30">
                 <input type="text" placeholder="Característica 2 - Que vai ser exibido no card." value="{{ $pacote->caracteristica2 }}" name="caracteristica2" class="form-control" maxlength="30">
                 <input type="text" placeholder="Característica 3 - Que vai ser exibido no card." value="{{ $pacote->caracteristica3 }}" name="caracteristica3" class="form-control" maxlength="30">

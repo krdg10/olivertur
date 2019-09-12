@@ -62,7 +62,7 @@
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active" id="nav-condicoes" data-toggle="tab" href="#condicoes" role="tab" aria-controls="condicoes" aria-selected="true">Condições Gerais</a>
             <a class="nav-item nav-link" id="nav-inclui" data-toggle="tab" href="#inclui" role="tab" aria-controls="inclui" aria-selected="false">Inclui</a>
-            <a class="nav-item nav-link" id="nav-valores" data-toggle="tab" href="#valores" role="tab" aria-controls="valores" aria-selected="false">Valores</a>
+            <a class="nav-item nav-link" id="nav-maisinformacoes" data-toggle="tab" href="#maisinformacoes" role="tab" aria-controls="maisinformacoes" aria-selected="false">Mais Informações</a>
         </div>
     </nav>
     <div class="tab-content" id="nav-tabContent">
@@ -73,9 +73,8 @@
             <h5>Inclui:</h5> <p align="justify" class="lead">{{$pacote->inclui}}</p>
             <h5>Não Inclui:</h5> <p align="justify" class="lead">{{$pacote->n_inclui}}</p>
         </div>
-        <div class="tab-pane fade" id="valores" role="tabpanel" aria-labelledby="nav-valores">
-            @if($pacote->pagamento)<h5>Pagamento:</h5> <p align="justify" class="lead">{{$pacote->pagamento}}</p>@endif
-            <h5>Preço:</h5> <p align="justify" class="lead">R${{$pacote->preco}} em até {{$pacote->parcelas}}x</p>
+        <div class="tab-pane fade" id="maisinformacoes" role="tabpanel" aria-labelledby="nav-maisinformacoes">
+            <h5>Mais Informações:</h5> <p align="justify" class="lead">{{$pacote->maisinformacoes}}</p>
         </div>
     </div>
 </div>
