@@ -19,13 +19,13 @@ class CreatePacotesTable extends Migration
             $table->text('condicoes');
             $table->text('inclui');
             $table->text('n_inclui');
-            $table->string('pagamento');
+            $table->string('pagamento')->nullable();
             $table->string('preco');
             $table->string('parcelas');
-            $table->string('data');
-            $table->string('caracteristica1');
-            $table->string('caracteristica2');
-            $table->string('caracteristica3');
+            $table->string('data')->nullable();
+            $table->string('caracteristica1')->nullable();
+            $table->string('caracteristica2')->nullable();
+            $table->string('caracteristica3')->nullable();
             $table->timestamps();
         });
     }
