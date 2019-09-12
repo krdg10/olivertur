@@ -53,6 +53,19 @@
     </div>
 </div>
 <div class="container">
+    <h2 class="d-flex justify-content-center">Adicionar Foto</h2>
+    <hr>
+    <div class="col-lg-12 d-flex justify-content-center">
+        <form id="delete-form" method="POST" action="{{ route('fotos.store_pacote', $pacote->id) }}" enctype="multipart/form-data">
+            @csrf
+            <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" multiple required/>
+            <div class="d-flex justify-content-center" id="formFooter">
+                <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Adicionar </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="container">
     <div class="row">
         @foreach($fotos as $foto)
             <div class="col-md-4">

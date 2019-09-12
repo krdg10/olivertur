@@ -35,6 +35,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::put('/edit/foto/{id}', 'FotosController@update')->name('fotos.update');
     Route::delete('/edit/foto/{id}', 'FotosController@destroy')->name('fotos.destroy');
+    Route::post('/store/fotoPacote/{id}', 'FotosController@store_pacote')->name('fotos.store_pacote');
+    Route::post('/store/fotoPost/{id}', 'FotosController@store_post')->name('fotos.store_post');
 
     Route::get('/novoPost', function () {
         return view('post.create');
