@@ -161,7 +161,7 @@
   
   a:focus, a:hover {
     text-decoration: none;
-    color: #3c6360;
+    color: #de7309;
   }
   
   a:not([href]):not([tabindex]) {
@@ -2427,36 +2427,36 @@
   
   .btn-primary {
     color: #fff;
-    background-color: #64a19d;    
-    border-color: #007bff;
+    background-color: #BD5E00;    
+    border-color: #de7309;
   }
   
   .btn-primary:hover {
     color: #fff;
-    background-color: #4f837f;
-    border-color: #0062cc;
+    background-color: #de7309;
+    border-color: #de7309;
   }
   .btn-primary:active {
-    background-color: #467370 !important;
+    background-color: #de7309 !important;
   }
   
   .btn-primary:focus, .btn-primary.focus {
-    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-    background-color: #4f837f;
+    box-shadow: 0 0 0 0.2rem #de7309;
+    background-color: #de7309;
     color: white;
   }
   
   .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #de7309;
+    border-color: #de7309;
   }
   
   .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #0062cc;
-    border-color: #005cbf;
+    background-color: #de7309;
+    border-color: #de7309;
   }
   
   .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -9884,7 +9884,7 @@
   }
   
   .text-primary {
-    color: #64a19d !important;
+    color: #BD5E00 !important;
 }
   
   a.text-primary:hover, a.text-primary:focus {
@@ -10149,8 +10149,11 @@
     #mainNav.navbar-shrink .nav-link.active {
       color: #BD5E00;
       outline: none;
-      border-bottom: 0.25rem solid #64a19d;
+      border-bottom: 0.25rem solid #BD5E00;
     }
+  }
+  .icones{
+    font-size: 50px;
   }
 
   .masthead {
@@ -10255,7 +10258,7 @@
       padding: 5rem;
     }
     .projects-section .project-text hr {
-      border-color: #64a19d;
+      border-color: #BD5E00;
       border-width: .25rem;
       width: 30%;
     }
@@ -10297,7 +10300,7 @@
   
   .contact-section .card {
     border: 0;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid #BD5E00;
   }
   
   .contact-section .card h4 {
@@ -10308,7 +10311,7 @@
   }
   
   .contact-section .card hr {
-    border-color: #64a19d;
+    border-color: #BD5E00;
     border-width: 0.25rem;
     width: 3rem;
   }

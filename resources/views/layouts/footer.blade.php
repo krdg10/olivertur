@@ -4,7 +4,7 @@
       <div class="row">
 
         <div class="col-md-4 mb-3 mb-md-0">
-          <div class="card py-4 h-100">
+          <div class="card h-100">
             <div class="card-body text-center">
               <i class="fas fa-map-marked-alt text-primary mb-2"></i>
               <h4 class="text-uppercase m-0">Endereço</h4>
@@ -15,20 +15,19 @@
         </div>
 
         <div class="col-md-4 mb-3 mb-md-0">
-          <div class="card py-4 h-100">
+          <div class="card h-100">
             <div class="card-body text-center">
-              <i class="fas fa-envelope text-primary mb-2"></i>
-              <h4 class="text-uppercase m-0">Email</h4>
+              <h4 class="text-uppercase m-0">Redes Sociais</h4>
               <hr class="my-4">
-              <div class="small text-black-50">
-                <a href="#">oliver@olivertur.com</a>
+              <div class="icones text-black-50">
+                <a href="#"><i class="fab fa-facebook"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-whatsapp"></i></a>
               </div>
             </div>
           </div>
         </div>
 
         <div class="col-md-4 mb-3 mb-md-0">
-          <div class="card py-4 h-100">
+          <div class="card h-100">
             <div class="card-body text-center">
               <i class="fas fa-mobile-alt text-primary mb-2"></i>
               <h4 class="text-uppercase m-0">Contatos</h4>

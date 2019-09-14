@@ -1,8 +1,9 @@
 <header id="header">
     <div class="container">
-    <a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">
+      <!--<a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">
        OliverTur Viagens e Turismo
-      </a>
+      </a>--->
+      <a href="{{ url('/') }}"><img src="LogoOficial.jpg" alt="Olivertur" title="Olivertur" style="width: 100px; height: 50px;"/></a>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
