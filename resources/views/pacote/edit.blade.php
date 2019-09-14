@@ -37,7 +37,7 @@
                 <input type="text" placeholder="Característica 2 - Que vai ser exibido no card." value="{{ $pacote->caracteristica2 }}" name="caracteristica2" class="form-control" maxlength="30">
                 <input type="text" placeholder="Característica 3 - Que vai ser exibido no card." value="{{ $pacote->caracteristica3 }}" name="caracteristica3" class="form-control" maxlength="30">
                 <div class="d-flex justify-content-center" id="formFooter">
-                    <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Editar </button>
+                    <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Salvar </button>
                     <button class="fadeIn fourth btn btn-primary" href="{{ route('pacotes.destroy', $pacote->id) }}"
                         onclick="event.preventDefault();
                         document.getElementById('delete-form').submit();"> 

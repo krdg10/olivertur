@@ -1,6 +1,6 @@
 @include('layouts.head')
 @include('layouts.header_mini')
-<h2 class="section-title">Pacotes</h2>
+<h2 class="text-center">Pacotes</h2>
 <div class="container">
     <div class="row">
         @foreach($pacotes as $pacote)

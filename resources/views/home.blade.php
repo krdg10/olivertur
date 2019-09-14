@@ -6,8 +6,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">Boas Vindas</h2>
-          <p class="text-white-50">A OliverTur tem a disposição dos seus clientes vários destinos turísticos com diversas atrativos, programações e passeios. Trabalhamos com o Turismo Personalizado, organizamos a sua viagem de acordo com seu perfil, tempo e orçamento disponível. Encontre o destino ideal para sua tão sonhada viagem! </p>
+          <h2 class="text-white mb-4">A equipe da OliverTur deseja Boas Vindas!</h2>
+          <p class="text-white-50">Temos a disposição diversos destinos turísticos com uma grande variedade de atrativos, programações e passeios. Os principais destinos são o Pantanal Sul, Bolívia e Peru. Trabalhamos com o Turismo Personalizado, organizamos a sua viagem de acordo com seu perfil, tempo e orçamento disponível. Encontre o destino ideal para sua tão sonhada viagem! </p>
         </div>
       </div>
       <img src="img/ipad.png" class="img-fluid" alt="">
@@ -98,24 +98,7 @@
     </div>
   </section>
 
-  <!-- Signup Section -->
-  <section id="signup" class="signup-section bgSignUp">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 col-lg-8 mx-auto text-center">
-
-          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-          <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-
-          <form class="form-inline d-flex">
-            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
-            <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
-          </form>
-
-        </div>
-      </div>
-    </div>
-  </section>
+  
     <!-- Map -->
     <section id="contact" class="map">
     <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.421219220931!2d-57.66147204895967!3d-19.00115191494135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9387a091156f16c9%3A0xd88b0545e9b827d5!2sOLIVER%20TUR%20-%20AG%C3%8ANCIA%20DE%20NAVEGA%C3%87%C3%83O%2C%20VIAGENS%20%26%20TURISMO!5e0!3m2!1spt-BR!2sbr!4v1567462077668!5m2!1spt-BR!2sbr"></iframe>

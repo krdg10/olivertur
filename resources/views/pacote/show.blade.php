@@ -20,11 +20,7 @@
                         <h5>Preço:</h5> <p align="justify" class="lead">R${{$pacote->preco}} em até {{$pacote->parcelas}}x</p>
                         @if($pacote->data)<h5>Data:</h5> <p align="justify" class="lead">{{$pacote->data}}</p>@endif
                     </div>
-                    <div class="col col-lg-4">
-                        @if($pacote->caracteristica1)<p align="justify" class="lead">• {{$pacote->caracteristica1}}</p>@endif
-                        @if($pacote->caracteristica2)<p align="justify" class="lead">• {{$pacote->caracteristica2}}</p>@endif
-                        @if($pacote->caracteristica3)<p align="justify" class="lead">• {{$pacote->caracteristica3}}</p>@endif
-                    </div>
+                    
                 </div>
                 
         </div>
