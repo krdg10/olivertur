@@ -1,4 +1,4 @@
-    <section class="contact-section bg-black">
+    <section id="contact" class="contact-section bg-black">
     <div class="container">
 
       <div class="row">
