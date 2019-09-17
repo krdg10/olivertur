@@ -10,8 +10,7 @@
           <li class="menu-active"><a href="{{ url('/') }}">Home</a></li>
           <li class="menu-has-children"><a href="">Destinos</a>
             <ul>
-              <li><a href="#">Bonito</a></li>
-              <li><a href="#">Pantanal</a></li>
+              <li><a href="#">Pantanal Sul</a></li>
               <li><a href="#">Peru</a></li>
               <li><a href="#">Bolivia</a></li>
             </ul>

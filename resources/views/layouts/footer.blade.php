@@ -32,8 +32,11 @@
               <i class="fas fa-mobile-alt text-primary mb-2"></i>
               <h4 class="text-uppercase m-0">Contatos</h4>
               <hr class="my-4">
-              <div class="small text-black-50"> <p> +55 (067) 3231-2030 </p>
-              <p> +55 (067) 3231-2030 </p> </div>
+              <div class="small text-black-50"> <p> +55 067 3231-2030 </p>
+              <p> +55 067 99861 - 4874 (Lídia) </p>
+              <p> +55 067 9640-2712 (Ruth) </p>
+              
+               </div>
             </div>
           </div>
         </div>
