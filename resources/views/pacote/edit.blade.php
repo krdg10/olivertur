@@ -1,4 +1,5 @@
 @include('layouts.head')
+<div id="app">
 @include('layouts.header_mini')
 <!-- por nav -->
 <div class="container">
@@ -95,3 +96,4 @@
     </div>
 </div>
 @include('layouts.footer')
+</div>
