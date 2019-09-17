@@ -22,6 +22,9 @@
                         </div>
                         <div class="carousel-item">
                             <img class="img-fluid rounded" style="height: 300px; width: 900px;" src="#" alt="alt">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid rounded" style="height: 300px; width: 900px;" src="#" alt="alt">
                         </div>  
                     </div>
                 </div>
