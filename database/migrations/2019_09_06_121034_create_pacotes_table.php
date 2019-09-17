@@ -15,18 +15,18 @@ class CreatePacotesTable extends Migration
     {
         Schema::create('pacotes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome');
-            $table->text('condicoes');
-            $table->text('inclui');
-            $table->text('n_inclui');
-            $table->text('maisinformacoes');
-            $table->string('pagamento')->nullable();
-            $table->string('preco');
-            $table->string('parcelas');
-            $table->string('data')->nullable();
-            $table->string('caracteristica1')->nullable();
-            $table->string('caracteristica2')->nullable();
-            $table->string('caracteristica3')->nullable();
+            $table->string('nome', 31);
+            $table->string('condicoes', 501);
+            $table->string('inclui', 501);
+            $table->string('n_inclui', 501);
+            $table->string('maisinformacoes', 501);
+            $table->string('pagamento', 151)->nullable();
+            $table->string('preco', 26);
+            $table->smallInteger('parcelas')->unsigned();
+            $table->string('data', 51)->nullable();
+            $table->string('caracteristica1', 31)->nullable();
+            $table->string('caracteristica2', 31)->nullable();
+            $table->string('caracteristica3', 31)->nullable();
             $table->timestamps();
         });
     }
