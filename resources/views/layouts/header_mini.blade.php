@@ -3,7 +3,7 @@
       <!--<a class="navbar-brand js-scroll-trigger" href="{{ url('/') }}">
        OliverTur Viagens e Turismo
       </a>--->
-      <a href="{{ url('/') }}"><img src="LogoOficial.jpg" alt="Olivertur" title="Olivertur" style="width: 100px; height: 50px;"/></a>
+      <a href="{{ url('/') }}"><img src="/LogoOficial.jpg" alt="Olivertur" title="Olivertur" style="width: 100px; height: 50px;"/></a>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
@@ -17,7 +17,7 @@
           </li>
           <li><a href="{{ url('/pacotes') }}">Pacotes</a></li>
           <li><a href="#contact">Contato</a></li>
-          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="{{ url('/sobreNos') }}">Sobre Nós</a></li>
           <li><a href="{{ url('/blog') }}">Blog</a></li>
           
           

@@ -31,7 +31,7 @@
             <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Sobre Nós</a>
+            <a class="nav-link js-scroll-trigger" href="{{ url('/sobreNos') }}">Sobre Nós</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{{ url('/blog') }}">Blog</a>

@@ -18,7 +18,9 @@ Route::get('/blog/{id}', 'PostsController@show')->name('posts.show');
 Route::get('/pacotes/{id}', 'PacotesController@show')->name('pacotes.show');
 Route::get('/blog/categoria/{categoria}', 'PostsController@categoria')->name('posts.categoria');
 Route::get('/blog/autor/{autor}', 'PostsController@autor')->name('posts.autor');
-
+Route::get('/sobreNos', function () {
+    return view('sobreNos.index');
+});
 Auth::routes();
 Route::group(['middleware' => ['auth']], function () {  
 
