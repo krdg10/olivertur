@@ -17,7 +17,7 @@
             </ul>
           </li>
           <li><a href="{{ url('/pacotes') }}">Pacotes</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="#contact">Contato</a></li>
           <li><a href="#">Sobre Nós</a></li>
           <li><a href="{{ url('/blog') }}">Blog</a></li>
           
