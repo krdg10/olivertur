@@ -10,9 +10,9 @@
           <li class="menu-active"><a href="{{ url('/') }}">Home</a></li>
           <li class="menu-has-children"><a href="">Destinos</a>
             <ul>
-              <li><a href="#">Pantanal Sul</a></li>
-              <li><a href="#">Peru</a></li>
-              <li><a href="#">Bolivia</a></li>
+              <li><a href="{{ url('/pantanalSul') }}">Pantanal Sul</a></li>
+              <li><a href="{{ url('/peru') }}">Peru</a></li>
+              <li><a href="{{ url('/bolivia') }}">Bolivia</a></li>
             </ul>
           </li>
           <li><a href="{{ url('/pacotes') }}">Pacotes</a></li>

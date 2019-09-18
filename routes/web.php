@@ -21,6 +21,15 @@ Route::get('/blog/autor/{autor}', 'PostsController@autor')->name('posts.autor');
 Route::get('/sobreNos', function () {
     return view('sobreNos.index');
 });
+Route::get('/peru', function () {
+    return view('destinos.peru');
+});
+Route::get('/pantanalSul', function () {
+    return view('destinos.pantanal');
+});
+Route::get('/bolivia', function () {
+    return view('destinos.bolivia');
+});
 Auth::routes();
 Route::group(['middleware' => ['auth']], function () {  
 
