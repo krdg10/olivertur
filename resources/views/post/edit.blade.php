@@ -31,7 +31,7 @@
                 <input type="text" placeholder="Tag - a categoria do post."  name="tag" value="{{$post->tag}}" class="form-control" maxlength="25" required>
                 <div class="d-flex justify-content-center" id="formFooter">
                     <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Salvar </button>
-                    <button class="fadeIn fourth btn btn-primary" href="{{ route('posts.destroy', $post->id) }}"
+                    <button class="fadeIn fourth btn btn-danger" href="{{ route('posts.destroy', $post->id) }}"
                         onclick="event.preventDefault();
                         document.getElementById('delete-form').submit();"> 
                         Apagar
@@ -70,7 +70,7 @@
                             @method('put')
                             <input type="text" placeholder="Nome da Foto - Legenda e Alt da foto." name="nomeFoto" value="{{$foto->nome}}" class="form-control" maxlength="50" required>
                             <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Atualizar </button>
-                            <button class="fadeIn fourth btn btn-primary" href="{{ route('fotos.destroy', $foto->id) }}" 
+                            <button class="fadeIn fourth btn btn-danger" href="{{ route('fotos.destroy', $foto->id) }}" 
                                 onclick="event.preventDefault();
                                 document.getElementById('delete-foto{{$foto->id}}').submit();"> 
                                 Apagar
