@@ -319,6 +319,9 @@
     color: inherit;
     white-space: normal;
   }
+  .background-white{
+    background-color: white;
+  }
   
   progress {
     vertical-align: baseline;
@@ -4687,6 +4690,9 @@
   .card-img {
     width: 100%;
     border-radius: calc(0.25rem - 1px);
+  }
+  #elementList{
+    margin-bottom: 5px;
   }
   
   .card-img-top {

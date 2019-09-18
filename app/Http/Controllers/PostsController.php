@@ -81,6 +81,10 @@ class PostsController extends Controller
         $flag = 0; //indicar o primeiro
         return view('post.index', compact('posts', 'flag'));
     }
+    public function indexAdm (){
+        $posts = Post::orderBy('data', 'desc')->paginate(20);
+        return view('post.indexAdm', compact('posts'));
+    }
 
     public function categoria ($categoria){
         $posts = Post::where('tag', $categoria)->orderBy('data', 'desc')->paginate(3);
