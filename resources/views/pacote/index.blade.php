@@ -6,7 +6,7 @@
         @foreach($pacotes as $pacote)
             <div class="col-md-4 marginCard">
                 <div class="card pacoteCard">
-                    <a href="/pacotes/{{$pacote->id}}"><img class="card-img-top img-thumbnail img-fluid" src="/storage/{{ $pacote->thumbnail->url }}" alt="Card image cap"></a>
+                    <a href="/pacotes/{{$pacote->id}}"><img class="card-img-top img-thumbnail img-fluid" src="/storage/{{ $pacote->thumbnail->url }}" alt="{{ $pacote->thumbnail->nome }}"></a>
                     <div class="card-body">
                         <a href="/pacotes/{{$pacote->id}}"><h5 class="card-title text-center">{{ $pacote->nome }}</h5></a>
                         @if($pacote->caracteristica1)<p class="card-text text-center"><small class="text-muted">• {{ $pacote->caracteristica1 }}</small></p>@else<p class="card-text text-center"><small class="text-muted">&nbsp</small></p>@endif

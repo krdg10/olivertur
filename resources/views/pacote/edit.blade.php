@@ -72,7 +72,7 @@
         @foreach($fotos as $foto)
             <div class="col-md-4">
                 <div class="card">
-                    <img class="card-img-top img-thumbnail img-fluid" src="/storage/{{ $foto->url }}" alt="Card image cap">
+                    <img class="card-img-top img-thumbnail img-fluid" src="/storage/{{ $foto->url }}" alt="{{ $foto->nome }}">
                     <div class="card-body">
                         <form method="POST" action="{{ route('fotos.update', $foto->id) }}" enctype="multipart/form-data">
                             @csrf
