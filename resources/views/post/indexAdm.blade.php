@@ -1,6 +1,7 @@
 @include('layouts.head')
 @include('layouts.header_mini')
 <div class="container" id="elementList">
+    <h2 class="text-white text-center">Lista de Posts</h2>
     <table class="table table-hover table-striped background-white">
         <thead>
             <tr>
