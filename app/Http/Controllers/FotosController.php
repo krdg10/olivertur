@@ -9,6 +9,17 @@ use App\Post;
 class FotosController extends Controller
 {
     public function update(Request $request, $id){
+        if(!$request->nomeFoto){
+            $error[] = 'Insira o nome da foto!';//pensar num jeito do texto voltar em caso de erro
+        }
+        else{
+            if(strlen($request->nomeFoto)>50){
+                $error[] = 'Insira nome da foto com no máximo 50 caracteres!';
+            }
+        }
+        if(isset($error)){
+            return redirect()->back()->with('error', $error);
+        }
         $foto = Foto::findOrFail($id);
         $foto->nome = $request->nomeFoto;
         $foto->save();
