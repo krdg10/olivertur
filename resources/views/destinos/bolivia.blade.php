@@ -10,8 +10,8 @@
                 <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                    <h2 class="text-white mb-4">A equipe da OliverTur deseja Boas Vindas!</h2>
-                    <p class="text-white-50">Temos a disposição diversos destinos turísticos com uma grande variedade de atrativos, programações e passeios. Os principais destinos são o Pantanal Sul, Bolívia e Peru. Trabalhamos com o Turismo Personalizado, organizamos a sua viagem de acordo com seu perfil, tempo e orçamento disponível. Encontre o destino ideal para sua tão sonhada viagem! </p>
+                    <h2 class="text-white mb-4">Visite a Bolívia!</h2>
+                    <p class="text-white-50">A OliverTur conta com diversos destinos e passeios no nosso país vizinho, desde a região da chiquitania, onde é possivel encontrar cidades maravilhosas, igrejas construidas por jesuitas no século XVII e recantos naturais apaixonantes, até a região do altos onde há ruinas de povos pré-colombianos, deserto de sal e o lago mais altos do mundo. </p>
                     </div>
                 </div>
                 <img src="img/ipad.png" class="img-fluid" alt="">
@@ -23,14 +23,14 @@
                 <div class="container">
                 <div class="row justify-content-center no-gutters">
                     <div class="col-lg-6">
-                    <img class="img-fluid" src="https://olvrtur.files.wordpress.com/2019/08/16265191_201476153660524_1764860663924253223_n.jpg" alt="" style="min-height:100%;">
+                    <img class="img-fluid" src="/Aguas.jpg" alt="" style="min-height:100%;">
                     </div>
                     <div class="col-lg-6 order-lg-first">
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right">
-                            <h4 class="text-white">Pantanal Sul</h4>
-                            <p class="mb-0 text-white-50">O Pantanal Sul possui uma imensa diversidade na fauna e flora. Existem na região 1.132 espécies de borboletas, 656 de aves, 122 de mamíferos, 263 de peixes e 93 de répteis. Existem diversas atrações e programações que é possivel realizar nesses destinos, como pesca, trilhas, passeios e safáris fotográficos, mergulho, observação de aves, dia de peão e hospedagem em fazendas.</p>
+                            <h4 class="text-white">Águas Calientes</h4>
+                            <p class="mb-0 text-white-50">Em um lugar natural, Aguas Calientes, uma comunidade do município de Roboré, Bolívia, encontra-se uma extensa fonte termal (rio) chamada Los Hervores, onde a água atinge temperaturas de 30 ° a 40 ° Celsius e onde naturalmente vulcões minúsculos irrompem do manto de areia fina. Aguas Calientes, conta com belos spas naturais, que também são medicinais porque ajudam a melhorar a dor do reumatismo, osteoartrite, artrite e são a solução contra o estresse. O local conta com diversos hoteis e spas, ideal para quem deseja relaxar e descansar o corpo.</p>
                             <hr class="d-none d-lg-block mb-0 mr-0">
                         </div>
                         </div>
@@ -44,14 +44,14 @@
                 <!-- Project One Row -->
                 <div class="row justify-content-center no-gutters">
                     <div class="col-lg-6">
-                    <img class="img-fluid" src="https://olvrtur.files.wordpress.com/2019/08/city-tour-santa-cruz-church.jpg?w=1000&h=" alt="" style="min-height:100%;">
+                    <img class="img-fluid" src="/SanJose.jpg" alt="" style="min-height:100%;">
                     </div>
                     <div class="col-lg-6">
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left">
-                            <h4 class="text-white">Bolívia</h4>
-                            <p class="mb-0 text-white-50">A OliverTur conta com diversos destinos e passeios no nosso país vizinho, desde a região da chiquitania, onde é possivel encontrar cidades maravilhosas, igrejas construidas por jesuitas no século XVII e recantos naturais apaixonantes, até a região do altos onde há ruinas de povos pré-colombianos, deserto de sal e o lago mais altos do mundo. Aventure-se por esses destinos com a OliverTur.</p>
+                            <h4 class="text-white">San Jose de Chiquitos</h4>
+                            <p class="mb-0 text-white-50">San José é uma cidade na Bolívia, que conta com um complexo missionário considerada Patrimônio Cultural da Humanidade pela UNESCO. Fundado pelos missionários jesuítas espanhóis no final do século XVII. Dos povoados fundados pelas missões jesuítas nessa região da Chiquitania, San José de Chiquitos é a terceira mais antiga, de 1696. Há outras atrações na cidade como Parque Nacional Santa Cruz de la Vieja, Valle de La Luna, Mirador de Ñuflo, Balneário Sutó entre outros. Ideal para passeios históricos e ecológicos.</p>
                             <hr class="d-none d-lg-block mb-0 ml-0">
                         </div>
                         </div>
@@ -62,14 +62,52 @@
                 <!-- Project Two Row -->
                 <div class="row justify-content-center no-gutters">
                     <div class="col-lg-6">
-                    <img class="img-fluid" src="https://olvrtur.files.wordpress.com/2019/08/750_2017626123854857-1.jpg" alt="" style="min-height:100%;">
+                    <img class="img-fluid" src="https://olvrtur.files.wordpress.com/2019/08/city-tour-santa-cruz-church.jpg?w=1000&h=" alt="" style="min-height:100%;">
                     </div>
                     <div class="col-lg-6 order-lg-first">
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right">
-                            <h4 class="text-white">Peru</h4>
-                            <p class="mb-0 text-white-50">O Peru é um país da América do Sul que abriga uma parte da Floresta Amazônica e Machu Picchu, uma antiga cidade inca na cordilheira dos Andes. A região ao redor de Machu Picchu, que abrange o Vale Sagrado dos Incas, o Camino Inca e a cidade colonial de Cusco, é rica em sítios arqueológicos. </p>
+                            <h4 class="text-white">Santa Cruz de La Sierra</h4>
+                            <p class="mb-0 text-white-50">A maior cidade e ‘capital econômica’ da Bolívia. A cidade dos anéis, como é conhecida, é uma das cidades que mais cresceu no mundo nos últimos anos e, atualmente, atrai investidores, empresas e turistas. Há atrações para todos os gostos desde parques aquáticos, jardim botânico, centros comerciais, restaurantes temáticos, esportes e muito mais. Venha conhecer a cultura boliviana e se apaixonar por esta incrível cidade. </p>
+                            <hr class="d-none d-lg-block mb-0 mr-0">
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+<!-- Project One Row -->
+                <div class="row justify-content-center no-gutters">
+                    <div class="col-lg-6">
+                    <img class="img-fluid" src="/LaPaz.jpg" alt="" style="min-height:100%;">
+                    </div>
+                    <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white">La Paz</h4>
+                            <p class="mb-0 text-white-50">La Paz, sede do governo central da Bolívia, está situada a 3.640 metros acima do nível do mar, é uma cidade cosmopolita com belos jardins, arquitetura e topografia únicas, rodeada pelas montanhas da majestosa Cordilheira dos Andes. Sua temperatura varia de 1 a 21 graus. No alto planalto, está o Lago Titicaca, Tiawanaku e outros. A 45 minutos do Centro da cidade, se encontra o sítio arqueológico Tiahuanaco. Acredita-se que era o centro de uma cultura baseada na agricultura e pecuária, caracterizada pela sua arquitetura, a magnificência de sua cultura se reflete em seu excelente trabalho cerâmico, têxtil e sobretudo, nas construções arquitetônicas, muitas das quais têm orientação astronômica.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Project Two Row -->
+                <div class="row justify-content-center no-gutters">
+                    <div class="col-lg-6">
+                    <img class="img-fluid" src="/copacabana.jpg" alt="" style="min-height:100%;">
+                    </div>
+                    <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-right">
+                            <h4 class="text-white">Copacabana</h4>
+                            <p class="mb-0 text-white-50">Região encantadora às margens do Lago Titicaca. O lago conta com uma área maior de 8.500 Km², situada a uma altitudede 3.841 metros acima do nível do mar. Com águas transparentes e uma rica flora conta com inúmeros sítios arqueológicos Pré-Incas e Incas. La Isla del Sol é uma ilha situada no Lago Titicaca com comprimento de 9,6 km por 4,6 km, existes vários sítios arqueológicos em toda a ilha. </p>
                             <hr class="d-none d-lg-block mb-0 mr-0">
                         </div>
                         </div>

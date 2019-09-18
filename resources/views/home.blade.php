@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2 class="text-white mb-4">A equipe da OliverTur deseja Boas Vindas!</h2>
-          <p class="text-white-50">Temos a disposição diversos destinos turísticos com uma grande variedade de atrativos, programações e passeios. Os principais destinos são o Pantanal Sul, Bolívia e Peru. Trabalhamos com o Turismo Personalizado, organizamos a sua viagem de acordo com seu perfil, tempo e orçamento disponível. Encontre o destino ideal para sua tão sonhada viagem! </p>
+          <p class="text-white-50">Temos a disposição diversos destinos turísticos com uma grande variedade de atrativos, programações e passeios. Os principais destinos são o Pantanal Sul, Bolívia e Peru. Trabalhamos com o Turismo Personalizado, organizamos a sua viagem de acordo com seu perfil, tempo e orçamento disponível. Encontre o destino ideal para sua tão sonhada viagem. Entre em contato conosco!</p>
         </div>
       </div>
       <img src="img/ipad.png" class="img-fluid" alt="">

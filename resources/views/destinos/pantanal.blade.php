@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                     <h2 class="text-white mb-4">Conheça o Pantanal Sul Matogrossense!</h2>
-                    <p class="text-white-50">O Pantanal Sul possui uma imensa diversidade na fauna e flora. Existem na região 1.132 espécies de borboletas, 656 de aves, 122 de mamíferos, 263 de peixes e 93 de répteis. Existem diversas atrações e programações que é possivel realizar nesses destinos, como pesca, trilhas, passeios e safáris fotográficos, mergulho, observação de aves, dia de peão e hospedagem em fazendas. Os principais destinos do Pantanal Sul Matogrossense que a OliverTur oferece seus serviços são Corumbá, Bonito e Miranda.</p>
+                    <p class="text-white-50">O Pantanal Sul possui uma imensa diversidade na fauna e flora. Existem na região 1.132 espécies de borboletas, 656 de aves, 122 de mamíferos, 263 de peixes e 93 de répteis. Existem diversas atrações e programações que é possivel realizar nesses destinos, como pesca, trilhas, passeios e safáris fotográficos, mergulho, observação de aves, dia de peão e hospedagem em fazendas. Os principais destinos do Pantanal Sul Matogrossense que a OliverTur oferece seus serviços são Corumbá, Bonito e Fazendas no Pantanal.</p>
                     </div>
                 </div>
                 <img src="img/ipad.png" class="img-fluid" alt="">
@@ -62,14 +62,14 @@
                 <!-- Project Two Row -->
                 <div class="row justify-content-center no-gutters">
                     <div class="col-lg-6">
-                    <img class="img-fluid" src="http://bonitonet.com.br/admin/files/73273/cavalgada%20pantanal.jpg" alt="" style="min-height:100%;">
+                    <img class="img-fluid" src="Pantanal.jpg" alt="" style="min-height:100%;">
                     </div>
                     <div class="col-lg-6 order-lg-first">
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right">
                             <h4 class="text-white">Pantanal</h4>
-                            <p class="mb-0 text-white-50"> e tem a estrada- Parque, cheia de hotéis para ecoturismo, um dos melhores locais para avistar animais no Pantanal. O Peru é um país da América do Sul que abriga uma parte da Floresta Amazônica e Machu Picchu, uma antiga cidade inca na cordilheira dos Andes. A região ao redor de Machu Picchu, que abrange o Vale Sagrado dos Incas, o Camino Inca e a cidade colonial de Cusco, é rica em sítios arqueológicos. </p>
+                            <p class="mb-0 text-white-50"> O pantanal sul matogrossense conta com diversos hoteis fazendas e pousadas que tem estrutura adequada para receber e atender turistas e visitantes. É possivel praticar pesca esportiva, passeio à cavalos, vivenciar a rotina de uma fazenda pantaneira. Os safáris fotograficos realizados nesses locais são considerados como um dos melhores para avistar animais no Pantanal. </p>
                             <hr class="d-none d-lg-block mb-0 mr-0">
                         </div>
                         </div>
