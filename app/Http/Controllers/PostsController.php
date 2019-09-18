@@ -16,13 +16,38 @@ class PostsController extends Controller
         $post = new Post;
         $allowedfileExtension=['jpg','png','gif','jpeg'];
         if(!$request->texto){
-            $error[] = 'Selecione um carro!';//pensar num jeito do texto voltar em caso de erro
+            $error[] = 'Insira um texto!';//pensar num jeito do texto voltar em caso de erro
         }
+
         if(!$request->tag){
-            $error[] = 'Insira um horário!';
+            $error[] = 'Insira uma categoria!';
         }
+        else{
+            if(strlen($request->tag)>25){
+                $error[] = 'Insira categoria com no máximo 25 caracteres!';
+            }
+        }
+
+        if(!$request->titulo){
+            $error[] = 'Insira o título!';
+        }
+        else{
+            if(strlen($request->titulo)>30){
+                $error[] = 'Insira título com no máximo 30 caracteres!';
+            }
+        }
+
+        if(!$request->previa){
+            $error[] = 'Insira a prévia!';
+        }
+        else{
+            if(strlen($request->previa)>120){
+                $error[] = 'Insira previa com no máximo 120 caracteres!';
+            }
+        }
+
         if(!$request->hasFile('fotos')){
-            $error[] =  'Insira pelo menos um arquivo!'; 
+            $error[] =  'Insira pelo menos uma foto!'; 
         }
         else{
             foreach($request->file('fotos') as $file){
@@ -104,6 +129,39 @@ class PostsController extends Controller
         return view('post.edit', compact('post', 'fotos'));
     }
     public function update (Request $request, $id){
+        if(!$request->texto){
+            $error[] = 'Insira um texto!';//pensar num jeito do texto voltar em caso de erro
+        }
+
+        if(!$request->tag){
+            $error[] = 'Insira uma categoria!';
+        }
+        else{
+            if(strlen($request->tag)>25){
+                $error[] = 'Insira categoria com no máximo 25 caracteres!';
+            }
+        }
+
+        if(!$request->titulo){
+            $error[] = 'Insira o título!';
+        }
+        else{
+            if(strlen($request->titulo)>30){
+                $error[] = 'Insira título com no máximo 30 caracteres!';
+            }
+        }
+
+        if(!$request->previa){
+            $error[] = 'Insira a prévia!';
+        }
+        else{
+            if(strlen($request->previa)>120){
+                $error[] = 'Insira previa com no máximo 120 caracteres!';
+            }
+        }
+        if(isset($error)){
+            return redirect()->back()->with('error', $error);
+        }
         $post = Post::findOrFail($id);
         $post->titulo = $request->titulo;
         $post->tag = $request->tag;
