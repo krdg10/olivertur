@@ -21,7 +21,7 @@ class CreatePacotesTable extends Migration
             $table->string('n_inclui', 601);
             $table->string('maisinformacoes', 601);
             $table->string('pagamento', 151)->nullable();
-            $table->string('preco', 26);
+            $table->float('preco');
             $table->smallInteger('parcelas')->unsigned();
             $table->string('data', 51)->nullable();
             $table->string('caracteristica1', 31)->nullable();

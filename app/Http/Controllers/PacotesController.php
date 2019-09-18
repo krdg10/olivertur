@@ -11,6 +11,108 @@ class PacotesController extends Controller
     public function store(Request $request){
         $pacote = new Pacote;
         $allowedfileExtension=['jpg','png','gif','jpeg'];
+        if(!$request->nome){
+            $error[] = 'Insira o nome!';//pensar num jeito do texto voltar em caso de erro
+        }
+        else{
+            if(strlen($request->nome)>30){
+                $error[] = 'Insira nome do pacote com no máximo 30 caracteres!';
+            }
+        }
+
+        if(!$request->condicoes){
+            $error[] = 'Insira as condições!';
+        }
+        else{
+            if(strlen($request->condicoes)>600){
+                $error[] = 'Insira as condições do pacote com no máximo 600 caracteres!';
+            }
+        }
+
+        if(!$request->inclui){
+            $error[] = 'Insira o que o pacote inclui!';
+        }
+        else{
+            if(strlen($request->inclui)>600){
+                $error[] = 'Insira o que o pacote inclui com no máximo 600 caracteres!';
+            }
+        }
+
+        if(!$request->n_inclui){
+            $error[] = 'Insira o que o pacote não inclui!';
+        }
+        else{
+            if(strlen($request->n_inclui)>600){
+                $error[] = 'Insira o que o pacote não inclui com no máximo 600 caracteres!';
+            }
+        }
+
+        if(!$request->maisinformacoes){
+            $error[] = 'Insira mais informações!';
+        }
+        else{
+            if(strlen($request->maisinformacoes)>600){
+                $error[] = 'Insira mais informações do pacote com no máximo 600 caracteres!';
+            }
+        }
+
+        if(!$request->preco){
+            $error[] = 'Insira o preço!';
+        }
+        else{
+            if(is_numeric($request->preco)){
+                if($request->preco < 0){
+                    $error[] = 'Insira apenas números positivos ou zero no preço!';
+                }
+            }
+            else{
+                $error[] = 'Insira apenas números no preço!';
+            }
+        }
+        
+        if(!$request->parcelas){
+            $error[] = 'Insira a quantidade de parcelas!';
+        }
+        else{
+            if(is_numeric($request->parcelas)){
+                if($request->preco < 0){
+                    $error[] = 'Insira apenas números positivos ou zero nas parcelas!';
+                }
+            }
+            else{
+                $error[] = 'Insira apenas números no preço!';
+            }
+        }
+        if($request->pagamento){
+            if(strlen($request->pagamento)>150){
+                $error[] = 'Insira pagamento do pacote com no máximo 150 caracteres!';
+            }
+        }
+
+        if($request->data){
+            if(strlen($request->data)>50){
+                $error[] = 'Insira data do pacote com no máximo 50 caracteres!';
+            }
+        }
+
+        if($request->caracteristica1){
+            if(strlen($request->caracteristica1)>30){
+                $error[] = 'Insira característica 1 do pacote com no máximo 30 caracteres!';
+            }
+        }
+
+        if($request->caracteristica2){
+            if(strlen($request->caracteristica2)>30){
+                $error[] = 'Insira característica 2 do pacote com no máximo 30 caracteres!';
+            }
+        }
+
+        if($request->caracteristica3){
+            if(strlen($request->caracteristica3)>30){
+                $error[] = 'Insira característica 3 do pacote com no máximo 30 caracteres!';
+            }
+        }
+       
         if(!$request->hasFile('fotos')){
             $error[] =  'Insira pelo menos um arquivo!'; 
         }
@@ -87,6 +189,111 @@ class PacotesController extends Controller
         return view('pacote.edit', compact('pacote', 'fotos'));
     }
     public function update (Request $request, $id){
+        if(!$request->nome){
+            $error[] = 'Insira o nome!';//pensar num jeito do texto voltar em caso de erro
+        }
+        else{
+            if(strlen($request->nome)>30){
+                $error[] = 'Insira nome do pacote com no máximo 30 caracteres!';
+            }
+        }
+
+        if(!$request->condicoes){
+            $error[] = 'Insira as condições!';
+        }
+        else{
+            if(strlen($request->condicoes)>600){
+                $error[] = 'Insira as condições do pacote com no máximo 600 caracteres!';
+            }
+        }
+
+        if(!$request->inclui){
+            $error[] = 'Insira o que o pacote inclui!';
+        }
+        else{
+            if(strlen($request->inclui)>600){
+                $error[] = 'Insira o que o pacote inclui com no máximo 600 caracteres!';
+            }
+        }
+
+        if(!$request->n_inclui){
+            $error[] = 'Insira o que o pacote não inclui!';
+        }
+        else{
+            if(strlen($request->n_inclui)>600){
+                $error[] = 'Insira o que o pacote não inclui com no máximo 600 caracteres!';
+            }
+        }
+
+        if(!$request->maisinformacoes){
+            $error[] = 'Insira mais informações!';
+        }
+        else{
+            if(strlen($request->maisinformacoes)>600){
+                $error[] = 'Insira mais informações do pacote com no máximo 600 caracteres!';
+            }
+        }
+
+        if(!$request->preco){
+            $error[] = 'Insira o preço!';
+        }
+        else{
+            if(is_numeric($request->preco)){
+                if($request->preco < 0){
+                    $error[] = 'Insira apenas números positivos ou zero no preço!';
+                }
+            }
+            else{
+                $error[] = 'Insira apenas números no preço!';
+            }
+        }
+        
+        if(!$request->parcelas){
+            $error[] = 'Insira a quantidade de parcelas!';
+        }
+        else{
+            if(is_numeric($request->parcelas)){
+                if($request->preco < 0){
+                    $error[] = 'Insira apenas números positivos ou zero nas parcelas!';
+                }
+            }
+            else{
+                $error[] = 'Insira apenas números no preço!';
+            }
+        }
+        if($request->pagamento){
+            if(strlen($request->pagamento)>150){
+                $error[] = 'Insira pagamento do pacote com no máximo 150 caracteres!';
+            }
+        }
+
+        if($request->data){
+            if(strlen($request->data)>50){
+                $error[] = 'Insira data do pacote com no máximo 50 caracteres!';
+            }
+        }
+
+        if($request->caracteristica1){
+            if(strlen($request->caracteristica1)>30){
+                $error[] = 'Insira característica 1 do pacote com no máximo 30 caracteres!';
+            }
+        }
+
+        if($request->caracteristica2){
+            if(strlen($request->caracteristica2)>30){
+                $error[] = 'Insira característica 2 do pacote com no máximo 30 caracteres!';
+            }
+        }
+
+        if($request->caracteristica3){
+            if(strlen($request->caracteristica3)>30){
+                $error[] = 'Insira característica 3 do pacote com no máximo 30 caracteres!';
+            }
+        }
+       
+        if(isset($error)){
+            return redirect()->back()->with('error', $error);
+        }
         $pacote = Pacote::findOrFail($id);
         $pacote->nome = $request->nome;
         $pacote->condicoes = $request->condicoes;
