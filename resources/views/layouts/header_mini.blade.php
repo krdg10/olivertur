@@ -30,8 +30,8 @@
             <ul>
               <li><a href="{{ url('/novoPost') }}">Novo Post</a></li>
               <li><a href="{{ url('/novoPacote') }}">Novo Pacote</a></li>
-              <li><a href="#">Lista de Posts</a></li>
-              <li><a href="#">Lista de Pacotes</a></li>
+              <li><a href="{{ url('/blogAdm') }}">Lista de Posts</a></li>
+              <li><a href="{{ url('/pacotesAdm') }}">Lista de Pacotes</a></li>
               <li><a class="dropdown-item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">

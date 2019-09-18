@@ -50,12 +50,12 @@
                                 Novo Post
                             </a>
                             <a class="dropdown-item" href="{{ url('/novoPacote') }}">
-                                Criar Pacote
+                                Novo Pacote
                             </a>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ url('/blogAdm') }}">
                                 Lista de Posts
                             </a>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ url('/pacotesAdm') }}">
                                 Lista de Pacotes
                             </a>
 
