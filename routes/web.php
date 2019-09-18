@@ -72,6 +72,7 @@ Route::group(['middleware' => ['auth']], function () {
   Route::put('/pacotes/edit/{id}', 'PacotesController@update')->name('pacotes.update');
   Route::delete('/pacotes/edit/{id}', 'PacotesController@destroy')->name('pacotes.destroy');
   Route::post('/store/fotoPacote/{id}', 'FotosController@store_pacote')->name('fotos.store_pacote');
+  Route::get('/pacotesAdm', 'PacotesController@indexAdm')->name('pacotes.indexAdm');
 
   //foto edit e delete
   Route::put('/edit/foto/{id}', 'FotosController@update')->name('fotos.update');
