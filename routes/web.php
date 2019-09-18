@@ -30,7 +30,21 @@ Route::get('/pantanalSul', function () {
 Route::get('/bolivia', function () {
     return view('destinos.bolivia');
 });
-Auth::routes();
+Route::get('login', [
+    'as' => 'login',
+    'uses' => 'Auth\LoginController@showLoginForm'
+  ]);
+  Route::post('login', [
+    'as' => '',
+    'uses' => 'Auth\LoginController@login'
+  ]);
+  Route::post('logout', [
+    'as' => 'logout',
+    'uses' => 'Auth\LoginController@logout'
+  ]);
+
+
+  
 Route::group(['middleware' => ['auth']], function () {  
 
     Route::post('/novoPost', 'PostsController@store')->name('posts.store');
@@ -55,4 +69,18 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/novoPacote', function () {
         return view('pacote.create');
     });
+
+    Route::get('register', [
+        'as' => 'register',
+        'uses' => 'Auth\RegisterController@showRegistrationForm'
+      ]);
+      Route::post('register', [
+        'as' => '',
+        'uses' => 'Auth\RegisterController@register'
+      ]);
 });
+
+//https://laraveldaily.com/9-things-you-can-customize-in-laravel-registration/
+//https://stackoverflow.com/questions/43224300/override-default-auth-routes-in-laravel-5-4
+//https://laracasts.com/discuss/channels/general-discussion/only-admin-can-create-new-users
+//https://maxkostinevich.com/blog/default-admin-user-in-laravel
