@@ -3254,7 +3254,6 @@
   }
   
   .dropdown-item:hover, .dropdown-item:focus {
-    color: #16181b;
     text-decoration: none;
     background-color: #f8f9fa;
   }
@@ -3262,7 +3261,7 @@
   .dropdown-item.active, .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #007bff;
+    background-color: #BD5E00;
   }
   
   .dropdown-item.disabled, .dropdown-item:disabled {
@@ -10158,6 +10157,90 @@
       border-bottom: 0.25rem solid #BD5E00;
     }
   }
+  #sideNav {
+    min-height: 56px;
+    background-color: #fff;
+    margin-bottom: 25px;
+  }
+  
+  #sideNav .navbar-toggler {
+    font-size: 80%;
+    padding: 0.75rem;
+    color: #64a19d;
+    border: 1px solid #64a19d;
+  }
+  
+  #sideNav .navbar-toggler:focus {
+    outline: none;
+  }
+  
+  #sideNav .navbar-brand {
+    color: rgb(68, 35, 1);
+    font-weight: 700;
+    padding: .9rem 0;
+  }
+  
+  #sideNav .navbar-nav .nav-item:hover {
+    color: fade(white, 80%);
+    outline: none;
+    background-color: transparent;
+  }
+  
+  #sideNav .navbar-nav .nav-item:active, #sideNav .navbar-nav .nav-item:focus {
+    outline: none;
+    background-color: transparent;
+  }
+  
+  @media (min-width: 992px) {
+    #sideNav {
+      padding-top: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+      background-color: #fff;
+      -webkit-transition: background-color 0.3s ease-in-out;
+      transition: background-color 0.3s ease-in-out;
+    }
+    #sideNav .navbar-brand {
+      padding: .5rem 0;
+      color: rgb(68, 35, 1);
+    }
+    #sideNav .nav-link {
+      -webkit-transition: none;
+      transition: none;
+      /*padding: 2rem 1.5rem;*/
+      color: rgb(68, 35, 1);/*cor nav header home*/
+      padding: 1.5rem 1.5rem 1.25rem;/*isso e o de baixo vindo do shrink*/
+      border-bottom: 0.25rem solid transparent;
+    }
+    #sideNav .nav-link:hover {
+      color: #BD5E00;
+    }
+    #sideNav .nav-link:active {
+      color: #BD5E00;
+    }/*
+    #sideNav.navbar-shrink {
+      background-color: #fff;
+    }
+    #sideNav.navbar-shrink .navbar-brand {
+      color: #161616;
+    }
+    #sideNav.navbar-shrink .nav-link {
+      color: #161616;
+      padding: 1.5rem 1.5rem 1.25rem;
+      border-bottom: 0.25rem solid transparent;
+    }
+    #sideNav.navbar-shrink .nav-link:hover {
+      color: #BD5E00;
+    }
+    #sideNav.navbar-shrink .nav-link:active {
+      color: #BD5E00;
+    }
+    #sideNav.navbar-shrink .nav-link.active {
+      color: #BD5E00;
+      outline: none;
+      border-bottom: 0.25rem solid #BD5E00;
+    }*/
+  }
   .icones{
     font-size: 50px;
   }
@@ -10223,7 +10306,7 @@
     font-size: 2.5rem;
     line-height: 2.5rem;
     letter-spacing: 0.8rem;
-    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));/*0.9*/
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
   }
