@@ -64,6 +64,9 @@ class PacotesController extends Controller
                 if($request->preco < 0){
                     $error[] = 'Insira apenas números positivos ou zero no preço!';
                 }
+                else if($request->preco > 1000000){
+                    $error[] = 'Insira apenas números abaixo de um milhão no preço!';
+                }
             }
             else{
                 $error[] = 'Insira apenas números no preço!';
@@ -77,6 +80,9 @@ class PacotesController extends Controller
             if(is_numeric($request->parcelas)){
                 if($request->preco < 0){
                     $error[] = 'Insira apenas números positivos ou zero nas parcelas!';
+                }
+                else if($request->preco > 1000000){
+                    $error[] = 'Insira apenas números abaixo de um milhão nas parcelas!';
                 }
             }
             else{
@@ -242,6 +248,9 @@ class PacotesController extends Controller
                 if($request->preco < 0){
                     $error[] = 'Insira apenas números positivos ou zero no preço!';
                 }
+                else if($request->preco > 1000000){
+                    $error[] = 'Insira apenas números abaixo de um milhão no preço!';
+                }
             }
             else{
                 $error[] = 'Insira apenas números no preço!';
@@ -255,6 +264,9 @@ class PacotesController extends Controller
             if(is_numeric($request->parcelas)){
                 if($request->preco < 0){
                     $error[] = 'Insira apenas números positivos ou zero nas parcelas!';
+                }
+                else if($request->parcelas > 1000000){
+                    $error[] = 'Insira apenas números abaixo de um milhão nas parcelas!';
                 }
             }
             else{

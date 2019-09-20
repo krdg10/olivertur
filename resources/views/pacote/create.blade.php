@@ -27,8 +27,8 @@
                     <div class="col-lg-6 justify-content-center">
                         <input type="text" placeholder="Nome - Título do Pacote" name="nome" class="form-control" maxlength="30" required>
                         <input type="text" placeholder="Pagamento - Formas: a vista, prazo." name="pagamento" class="form-control" maxlength="150">
-                        <input type="number" placeholder="Preço - Valor do pacote. Não colocar R$" name="preco" class="form-control" required min="0">
-                        <input type="number" placeholder="Parcelas - Quantia de parcelas." name="parcelas" class="form-control" required min="0">
+                        <input type="number" placeholder="Preço - Valor do pacote. Não colocar R$" name="preco" class="form-control" required min="0" max="1000000">
+                        <input type="number" placeholder="Parcelas - Quantia de parcelas." name="parcelas" class="form-control" required min="0" max="1000000">
                     </div>
                     <div class="col-lg-6 justify-content-center">
                         <input type="text" placeholder="Data - Toda semana, 24/10/2019 até 24/10/2019, etc." name="data" class="form-control" maxlength="50">
