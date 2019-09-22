@@ -7,7 +7,12 @@
             <h2>Sobre Nós</h2>
                 <div class="row">
                     <div class="col">
-                       texto
+                     A OliverTur é uma empresa que presta serviços na área de turismo e transporte fundada em 2003, está há pouco mais de 15 anos atuando no ramo. Oferece pacotes e destinos que atendam o público, com passeios ecológicos, city tour, turismo contemplativo, entre outros. Os principais destinos que a empresa oferece serviços são o Pantanal Sul e excursões na Bolívia e Peru. 
+
+                        A OliverTur trabalha com o turismo personalizado. A empresa leva em consideração as demandas, necessidades, perfil e orçamento do cliente para realizar o planejamento e organização da viagem, para que seja a viagem ideal para o seu cliente. 
+                        Antes de oferecer qualquer produto ou serviço, uma equipe da OliverTur realiza o roteiro de viagem para garantir a qualidade do serviço, fazendo diminuir insatisfações e problemas gerais. 
+                        
+                     Esperamos você para organizarmos sua viagem, entre em contato por email ou pelo Mensseger. Confira nossos destinos e pacotes, entre em contato conosco. 
                     </div>
                     
                 </div>

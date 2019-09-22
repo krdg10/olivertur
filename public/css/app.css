@@ -10121,13 +10121,13 @@
     }
     #mainNav .navbar-brand {
       padding: .5rem 0;
-      color: rgb(68, 35, 1);
+      color: white;
     }
     #mainNav .nav-link {
       -webkit-transition: none;
       transition: none;
       padding: 2rem 1.5rem;
-      color: rgb(68, 35, 1);/*cor nav header home*/
+      color: white;/*cor nav header home*/
     }
     #mainNav .nav-link:hover {
       color: #BD5E00;
