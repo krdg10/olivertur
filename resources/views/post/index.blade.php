@@ -16,7 +16,7 @@
                 @php $flag=1; @endphp
             @endif
         @endforeach
-        <div class="d-flex justify-content-center">
+        <div class="container d-flex justify-content-center">
             {{ $posts->links() }}
         </div>
     </div>
