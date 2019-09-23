@@ -2,8 +2,8 @@
 <div id="app">
 @include('layouts.header_mini')
 <!-- por nav -->
-<div class="container">
-    <h2 class="d-flex justify-content-center text-white">Editar Pacote</h2>
+<div class="container background-white">
+    <h2 class="d-flex justify-content-center">Editar Pacote</h2>
     <hr>
     <div class="col-lg-12 justify-content-center">
         <div id="formContent">
@@ -27,22 +27,58 @@
                 @method('put')
                 <div class="row">
                     <div class="col-lg-6 justify-content-center">
-                        <input type="text" placeholder="Nome - Título do Pacote" name="nome" value="{{ $pacote->nome }}" class="form-control" maxlength="30" required>
-                        <input type="text" placeholder="Pagamento - Formas: a vista, prazo." value="{{ $pacote->pagamento }}" name="pagamento" class="form-control" maxlength="150">
-                        <input type="number" placeholder="Preço - Valor do pacote. Não colocar R$" value="{{ $pacote->preco }}" name="preco" class="form-control" required min="0" max="1000000">
-                        <input type="number" placeholder="Parcelas - Quantia de parcelas." value="{{ $pacote->parcelas }}" name="parcelas" class="form-control" required min="0" max="1000000">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" placeholder="Nome - Título do Pacote" name="nome" value="{{ $pacote->nome }}" class="form-control" maxlength="30" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pagamento">Pagamento</label>
+                            <input type="text" placeholder="Pagamento - Formas: a vista, prazo." value="{{ $pacote->pagamento }}" name="pagamento" class="form-control" maxlength="150">
+                        </div>
+                        <div class="form-group">
+                            <label for="preco">Preço</label>
+                            <input type="number" placeholder="Preço - Valor do pacote. Não colocar R$" value="{{ $pacote->preco }}" name="preco" class="form-control" required min="0" max="1000000">
+                        </div>
+                        <div class="form-group">
+                            <label for="parcelas">Quantidade de Parcelas</label>
+                            <input type="number" placeholder="Parcelas - Quantia de parcelas." value="{{ $pacote->parcelas }}" name="parcelas" class="form-control" required min="0" max="1000000">
+                        </div>
                     </div>
                     <div class="col-lg-6 justify-content-center">
-                        <input type="text" placeholder="Data - Toda semana, 24/10/2019 até 24/10/2019, etc." value="{{ $pacote->data }}" name="data" class="form-control" maxlength="50">
-                        <input type="text" placeholder="Característica 1 - Que vai ser exibido no card." value="{{ $pacote->caracteristica1 }}" name="caracteristica1" class="form-control" maxlength="30">
-                        <input type="text" placeholder="Característica 2 - Que vai ser exibido no card." value="{{ $pacote->caracteristica2 }}" name="caracteristica2" class="form-control" maxlength="30">
-                        <input type="text" placeholder="Característica 3 - Que vai ser exibido no card." value="{{ $pacote->caracteristica3 }}" name="caracteristica3" class="form-control" maxlength="30">
+                        <div class="form-group">
+                            <label for="data">Data</label>
+                            <input type="text" placeholder="Data - Toda semana, 24/10/2019 até 24/10/2019, etc." value="{{ $pacote->data }}" name="data" class="form-control" maxlength="50">
+                        </div>
+                        <div class="form-group">
+                            <label for="caracteristica1">Característica 1</label>
+                            <input type="text" placeholder="Característica 1 - Que vai ser exibido no card." value="{{ $pacote->caracteristica1 }}" name="caracteristica1" class="form-control" maxlength="30">
+                        </div>
+                        <div class="form-group">
+                            <label for="caracteristica2">Característica 2</label>
+                            <input type="text" placeholder="Característica 2 - Que vai ser exibido no card." value="{{ $pacote->caracteristica2 }}" name="caracteristica2" class="form-control" maxlength="30">
+                        </div>
+                        <div class="form-group">
+                            <label for="caracteristica3">Característica 3</label>
+                            <input type="text" placeholder="Característica 3 - Que vai ser exibido no card." value="{{ $pacote->caracteristica3 }}" name="caracteristica3" class="form-control" maxlength="30">
+                        </div>
                     </div>
                 </div>
-                <textarea type="text" placeholder="Condições - As condições gerais. O que ele tem, vai fazer, etc." name="condicoes" class="form-control" maxlength="600" required rows="5">{{ $pacote->condicoes }}</textarea>
-                <textarea type="text" placeholder="Inclui - Os benefícios do pacote." name="inclui" class="form-control" maxlength="600" required rows="5">{{ $pacote->inclui }}</textarea>
-                <textarea type="text" placeholder="Não Inclui - Coisas que ele não tem." name="n_inclui" class="form-control" maxlength="600" required rows="5">{{ $pacote->n_inclui }}</textarea>
-                <textarea type="text" placeholder="Mais informações - mais informações relacionadas a viagem mas não relacionada ao pacote." name="maisinformacoes" class="form-control" maxlength="600" required rows="5">{{ $pacote->maisinformacoes }}</textarea>
+                <div class="form-group">
+                    <label for="condicoes">Condições</label>
+                    <textarea type="text" placeholder="Condições - As condições gerais. O que ele tem, vai fazer, etc." name="condicoes" class="form-control" maxlength="600" required rows="5">{{ $pacote->condicoes }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="inclui">Inclui</label>
+                    <textarea type="text" placeholder="Inclui - Os benefícios do pacote." name="inclui" class="form-control" maxlength="600" required rows="5">{{ $pacote->inclui }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="n_inclui">Não Inclui</label>
+                    <textarea type="text" placeholder="Não Inclui - Coisas que ele não tem." name="n_inclui" class="form-control" maxlength="600" required rows="5">{{ $pacote->n_inclui }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="maisinformacoes">Mais Informações</label>
+                    <textarea type="text" placeholder="Mais informações - mais informações relacionadas a viagem mas não relacionada ao pacote." name="maisinformacoes" class="form-control" maxlength="600" required rows="5">{{ $pacote->maisinformacoes }}</textarea>
+                </div>
                 <div class="d-flex justify-content-center" id="formFooter">
                     <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Salvar </button>
                     <button class="fadeIn fourth btn btn-danger" href="{{ route('pacotes.destroy', $pacote->id) }}"
@@ -60,20 +96,23 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container background-white">
     <h2 class="d-flex justify-content-center text-white">Adicionar Foto</h2>
     <hr>
     <div class="col-lg-12 d-flex justify-content-center">
         <form id="delete-form" method="POST" action="{{ route('fotos.store_pacote', $pacote->id) }}" enctype="multipart/form-data">
             @csrf
-            <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" multiple required/>
+            <div class="form-group">
+                <label for="fotos">Fotos</label>
+                <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" multiple required/>
+            </div>
             <div class="d-flex justify-content-center" id="formFooter">
                 <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Adicionar </button>
             </div>
         </form>
     </div>
 </div>
-<div class="container">
+<div class="container margin10Top">
     <div class="row">
         @foreach($fotos as $foto)
             <div class="col-md-4">
@@ -83,7 +122,10 @@
                         <form method="POST" action="{{ route('fotos.update', $foto->id) }}" enctype="multipart/form-data">
                             @csrf
                             @method('put')
-                            <input type="text" placeholder="Nome da Foto - Legenda e Alt da foto." name="nomeFoto" value="{{$foto->nome}}" class="form-control" maxlength="50" required>
+                            <div class="form-group">
+                                <label for="nomeFoto">Nome da Foto</label>
+                                <input type="text" placeholder="Nome da Foto - Legenda e Alt da foto." name="nomeFoto" value="{{$foto->nome}}" class="form-control" maxlength="50" required>
+                            </div>
                             <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Atualizar </button>
                             <button class="fadeIn fourth btn btn-danger" href="{{ route('fotos.destroy', $foto->id) }}" 
                                 onclick="event.preventDefault();
