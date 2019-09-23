@@ -4671,6 +4671,9 @@
   .marginCard{
     margin-bottom: 5px;
   }
+  .margin10Top{
+    margin-top: 10px;
+  }
   .pacoteCard{
     max-height: 500px;
     min-height: 500px;

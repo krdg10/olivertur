@@ -1,8 +1,8 @@
 @include('layouts.head')
 @include('layouts.header_mini')
 <!-- por nav -->
-<div class="container">
-    <h2 class="d-flex justify-content-center text-white">Editar Post</h2>
+<div class="container background-white">
+    <h2 class="d-flex justify-content-center">Editar Post</h2>
     <hr>
     <div class="col-lg-12 justify-content-center">
         <div id="formContent">
@@ -25,10 +25,22 @@
             <form method="POST" action="{{ route('posts.update', $post->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('put')
-                <input type="text" placeholder="Título do post." name="titulo" value="{{$post->titulo}}" class="form-control" maxlength="30" required>
-                <textarea type="text" placeholder="Prévia - Textinho que vai ficar na listagem de todos os posts." name="previa" class="form-control" maxlength="120" required rows="10">{{$post->previa}}</textarea>
-                <textarea type="text" placeholder="Texto - O conteúdo do post." name="texto" class="form-control" required rows="10">{{$post->texto}}</textarea>
-                <input type="text" placeholder="Tag - a categoria do post."  name="tag" value="{{$post->tag}}" class="form-control" maxlength="25" required>
+                <div class="form-group">
+                    <label for="titulo">Título</label>
+                    <input type="text" placeholder="Título do post." name="titulo" value="{{$post->titulo}}" class="form-control" maxlength="30" required>
+                </div>
+                <div class="form-group">
+                    <label for="previa">Prévia</label>
+                    <textarea type="text" placeholder="Prévia - Textinho que vai ficar na listagem de todos os posts." name="previa" class="form-control" maxlength="120" required rows="10">{{$post->previa}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="texto">Texto</label>
+                    <textarea type="text" placeholder="Texto - O conteúdo do post." name="texto" class="form-control" required rows="10">{{$post->texto}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tag">Categoria</label>
+                    <input type="text" placeholder="Tag - a categoria do post."  name="tag" value="{{$post->tag}}" class="form-control" maxlength="25" required>
+                </div>
                 <div class="d-flex justify-content-center" id="formFooter">
                     <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Salvar </button>
                     <button class="fadeIn fourth btn btn-danger" href="{{ route('posts.destroy', $post->id) }}"
@@ -45,30 +57,36 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container background-white">
     <h2 class="d-flex justify-content-center">Adicionar Foto</h2>
     <hr>
     <div class="col-lg-12 d-flex justify-content-center">
         <form id="delete-form" method="POST" action="{{ route('fotos.store_post', $post->id) }}" enctype="multipart/form-data">
             @csrf
-            <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" multiple required/>
+            <div class="form-group">
+                <label for="fotos">Fotos</label>
+                <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" multiple required/>
+            </div>
             <div class="d-flex justify-content-center" id="formFooter">
                 <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Adicionar </button>
             </div>
         </form>
     </div>
 </div>
-<div class="container">
+<div class="container margin10Top">
     <div class="row">
         @foreach($fotos as $foto)
             <div class="col-md-4">
-                <div class="card">
+                <div class="card marginCard">
                     <img class="card-img-top img-thumbnail img-fluid" src="/storage/{{ $foto->url }}" alt="{{ $foto->nome }}">
                     <div class="card-body">
                         <form method="POST" action="{{ route('fotos.update', $foto->id) }}" enctype="multipart/form-data">
                             @csrf
                             @method('put')
-                            <input type="text" placeholder="Nome da Foto - Legenda e Alt da foto." name="nomeFoto" value="{{$foto->nome}}" class="form-control" maxlength="50" required>
+                            <div class="form-group">
+                                <label for="nomeFoto">Nome da Foto</label>
+                                <input type="text" placeholder="Nome da Foto - Legenda e Alt da foto." name="nomeFoto" value="{{$foto->nome}}" class="form-control" maxlength="50" required>
+                            </div>
                             <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Atualizar </button>
                             <button class="fadeIn fourth btn btn-danger" href="{{ route('fotos.destroy', $foto->id) }}" 
                                 onclick="event.preventDefault();
