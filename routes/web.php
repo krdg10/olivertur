@@ -47,16 +47,6 @@ Route::post('logout', [
   'as' => 'logout',
   'uses' => 'Auth\LoginController@logout'
 ]);
-
-//register
-  Route::get('register', [
-    'as' => 'register',
-    'uses' => 'Auth\RegisterController@showRegistrationForm'
-  ]);
-  Route::post('register', [
-    'as' => '',
-    'uses' => 'Auth\RegisterController@register'
-  ]);
   
 Route::group(['middleware' => ['auth']], function () {  
   //criação de post e pacote
@@ -86,7 +76,15 @@ Route::group(['middleware' => ['auth']], function () {
   Route::put('/edit/foto/{id}', 'FotosController@update')->name('fotos.update');
   Route::delete('/edit/foto/{id}', 'FotosController@destroy')->name('fotos.destroy');
   
-
+  //register
+  Route::get('register', [
+    'as' => 'register',
+    'uses' => 'Auth\RegisterController@showRegistrationForm'
+  ]);
+  Route::post('register', [
+    'as' => '',
+    'uses' => 'Auth\RegisterController@register'
+  ]);
   
 });
 
