@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col">
                         @if($pacote->pagamento)<h5>Pagamento:</h5> <p align="justify" class="lead">{{$pacote->pagamento}}</p>@endif
-                        <h5>Preço:</h5> <p align="justify" class="lead">R${{$pacote->preco}} em até {{$pacote->parcelas}}x.</p>
+                        <h5>Preço:</h5> <p align="justify" class="lead">R${{number_format($pacote->preco, 2, ',', '')}} em até {{$pacote->parcelas}}x.</p>
                         @if($pacote->data)<h5>Data:</h5> <p align="justify" class="lead">{{$pacote->data}}</p>@endif
                     </div>
                     

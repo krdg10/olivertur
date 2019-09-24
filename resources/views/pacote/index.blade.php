@@ -14,7 +14,7 @@
                         @if($pacote->caracteristica3)<p class="card-text text-center"><small class="text-muted">• {{ $pacote->caracteristica3 }}</small></p>@else<p class="card-text text-center"><small class="text-muted">&nbsp</small></p>@endif
                     </div>
                     <div class="card-footer text-muted">
-                        <p class="card-text">R${{$pacote->preco}} em até {{ $pacote->parcelas }}x.</p>
+                        <p class="card-text">R${{number_format($pacote->preco, 2, ',', '')}} em até {{ $pacote->parcelas }}x.</p>
                         @guest
                             @if (Route::has('register'))
                             @endif
