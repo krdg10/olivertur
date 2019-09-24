@@ -73,19 +73,16 @@
                     <label for="condicoes">Condições</label>
                     <textarea type="text" placeholder="Condições - As condições gerais. O que ele tem, vai fazer, etc." name="condicoes" class="form-control" maxlength="600" required rows="5"></textarea>
                     <small id="condicoesHelp" class="form-text text-muted">Obrigatório. Máximo 600 caracteres.</small>
-
                 </div>
                 <div class="form-group">
                     <label for="inclui">Inclui</label>
                     <textarea type="text" placeholder="Inclui - Os benefícios do pacote." name="inclui" class="form-control" maxlength="600" required rows="5"></textarea>
                     <small id="incluiHelp" class="form-text text-muted">Obrigatório. Máximo 600 caracteres.</small>
-
                 </div>
                 <div class="form-group">
                     <label for="n_inclui">Não Inclui</label>
                     <textarea type="text" placeholder="Não Inclui - Coisas que ele não tem." name="n_inclui" class="form-control" maxlength="600" required rows="5"></textarea>
                     <small id="n_incluiHelp" class="form-text text-muted">Obrigatório. Máximo 600 caracteres.</small>
-
                 </div>
                 <div class="form-group">
                     <label for="maisinformacoes">Mais Informações</label>
