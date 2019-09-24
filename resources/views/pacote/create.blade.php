@@ -88,7 +88,6 @@
                     <label for="maisinformacoes">Mais Informações</label>
                     <textarea type="text" placeholder="Mais informações - mais informações relacionadas a viagem mas não relacionada ao pacote." name="maisinformacoes" class="form-control" maxlength="600" required rows="5"></textarea>
                     <small id="maisinformacoesHelp" class="form-text text-muted">Obrigatório. Máximo 600 caracteres.</small>
-
                 </div>
                 <div class="form-group">
                     <label for="fotos">Fotos</label>
