@@ -35,7 +35,7 @@
                         </div>
                         <div class="form-group">
                             <label for="preco">Preço</label>
-                            <input type="number" placeholder="Preço - Valor do pacote. Não colocar R$" name="preco" class="form-control" required min="0" max="1000000">
+                            <input type="number" placeholder="Preço - Valor do pacote. Não colocar R$" name="preco" step="any" class="form-control" required min="0" max="1000000">
                         </div>
                         <div class="form-group">
                             <label for="parcelas">Quantidade de Parcelas</label>
