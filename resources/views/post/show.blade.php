@@ -8,7 +8,7 @@
             @include('blog.carrossel')
             <hr>
             <!-- Post Content -->
-            <p align="justify" class="lead">{{$post->texto}}</p>
+            <p align="justify" class="lead">{!! nl2br(e($post->texto)) !!}</p>
            
         </div>
         @include('blog.sidebar')
