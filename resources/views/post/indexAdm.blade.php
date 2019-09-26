@@ -6,6 +6,7 @@
         <thead>
             <tr>
                 <th>Título</th>
+                <th>Autor</th>
                 <th>Ver</th>
                 <th>Editar/Apagar</th>
             </tr>
@@ -17,6 +18,7 @@
                     @foreach ($posts as $post)
                         <tr>
                             <td>{{$post->titulo}}</td>
+                            <td>{{$post->autor->name}}</td>
                             <td><a href="{{ url('/blog/'.$post->id) }}"> <i class="fas fa-eye"></i> </a></td>
                             <td><a href="{{ url('/blog/edit/'.$post->id) }}"> <i class="fas fa-edit"></i> </a></td>
                         </tr>

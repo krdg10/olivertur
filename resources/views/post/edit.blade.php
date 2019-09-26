@@ -28,18 +28,22 @@
                 <div class="form-group">
                     <label for="titulo">Título</label>
                     <input type="text" placeholder="Título do post." name="titulo" value="{{$post->titulo}}" class="form-control" maxlength="30" required>
+                    <small id="tituloHelp" class="form-text text-muted">Obrigatório. Máximo 30 caracteres.</small>
                 </div>
                 <div class="form-group">
                     <label for="previa">Prévia</label>
                     <textarea type="text" placeholder="Prévia - Textinho que vai ficar na listagem de todos os posts." name="previa" class="form-control" maxlength="120" required rows="10">{{$post->previa}}</textarea>
+                    <small id="previaHelp" class="form-text text-muted">Obrigatório. Máximo 120 caracteres.</small>
                 </div>
                 <div class="form-group">
                     <label for="texto">Texto</label>
                     <textarea type="text" placeholder="Texto - O conteúdo do post." name="texto" class="form-control" required rows="10">{{$post->texto}}</textarea>
+                    <small id="textoHelp" class="form-text text-muted">Obrigatório.</small>
                 </div>
                 <div class="form-group">
                     <label for="tag">Categoria</label>
                     <input type="text" placeholder="Tag - a categoria do post."  name="tag" value="{{$post->tag}}" class="form-control" maxlength="25" required>
+                    <small id="tagHelp" class="form-text text-muted">Obrigatório. Máximo 25 caracteres.</small>
                 </div>
                 <div class="d-flex justify-content-center" id="formFooter">
                     <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Salvar </button>
@@ -66,6 +70,7 @@
             <div class="form-group">
                 <label for="fotos">Fotos</label>
                 <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" multiple required/>
+                <small id="fotosHelp" class="form-text text-muted">Arquivos nos formatos: gif, png, jpg e jpeg.</small>
             </div>
             <div class="d-flex justify-content-center" id="formFooter">
                 <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Adicionar </button>
@@ -86,6 +91,7 @@
                             <div class="form-group">
                                 <label for="nomeFoto">Nome da Foto</label>
                                 <input type="text" placeholder="Nome da Foto - Legenda e Alt da foto." name="nomeFoto" value="{{$foto->nome}}" class="form-control" maxlength="50" required>
+                                <small id="nomeFotoHelp" class="form-text text-muted">Máximo 50 caracteres.</small>
                             </div>
                             <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Atualizar </button>
                             <button class="fadeIn fourth btn btn-danger" href="{{ route('fotos.destroy', $foto->id) }}" 

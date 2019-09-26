@@ -63,14 +63,14 @@
     </nav>
     <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="condicoes" role="tabpanel" aria-labelledby="nav-condicoes">
-            <h5>Condições Gerais:</h5> <p align="justify" class="lead">{{$pacote->condicoes}}</p>
+            <h5>Condições Gerais:</h5> <p align="justify" class="lead">{!! nl2br(e($pacote->condicoes)) !!}</p>
         </div>
         <div class="tab-pane fade" id="inclui" role="tabpanel" aria-labelledby="nav-inclui">
-            <h5>Inclui:</h5> <p align="justify" class="lead">{{$pacote->inclui}}</p>
-            <h5>Não Inclui:</h5> <p align="justify" class="lead">{{$pacote->n_inclui}}</p>
+            <h5>Inclui:</h5> <p align="justify" class="lead">{!! nl2br(e($pacote->inclui)) !!}</p>
+            <h5>Não Inclui:</h5> <p align="justify" class="lead">{!! nl2br(e($pacote->n_inclui)) !!}</p>
         </div>
         <div class="tab-pane fade" id="maisinformacoes" role="tabpanel" aria-labelledby="nav-maisinformacoes">
-            <h5>Mais Informações:</h5> <p align="justify" class="lead">{{$pacote->maisinformacoes}}</p>
+            <h5>Mais Informações:</h5> <p align="justify" class="lead">{!! nl2br(e($pacote->maisinformacoes)) !!}</p>
         </div>
     </div>
 </div>
