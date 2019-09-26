@@ -6,7 +6,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">A equipe da example deseja Boas Vindas!</h2>
+          <h2 class="text-white mb-4">A equipe da OliverTur deseja Boas Vindas!</h2>
           <p class="text-white">Temos a disposição diversos destinos turísticos com uma grande variedade de atrativos, programações e passeios. Os principais destinos são o Pantanal Sul, Bolívia e Peru. Trabalhamos com o Turismo Personalizado, organizamos a sua viagem de acordo com seu perfil, tempo e orçamento disponível. Encontre o destino ideal para sua tão sonhada viagem. Entre em contato conosco!</p>
         </div>
       </div>
@@ -47,7 +47,7 @@
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
                 <a href="{{ url('/bolivia') }}"><h4 class="text-white">Bolívia</h4></a>
-                <p class="mb-0 text-white-50">A example conta com diversos destinos e passeios no nosso país vizinho, desde a região da chiquitania, onde é possivel encontrar cidades maravilhosas, igrejas construidas por jesuitas no século XVII e recantos naturais apaixonantes, até a região do altos onde há ruinas de povos pré-colombianos, deserto de sal e o lago mais altos do mundo. Aventure-se por esses destinos com a example.</p>
+                <p class="mb-0 text-white-50">A OliverTur conta com diversos destinos e passeios no nosso país vizinho, desde a região da chiquitania, onde é possivel encontrar cidades maravilhosas, igrejas construidas por jesuitas no século XVII e recantos naturais apaixonantes, até a região do altos onde há ruinas de povos pré-colombianos, deserto de sal e o lago mais altos do mundo. Aventure-se por esses destinos com a OliverTur.</p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
