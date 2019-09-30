@@ -1,5 +1,5 @@
 <!-- Sidebar Widgets Column -->
-<div class="col-md-4">
+<div class="col-md-4" id="side">
    
     <!-- Categories Widget -->
     <div class="card my-4">
