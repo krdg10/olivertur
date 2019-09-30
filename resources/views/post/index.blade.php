@@ -17,7 +17,7 @@
             @endif
         @endforeach
         <div class="container d-flex justify-content-center">
-            {{ $posts->links() }}
+            {{ $posts->onEachSide(1)->links() }}
         </div>
     </div>
     <!-- /.row -->

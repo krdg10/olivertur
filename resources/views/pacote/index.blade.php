@@ -26,7 +26,7 @@
             </div>
         @endforeach
         <div class="container d-flex justify-content-center">
-            {{ $pacotes->links() }}
+            {{ $pacotes->onEachSide(1)->links() }}
         </div>
     </div>
 </div>

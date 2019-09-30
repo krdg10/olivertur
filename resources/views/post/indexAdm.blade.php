@@ -26,7 +26,7 @@
                 </tbody>
             </table>
     <div class="d-flex justify-content-center">
-        {{ $posts->links() }}
+        {{ $posts->onEachSide(1)->links() }}
     </div>
 </div>
 @include('layouts.footer')

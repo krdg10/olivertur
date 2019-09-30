@@ -24,7 +24,7 @@
                 </tbody>
             </table>
     <div class="d-flex justify-content-center">
-        {{ $pacotes->links() }}
+        {{ $pacotes->onEachSide(1)->links() }}
     </div>
 </div>
 @include('layouts.footer')
