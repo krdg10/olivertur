@@ -8,7 +8,7 @@
 @endguest
 <!-- Author -->
 <p class="lead">
-by
+por
 <a href="/blog/autor/{{$post->autor->name}}">{{$post->autor->name}}</a>
 </p>
 <p class="lead">
@@ -17,5 +17,5 @@ Categoria
 </p>
 <hr>
 <!-- Date/Time -->
-<p>Posted on {{$post->data}}</p>
+<p>Postado em {{date('d/m/Y', strtotime($post->data))}}</p>
 <hr>
