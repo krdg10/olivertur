@@ -158,10 +158,10 @@
     text-decoration: none;
     background-color: transparent;
   }
-  h4.text-white:hover {
+  a h4.text-white:hover {
     color: #BD5E00 !important;
   }
-  h4.text-white:active {
+  a h4.text-white:active {
     color: #BD5E00 !important;
   }
   
