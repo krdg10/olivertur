@@ -89,7 +89,7 @@
                 <p class="card-text">{{ $post->previa }}</p>
               </div>
               <div class="card-footer text-muted">
-                <p class="card-text"><small class="text-muted">{{ $post->data }}</small></p>
+                <p class="card-text"><small class="text-muted">{{date('d/m/Y', strtotime($post->data))}}</small></p>
               </div>
             </div>
           </div>
