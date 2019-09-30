@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                     <h2 class="text-white mb-4">Visite o Peru!</h2>
-                    <p class="text-white"> O Peru é um país da América do Sul que abriga uma parte da Floresta Amazônica e Machu Picchu, uma antiga cidade inca na cordilheira dos Andes. A região ao redor de Machu Picchu, que abrange o Vale Sagrado dos Incas, o Camino Inca e a cidade colonial de Cusco, é rica em sítios arqueológicos. </p>
+                    <p class="text-white"> Um país com imensa mistura de tradições e culturas, que começou a acontecer bem antes da colonização espanhola no século XVI. O Peru é um país de arraigada tradição e de passado indígena, mas também fortemente ligado aos costumes impostos pelos conquistadores espanhóis. Essa mistura de culturas deixou em seu vasto território monumentos históricos, igrejas e sítios arqueológicos. A natureza também não deixa por menos: aqui, há belas florestas, desertos e cordilheiras nevadas. </p>
                     </div>
                 </div>
                 <img src="img/ipad.png" class="img-fluid" alt="">

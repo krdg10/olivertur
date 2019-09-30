@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                     <h2 class="text-white mb-4">Visite a Bolívia!</h2>
-                    <p class="text-white">A OliverTur conta com diversos destinos e passeios no nosso país vizinho, desde a região da chiquitania, onde é possivel encontrar cidades maravilhosas, igrejas construidas por jesuitas no século XVII e recantos naturais apaixonantes, até a região do altos onde há ruinas de povos pré-colombianos, deserto de sal e o lago mais altos do mundo. </p>
+                    <p class="text-white">A Bolívia é um país da parte central da América do Sul, com relevo variado que inclui a cordilheira dos Andes, o deserto de Atacama e a floresta tropical da bacia do rio Amazonas. A mais de 3.500 m de altitude, sua capital administrativa, La Paz, está localizada no altiplano andino, tendo a montanha Illimani, coberta de neve, como plano de fundo. Na região mais baixa, a chiquitania, conta com cidades históricas e destinos apaixonantes. Venha conhecer esse pais magnifico com a OliverTur!  </p>
                     </div>
                 </div>
                 <img src="img/ipad.png" class="img-fluid" alt="">

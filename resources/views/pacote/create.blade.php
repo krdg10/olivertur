@@ -28,7 +28,7 @@
                         <div class="form-group">
                             <label for="nome">Nome</label>
                             <input type="text" placeholder="Nome - Título do Pacote" name="nome" class="form-control" maxlength="30" required>
-                            <small id="nomeHelp" class="form-text text-muted">Obrigatório. Máximo 30 caracteres.</small>
+                            <small id="nomeHelp" class="form-text text-muted">Campo obrigatório. Máximo 30 caracteres.</small>
                         </div>
                         <div class="form-group">
                             <label for="pagamento">Pagamento</label>
@@ -38,12 +38,12 @@
                         <div class="form-group">
                             <label for="preco">Preço</label>
                             <input type="number" placeholder="Preço - Valor do pacote. Não colocar R$" name="preco" step="any" class="form-control" required min="0" max="1000000">
-                            <small id="precoHelp" class="form-text text-muted">Obrigatório. Apenas números positivos. Não colocar R$.</small>
+                            <small id="precoHelp" class="form-text text-muted">Campo obrigatório. Apenas números positivos. Não colocar R$.</small>
                         </div>
                         <div class="form-group">
                             <label for="parcelas">Quantidade de Parcelas</label>
                             <input type="number" placeholder="Parcelas - Quantia de parcelas." name="parcelas" class="form-control" required min="0" max="1000000">
-                            <small id="parcelasHelp" class="form-text text-muted">Obrigatório. Apenas números positivos.</small>
+                            <small id="parcelasHelp" class="form-text text-muted">Campo obrigatório. Apenas números positivos.</small>
                         </div>
                     </div>
                     <div class="col-lg-6 justify-content-center">
@@ -72,27 +72,27 @@
                 <div class="form-group">
                     <label for="condicoes">Condições</label>
                     <textarea type="text" placeholder="Condições - As condições gerais. O que ele tem, vai fazer, etc." name="condicoes" class="form-control" maxlength="600" required rows="5"></textarea>
-                    <small id="condicoesHelp" class="form-text text-muted">Obrigatório. Máximo 600 caracteres.</small>
+                    <small id="condicoesHelp" class="form-text text-muted">Campo obrigatório. Máximo 600 caracteres.</small>
                 </div>
                 <div class="form-group">
                     <label for="inclui">Inclui</label>
                     <textarea type="text" placeholder="Inclui - Os benefícios do pacote." name="inclui" class="form-control" maxlength="600" required rows="5"></textarea>
-                    <small id="incluiHelp" class="form-text text-muted">Obrigatório. Máximo 600 caracteres.</small>
+                    <small id="incluiHelp" class="form-text text-muted">Campo obrigatório. Máximo 600 caracteres.</small>
                 </div>
                 <div class="form-group">
                     <label for="n_inclui">Não Inclui</label>
                     <textarea type="text" placeholder="Não Inclui - Coisas que ele não tem." name="n_inclui" class="form-control" maxlength="600" required rows="5"></textarea>
-                    <small id="n_incluiHelp" class="form-text text-muted">Obrigatório. Máximo 600 caracteres.</small>
+                    <small id="n_incluiHelp" class="form-text text-muted">Campo obrigatório. Máximo 600 caracteres.</small>
                 </div>
                 <div class="form-group">
                     <label for="maisinformacoes">Mais Informações</label>
                     <textarea type="text" placeholder="Mais informações - mais informações relacionadas a viagem mas não relacionada ao pacote." name="maisinformacoes" class="form-control" maxlength="600" required rows="5"></textarea>
-                    <small id="maisinformacoesHelp" class="form-text text-muted">Obrigatório. Máximo 600 caracteres.</small>
+                    <small id="maisinformacoesHelp" class="form-text text-muted">Campo Obrigatório. Máximo 600 caracteres.</small>
                 </div>
                 <div class="form-group">
                     <label for="fotos">Fotos</label>
                     <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" multiple required />
-                    <small id="fotosHelp" class="form-text text-muted">Obrigatório. Arquivos nos formatos: gif, png, jpg e jpeg.</small>
+                    <small id="fotosHelp" class="form-text text-muted">Campo obrigatório. Arquivos nos formatos: gif, png, jpg e jpeg.</small>
                 </div>
                 <div class="d-flex justify-content-center" id="formFooter">
                     <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Salvar </button>
