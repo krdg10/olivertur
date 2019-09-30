@@ -10729,3 +10729,8 @@ body.mobile-nav-active #mobile-nav {
   margin-bottom:10px;
   padding-bottom:10px;
 }
+@media (max-width: 991px) {
+  #side {
+    display: none;
+  }
+}
