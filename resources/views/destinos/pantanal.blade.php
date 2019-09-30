@@ -11,7 +11,9 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                     <h2 class="text-white mb-4">Conheça o Pantanal Sul Matogrossense!</h2>
-                    <p class="text-white-50">O Pantanal Sul possui uma imensa diversidade na fauna e flora. Existem na região 1.132 espécies de borboletas, 656 de aves, 122 de mamíferos, 263 de peixes e 93 de répteis. Existem diversas atrações e programações que é possivel realizar nesses destinos, como pesca, trilhas, passeios e safáris fotográficos, mergulho, observação de aves, dia de peão e hospedagem em fazendas. Os principais destinos do Pantanal Sul Matogrossense que a OliverTur oferece seus serviços são Corumbá, Bonito e Fazendas no Pantanal.</p>
+                    <p class="text-white">Um destino que agrada diferentes perfis de turistas, o Pantanal conta com uma programação que une o melhor da aventura em meio ao cenário verde, momentos de descanso nos belos hotéis-fazenda ou hotéis-barco da região e passeios por cidades e locais históricos.
+
+                    Para fazer um passeio diferente e aproveitar o final de semana em meio a um cenário perfeito para a prática de diferentes esportes, a dica é passear pelo Pantanal sul-mato-grossense. Conheça as três principais destinos que a OliverTur te leva para conhecer!</p>
                     </div>
                 </div>
                 <img src="img/ipad.png" class="img-fluid" alt="">

@@ -9,7 +9,7 @@
               <i class="fas fa-map-marked-alt text-primary mb-2"></i>
               <h4 class="text-uppercase m-0">Endereço</h4>
               <hr class="my-4">
-              <div class="small text-black-50">Rua Firmo de Matos, 275 - Centro. Corumbá-MS</div>
+              <div class="small text-black-50"> <b>Rua Firmo de Matos, 275 - Centro. Corumbá-MS </b></div>
             </div>
           </div>
         </div>
@@ -32,9 +32,9 @@
               <i class="fas fa-mobile-alt text-primary mb-2"></i>
               <h4 class="text-uppercase m-0">Contatos</h4>
               <hr class="my-4">
-              <div class="small text-black-50"> <p> +55 067 3231-2030 </p>
-              <p> +55 067 99861 - 4874 (Lídia) </p>
-              <p> +55 067 9640-2712 (Ruth) </p>
+              <div class="small text-black-50"> <p><b> +55 067 3231-2030 </b></p>
+              <p><b> +55 067 99861-4874 (Lídia) </b></p>
+              <p><b> +55 067 9640-2712 (Ruth) </b></p>
               
                </div>
             </div>
@@ -50,6 +50,6 @@
   <!-- Footer -->
   <footer class="bg-black small text-center text-white-50">
     <div class="container">
-      Copyright &copy; Your Website 2019
+      Copyright &copy; OliverTur Viagens e Turismo 2019
     </div>
   </footer>

@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                     <h2 class="text-white mb-4">Visite a Bolívia!</h2>
-                    <p class="text-white-50">A OliverTur conta com diversos destinos e passeios no nosso país vizinho, desde a região da chiquitania, onde é possivel encontrar cidades maravilhosas, igrejas construidas por jesuitas no século XVII e recantos naturais apaixonantes, até a região do altos onde há ruinas de povos pré-colombianos, deserto de sal e o lago mais altos do mundo. </p>
+                    <p class="text-white">A OliverTur conta com diversos destinos e passeios no nosso país vizinho, desde a região da chiquitania, onde é possivel encontrar cidades maravilhosas, igrejas construidas por jesuitas no século XVII e recantos naturais apaixonantes, até a região do altos onde há ruinas de povos pré-colombianos, deserto de sal e o lago mais altos do mundo. </p>
                     </div>
                 </div>
                 <img src="img/ipad.png" class="img-fluid" alt="">
