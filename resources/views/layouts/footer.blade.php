@@ -17,6 +17,7 @@
         <div class="col-md-4 mb-3 mb-md-0">
           <div class="card h-100">
             <div class="card-body text-center">
+              <i class="fas fa-hashtag text-primary mb-2"></i>
               <h4 class="text-uppercase m-0">Redes Sociais</h4>
               <hr class="my-4">
               <div class="icones text-black-50">
