@@ -2,8 +2,8 @@
 <div id="app">
 @include('layouts.header_mini')
 <!-- por nav -->
-<div class="container background-white">
-    <h2 class="d-flex justify-content-center">Editar Pacote</h2>
+<div class="container bg-black border-radius">
+    <h2 class="d-flex justify-content-center text-white">Editar Pacote</h2>
     <hr>
     <div class="col-lg-12 justify-content-center">
         <div id="formContent">
@@ -108,8 +108,8 @@
         </div>
     </div>
 </div>
-<div class="container background-white">
-    <h2 class="d-flex justify-content-center text-white">Adicionar Foto</h2>
+<div class="container bg-black border-radius">
+    <h2 class="d-flex justify-content-center text-white text-white">Adicionar Foto</h2>
     <hr>
     <div class="col-lg-12 d-flex justify-content-center">
         <form id="delete-form" method="POST" action="{{ route('fotos.store_pacote', $pacote->id) }}" enctype="multipart/form-data">

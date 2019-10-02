@@ -15,7 +15,7 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="projects-section bg-light">
+  <section id="projects" class="projects-section bgBlog">
     <div class="container">
       <div class="row justify-content-center no-gutters">
         <div class="col-lg-6">
@@ -76,7 +76,7 @@
     </div>
   </section>
 
-  <section id="signup" class="signup-section bgBlog">
+  <section id="signup" class="signup-section bgSignUp">
     <div class="container">
       <h1 class="text-white mb-5 text-center">Blog</h1>
       <div class="row">

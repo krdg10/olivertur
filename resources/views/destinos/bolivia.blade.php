@@ -19,7 +19,7 @@
             </section>
 
             <!-- Projects Section -->
-            <section id="projects" class="projects-section bg-light">
+            <section id="projects" class="projects-section bgBlog">
                 <div class="container">
                 <div class="row justify-content-center no-gutters">
                     <div class="col-lg-6">
