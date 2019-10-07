@@ -23,8 +23,10 @@ class PostsController extends Controller
             $error[] = 'Insira uma categoria!';
         }
         else{
-            if(strlen($request->tag)>25){
-                $error[] = 'Insira categoria com no máximo 25 caracteres!';
+            if(!($request->tag=='Turismo Ecológico'||$request->tag=='Excursão'||$request->tag=='City Tour'||
+            $request->tag=='Fazenda Pantanal'||$request->tag=='Day Use'||$request->tag=='Pesca Pantanal'||
+            $request->tag=='Bonito Tour'||$request->tag=='Receitas'||$request->tag=='Trilhas')){
+                $error[] = 'Insira uma categoria válida!';
             }
         }
 
@@ -137,8 +139,10 @@ class PostsController extends Controller
             $error[] = 'Insira uma categoria!';
         }
         else{
-            if(strlen($request->tag)>25){
-                $error[] = 'Insira categoria com no máximo 25 caracteres!';
+            if(!($request->tag=='Turismo Ecológico'||$request->tag=='Excursão'||$request->tag=='City Tour'||
+            $request->tag=='Fazenda Pantanal'||$request->tag=='Day Use'||$request->tag=='Pesca Pantanal'||
+            $request->tag=='Bonito Tour'||$request->tag=='Receitas'||$request->tag=='Trilhas')){
+                $error[] = 'Insira uma categoria válida!';
             }
         }
 
