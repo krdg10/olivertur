@@ -9,26 +9,53 @@
                 <div class="col-lg-6">
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a href="#">Web Design</a>
+                            <a href="#">Turismo Ecológico</a>
                         </li>
                         <li>
-                            <a href="#">HTML</a>
+                            <a href="#">City Tour</a>
                         </li>
                         <li>
-                            <a href="#">Freebies</a>
+                            <a href="#">Day Use</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a href="#">JavaScript</a>
+                            <a href="#">Bolivia Excursão</a>
                         </li>
                         <li>
-                            <a href="#">CSS</a>
+                            <a href="#">Peru Excursão</a>
                         </li>
                         <li>
-                            <a href="#">Tutorials</a>
+                            <a href="#">Fazenda Pantanal</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6">
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#">Bonito Tour</a>
+                        </li>
+                        <li>
+                            <a href="#">Trilhas</a>
+                        </li>
+                        <li>
+                            <a href="#">Datas Comemorativas</a>
+                        </li>
+                    </ul>
+                </div>
+                                <div class="col-lg-6">
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#">Pesca Pantanal</a>
+                        </li>
+                        <li>
+                            <a href="#">Receitas</a>
+                        </li>
+                        <li>
+                            <a href="#">Dicas de Viagem</a>
                         </li>
                     </ul>
                 </div>
