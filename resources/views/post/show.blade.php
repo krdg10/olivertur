@@ -13,7 +13,9 @@
         </div>
         @include('blog.sidebar')
     </div>
+    @include('blog.galeria')
     <!-- /.row -->
 </div>
+
 <!-- /.container -->
 @include('layouts.footer')
