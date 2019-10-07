@@ -4924,17 +4924,17 @@
     padding: 0.5rem 0.75rem;
     margin-left: -1px;
     line-height: 1.25;
-    color: #BD5E00;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
+    color: white;
+    background-color: black;
+    border: 1px solid #584f4f;
   }
   
   .page-link:hover {
     z-index: 2;
     color: #BD5E00;
     text-decoration: none;
-    background-color: #e9ecef;
-    border-color: #dee2e6;
+    background-color: #323538;
+    border: 1px solid #584f4f;
   }
   
   .page-link:focus {
@@ -4958,15 +4958,15 @@
     z-index: 1;
     color: #fff;
     background-color: #BD5E00;
-    border-color: #fff;
+    border: 1px solid #584f4f;
   }
   
   .page-item.disabled .page-link {
-    color: #6c757d;
+    color: white;
     pointer-events: none;
     cursor: auto;
-    background-color: #fff;
-    border-color: #dee2e6;
+    background-color: black;
+    border: 1px solid #584f4f;
   }
   
   .pagination-lg .page-link {
@@ -10763,4 +10763,9 @@ body.mobile-nav-active #mobile-nav {
   #side {
     display: none;
   }
+}
+.categoria{
+  margin-bottom: 7px;
+  margin-left: 7px;
+  margin-right: 7px;
 }
