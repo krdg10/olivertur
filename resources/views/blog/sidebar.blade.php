@@ -8,6 +8,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <ul class="list-unstyled mb-0">
+
                         <li>
                             <a href="#">Turismo Ecológico</a>
                         </li>
@@ -16,11 +17,28 @@
                         </li>
                         <li>
                             <a href="#">Day Use</a>
+
+                        <li class="categoria">
+                            <a href="{{ route('posts.categoria', ['categoria'=>'Turismo Ecológico']) }}">Turismo Ecológico</a>
+                        </li>
+                        <li class="categoria">
+                            <a href="{{ route('posts.categoria', ['categoria'=>'City Tour']) }}">City Tour</a>
+                        </li>
+                        <li class="categoria">
+                            <a href="{{ route('posts.categoria', ['categoria'=>'Day Use']) }}">Day Use</a>
+                        </li>
+                        <li class="categoria">
+                            <a href="{{ route('posts.categoria', ['categoria'=>'Bonito Tour']) }}">Bonito Tour</a>
+                        </li>
+                        <li class="categoria">
+                            <a href="{{ route('posts.categoria', ['categoria'=>'Trilhas']) }}">Trilhas</a>
+
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-unstyled mb-0">
+
                         <li>
                             <a href="#">Bolivia Excursão</a>
                         </li>
@@ -56,6 +74,19 @@
                         </li>
                         <li>
                             <a href="#">Dicas de Viagem</a>
+
+                        <li class="categoria">
+                            <a href="{{ route('posts.categoria', ['categoria'=>'Excursão']) }}">Excursão</a>
+                        </li>
+                        <li class="categoria">
+                            <a href="{{ route('posts.categoria', ['categoria'=>'Fazenda Pantanal']) }}">Fazenda Pantanal</a>
+                        </li>
+                        <li class="categoria">
+                            <a href="{{ route('posts.categoria', ['categoria'=>'Pesca Pantanal']) }}">Pesca Pantanal</a>
+                        </li>
+                        <li class="categoria">
+                            <a href="{{ route('posts.categoria', ['categoria'=>'Receitas']) }}">Receitas</a>
+
                         </li>
                     </ul>
                 </div>

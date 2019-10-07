@@ -1,6 +1,11 @@
 @include('layouts.head')
 @include('layouts.header_mini')
-<!-- por nav -->
+<script>
+    $( document ).ready(function() {
+        $('select[name="tag"]').find('option:contains("{{$post->tag}}")').attr("selected",true);
+    });
+</script>
+
 <div class="container bg-black border-radius">
     <h2 class="d-flex justify-content-center text-white">Editar Post</h2>
     <hr>
@@ -30,6 +35,21 @@
                     <input type="text" placeholder="Título do post." name="titulo" value="{{$post->titulo}}" class="form-control" maxlength="30" required>
                     <small id="tituloHelp" class="form-text text-muted">Obrigatório. Máximo 30 caracteres.</small>
                 </div>
+                <div class="form-group tag">
+                    <label for="tag">Categoria</label>
+                    <select name="tag" class="form-control" id="tag" required>
+                        <option value="Turismo Ecológico">Turismo Ecológico</option>
+                        <option value="Excursão">Excursão</option>
+                        <option value="City Tour">City Tour</option>
+                        <option value="Fazenda Pantanal">Fazenda Pantanal</option>
+                        <option value="Day Use">Day Use</option>
+                        <option value="Pesca Pantanal">Pesca Pantanal</option>
+                        <option value="Bonito Tour">Bonito Tour</option>
+                        <option value="Receitas">Receitas</option>
+                        <option value="Trilhas">Trilhas</option>
+                    </select>
+                    <small id="tagHelp" class="form-text text-muted">Obrigatório.</small>
+                </div>
                 <div class="form-group">
                     <label for="previa">Prévia</label>
                     <textarea type="text" placeholder="Prévia - Textinho que vai ficar na listagem de todos os posts." name="previa" class="form-control" maxlength="120" required rows="10">{{$post->previa}}</textarea>
@@ -39,11 +59,6 @@
                     <label for="texto">Texto</label>
                     <textarea type="text" placeholder="Texto - O conteúdo do post." name="texto" class="form-control" required rows="10">{{$post->texto}}</textarea>
                     <small id="textoHelp" class="form-text text-muted">Obrigatório.</small>
-                </div>
-                <div class="form-group">
-                    <label for="tag">Categoria</label>
-                    <input type="text" placeholder="Tag - a categoria do post."  name="tag" value="{{$post->tag}}" class="form-control" maxlength="25" required>
-                    <small id="tagHelp" class="form-text text-muted">Obrigatório. Máximo 25 caracteres.</small>
                 </div>
                 <div class="d-flex justify-content-center" id="formFooter">
                     <button type="submit" id="submit" class="fadeIn fourth btn btn-primary"> Salvar </button>

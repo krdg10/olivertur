@@ -1,3 +1,4 @@
+    @include('layouts.scripts')
     <section id="contact" class="contact-section bg-black">
     <div class="container">
 

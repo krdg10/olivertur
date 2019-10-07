@@ -4924,17 +4924,17 @@
     padding: 0.5rem 0.75rem;
     margin-left: -1px;
     line-height: 1.25;
-    color: #BD5E00;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
+    color: white;
+    background-color: black;
+    border: 1px solid #584f4f;
   }
   
   .page-link:hover {
     z-index: 2;
     color: #BD5E00;
     text-decoration: none;
-    background-color: #e9ecef;
-    border-color: #dee2e6;
+    background-color: #323538;
+    border: 1px solid #584f4f;
   }
   
   .page-link:focus {
@@ -4958,15 +4958,15 @@
     z-index: 1;
     color: #fff;
     background-color: #BD5E00;
-    border-color: #fff;
+    border: 1px solid #584f4f;
   }
   
   .page-item.disabled .page-link {
-    color: #6c757d;
+    color: white;
     pointer-events: none;
     cursor: auto;
-    background-color: #fff;
-    border-color: #dee2e6;
+    background-color: black;
+    border: 1px solid #584f4f;
   }
   
   .pagination-lg .page-link {
@@ -10287,8 +10287,8 @@
     height: auto;
     min-height: 35rem;
     padding: 15rem 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)), url("../img/bg-masthead.jpg");
-    background: linear-gradient(to bottom, #BD5E00, #de7309 , #161616 100%), url(../img/bg-masthead.jpg);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616));
+    background: linear-gradient(to bottom, #BD5E00, #de7309 , #161616 100%);
     background-image: url(
       "https://free4kwallpapers.com/uploads/originals/2016/09/02/chincha-the-jaguar-wallpaper.jpg");
     background-position: center;
@@ -10301,8 +10301,8 @@
     width: 100%;
     height: auto;
     padding: 15rem 0;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)), url("../img/bg-masthead.jpg");
-    background: linear-gradient(to bottom, #BD5E00, #de7309 , #161616 100%), url(../img/bg-masthead.jpg);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616));
+    background: linear-gradient(to bottom, #BD5E00, #de7309 , #161616 100%);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -10446,8 +10446,8 @@
     background-size: cover;
   }
   .bgBlog{
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)), url("../img/bg-masthead.jpg");
-    background: linear-gradient(to bottom, #BD5E00, #de7309 , #161616 100%), url(../img/bg-masthead.jpg);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616));
+    background: linear-gradient(to bottom, #BD5E00, #de7309 , #161616 100%);
   }
   .bgSignUp{
     background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
@@ -10763,4 +10763,117 @@ body.mobile-nav-active #mobile-nav {
   #side {
     display: none;
   }
+}
+.categoria{
+  margin-bottom: 7px;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+.clrd-font{
+	background: #FF512F;
+	background: -webkit-linear-gradient(to right, #F09819, #FF512F);
+	background: linear-gradient(to right, #F09819, #FF512F);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+.single_portfolio_text{
+	display:inline-block;
+	padding:0;
+	position:relative;
+	overflow:hidden;
+}
+.single_portfolio_text img{
+  width:100%;
+  height: 225px;
+}
+
+.single_portfolio_text:hover .portfolio_images_overlay{
+	top:5%;
+	left: 5%;
+}
+
+.portfolio_images_overlay{
+	width: 90%;
+	height: 90%;
+	background: rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	margin: 0 auto;
+	top: -100%;
+	left: 5%;
+	position: absolute;
+	transition:.6s;
+	
+}
+.portfolio_images_overlay h6{
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 30px;
+	font-weight: 900;
+	border: 2px solid #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.portfolio_images_overlay .product_price{
+	font-size: 35px;
+	color: #fff;
+	font-weight:800;
+	line-height:30px;
+}
+.portfolio_images_overlay .product_price i{
+    margin-right: -10px;
+}
+.zoom{
+	width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    border-radius: 50%;
+
+	background: #FF512F;
+	background: -webkit-linear-gradient(to right, #F09819, #FF512F);
+	background: linear-gradient(to right, #F09819, #FF512F);
+    box-shadow:0px 0px 0px 10px rgba(0,0,0,0.5);
+	opacity:0.9;
+}
+.zoom:before {
+	content: "\f00e";
+    font-family: FontAwesome;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 70px;
+    padding-right: 20px;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+@media (min-width:769px) and (max-width:991px) {
+	.portfolio_images_overlay {
+		padding: 0px;
+	}
+}
+@media (max-width:768px) {
+	.portfolio_images_overlay{
+		padding: 170px 20px;
+	}
+}
+@media (max-width:580px) {
+	.portfolio_images_overlay{
+		padding: 100px 20px;
+	}
+}
+@media (max-width:480px) {
+	.portfolio_images_overlay{
+		padding: 40px 20px;
+	}
+}
+@media (max-width:320px) {
+	.portfolio_images_overlay{
+		padding: 20px;
+	}
+}
+#galeria{
+  margin-bottom: 15px;
 }

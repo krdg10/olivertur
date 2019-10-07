@@ -30,6 +30,22 @@
                     <small id="tituloHelp" class="form-text text-muted">Obrigatório. Máximo 30 caracteres.</small>
                 </div>
                 <div class="form-group">
+                    <label for="tag">Categoria</label>
+                    <select name="tag" class="form-control" required>
+                        <option selected>Selecione Uma Categoria</option> 
+                        <option value="Turismo Ecológico">Turismo Ecológico</option>
+                        <option value="Excursão">Excursão</option>
+                        <option value="City Tour">City Tour</option>
+                        <option value="Fazenda Pantanal">Fazenda Pantanal</option>
+                        <option value="Day Use">Day Use</option>
+                        <option value="Pesca Pantanal">Pesca Pantanal</option>
+                        <option value="Bonito Tour">Bonito Tour</option>
+                        <option value="Receitas">Receitas</option>
+                        <option value="Trilhas">Trilhas</option>
+                    </select>
+                    <small id="tagHelp" class="form-text text-muted">Obrigatório.</small>
+                </div>
+                <div class="form-group">
                     <label for="previa">Prévia</label>
                     <textarea type="text" placeholder="Prévia - Textinho que vai ficar na listagem de todos os posts." name="previa" class="form-control" maxlength="120" required rows="10"></textarea>
                     <small id="previaHelp" class="form-text text-muted">Obrigatório. Máximo 120 caracteres.</small>
@@ -38,11 +54,6 @@
                     <label for="texto">Texto</label>
                     <textarea type="text" placeholder="Texto - O conteúdo do post." name="texto" class="form-control" required rows="10"></textarea>
                     <small id="textoHelp" class="form-text text-muted">Obrigatório.</small>
-                </div>
-                <div class="form-group">
-                    <label for="tag">Categoria</label>
-                    <input type="text" placeholder="Tag - a categoria do post." name="tag" class="form-control" maxlength="25" required>
-                    <small id="tagHelp" class="form-text text-muted">Obrigatório. Máximo 25 caracteres.</small>
                 </div>
                 <div class="form-group">
                     <label for="fotos">Fotos</label>
