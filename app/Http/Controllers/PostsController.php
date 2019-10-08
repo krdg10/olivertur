@@ -112,6 +112,10 @@ class PostsController extends Controller
         $posts = Post::orderBy('data', 'desc')->paginate(20);
         return view('post.indexAdm', compact('posts'));
     }
+    public function indexAdmFilter ($categoria){
+        $posts = Post::where('tag', $categoria)->orderBy('data', 'desc')->paginate(20);
+        return view('post.indexAdm', compact('posts'));
+    }
 
     public function categoria ($categoria){
         $posts = Post::where('tag', $categoria)->orderBy('data', 'desc')->paginate(3);

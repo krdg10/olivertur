@@ -65,6 +65,8 @@ Route::group(['middleware' => ['auth']], function () {
   Route::delete('/blog/edit/{id}', 'PostsController@destroy')->name('posts.destroy');
   Route::post('/store/fotoPost/{id}', 'FotosController@store_post')->name('fotos.store_post');
   Route::get('/blogAdm', 'PostsController@indexAdm')->name('posts.indexAdm');
+  Route::get('/blogAdm/{categoria}', 'PostsController@indexAdmFilter')->name('posts.indexAdmFilter');
+
   //crud pacote
   Route::get('/pacotes/edit/{id}', 'PacotesController@edit')->name('pacotes.edit');
   Route::put('/pacotes/edit/{id}', 'PacotesController@update')->name('pacotes.update');
