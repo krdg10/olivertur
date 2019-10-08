@@ -57,7 +57,7 @@
                 </div>
                 <div class="form-group">
                     <label for="fotos">Fotos</label>
-                    <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" multiple required />
+                    <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" accept="image/x-png, image/gif, image/jpeg, image/jpg" multiple required />
                     <small id="fotosHelp" class="form-text text-muted">Obrigatório. Arquivos nos formatos: gif, png, jpg e jpeg.</small>
                 </div>
                 <div class="d-flex justify-content-center" id="formFooter">
