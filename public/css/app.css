@@ -1532,6 +1532,7 @@
     width: 100%;
     margin-bottom: 1rem;
     color: #212529;
+    table-layout:fixed;
   }
   
   .table th,
@@ -1539,6 +1540,9 @@
     padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
+  }
+  table td { 
+    word-wrap: break-word; 
   }
   
   .table thead th {
@@ -10876,4 +10880,20 @@ body.mobile-nav-active #mobile-nav {
 }
 #galeria{
   margin-bottom: 15px;
+}
+#tableAdm{
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+@media screen and ( max-width: 520px ){
+  ul.pagination li {
+    display: none;
+  }
+
+  ul.pagination li:first-child,
+  ul.pagination li:last-child,
+  ul.pagination li.active {
+    display: block;
+  }
 }
