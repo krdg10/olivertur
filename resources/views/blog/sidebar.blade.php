@@ -8,6 +8,8 @@
             <div class="row">
                 <div class="col-lg-6">
                     <ul class="list-unstyled mb-0">
+
+                        
                         <li class="categoria">
                             <a href="{{ route('posts.categoria', ['categoria'=>'Turismo Ecológico']) }}">Turismo Ecológico</a>
                         </li>
@@ -22,11 +24,22 @@
                         </li>
                         <li class="categoria">
                             <a href="{{ route('posts.categoria', ['categoria'=>'Trilhas']) }}">Trilhas</a>
+
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-unstyled mb-0">
+
+                        
+                    </ul>
+                </div>
+
+               
+                                <div class="col-lg-6">
+                    <ul class="list-unstyled mb-0">
+                       
+
                         <li class="categoria">
                             <a href="{{ route('posts.categoria', ['categoria'=>'Excursão']) }}">Excursão</a>
                         </li>
@@ -38,6 +51,7 @@
                         </li>
                         <li class="categoria">
                             <a href="{{ route('posts.categoria', ['categoria'=>'Receitas']) }}">Receitas</a>
+
                         </li>
                     </ul>
                 </div>
