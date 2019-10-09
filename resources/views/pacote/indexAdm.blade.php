@@ -2,13 +2,15 @@
 @include('layouts.header_mini')
 <div class="container" id="elementList">
     <h2 class="text-white text-center">Lista de Pacotes</h2>
-    <table class="table table-hover table-striped background-white">
-        <thead>
-            <tr>
-                <th>Título</th>
-                <th>Ver</th>
-                <th>Editar/Apagar</th>
-            </tr>
+    <div class="row">
+        <div class="col-sm-12" id="tableAdm">
+            <table class="table table-hover table-striped background-white">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Ver</th>
+                        <th>Editar-Apagar</th>
+                    </tr>
                 </thead>
                 <tbody>
                     @if(count($pacotes)==0)
@@ -23,6 +25,8 @@
                     @endforeach
                 </tbody>
             </table>
+        </div>
+    </div>
     <div class="d-flex justify-content-center">
         {{ $pacotes->onEachSide(1)->links() }}
     </div>
