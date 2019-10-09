@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-lg-6 justify-content-center">
                         <div class="form-group">
-                            <label for="nome">Nome</label>
+                            <label for="nome">Nome <a class="required">*</a></label>
                             <input type="text" placeholder="Nome - Título do Pacote" name="nome" value="{{ $pacote->nome }}" class="form-control" maxlength="30" required>
                             <small id="nomeHelp" class="form-text text-muted">Obrigatório. Máximo 30 caracteres.</small>
                         </div>
@@ -24,12 +24,12 @@
                             <small id="pagamentoHelp" class="form-text text-muted">Máximo 150 caracteres.</small>
                         </div>
                         <div class="form-group">
-                            <label for="preco">Preço</label>
+                            <label for="preco">Preço <a class="required">*</a></label>
                             <input type="number" placeholder="Preço - Valor do pacote. Não colocar R$" value="{{ $pacote->preco }}" name="preco" step="any" class="form-control" required min="0" max="1000000">
                             <small id="precoHelp" class="form-text text-muted">Obrigatório. Apenas números positivos. Não colocar R$.</small>
                         </div>
                         <div class="form-group">
-                            <label for="parcelas">Quantidade de Parcelas</label>
+                            <label for="parcelas">Quantidade de Parcelas <a class="required">*</a></label>
                             <input type="number" placeholder="Parcelas - Quantia de parcelas." value="{{ $pacote->parcelas }}" name="parcelas" class="form-control" required min="0" max="1000000">
                             <small id="parcelasHelp" class="form-text text-muted">Obrigatório. Apenas números positivos.</small>
                         </div>
@@ -58,22 +58,22 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="condicoes">Condições</label>
+                    <label for="condicoes">Condições <a class="required">*</a></label>
                     <textarea type="text" placeholder="Condições - As condições gerais. O que ele tem, vai fazer, etc." name="condicoes" class="form-control" maxlength="600" required rows="5">{{ $pacote->condicoes }}</textarea>
                     <small id="condicoesHelp" class="form-text text-muted">Obrigatório. Máximo 600 caracteres.</small>
                 </div>
                 <div class="form-group">
-                    <label for="inclui">Inclui</label>
+                    <label for="inclui">Inclui <a class="required">*</a></label>
                     <textarea type="text" placeholder="Inclui - Os benefícios do pacote." name="inclui" class="form-control" maxlength="600" required rows="5">{{ $pacote->inclui }}</textarea>
                     <small id="incluiHelp" class="form-text text-muted">Obrigatório. Máximo 600 caracteres.</small>
                 </div>
                 <div class="form-group">
-                    <label for="n_inclui">Não Inclui</label>
+                    <label for="n_inclui">Não Inclui <a class="required">*</a></label>
                     <textarea type="text" placeholder="Não Inclui - Coisas que ele não tem." name="n_inclui" class="form-control" maxlength="600" required rows="5">{{ $pacote->n_inclui }}</textarea>
                     <small id="n_incluiHelp" class="form-text text-muted">Obrigatório. Máximo 600 caracteres.</small>
                 </div>
                 <div class="form-group">
-                    <label for="maisinformacoes">Mais Informações</label>
+                    <label for="maisinformacoes">Mais Informações <a class="required">*</a></label>
                     <textarea type="text" placeholder="Mais informações - mais informações relacionadas a viagem mas não relacionada ao pacote." name="maisinformacoes" class="form-control" maxlength="600" required rows="5">{{ $pacote->maisinformacoes }}</textarea>
                     <small id="maisinformacoesHelp" class="form-text text-muted">Obrigatório. Máximo 600 caracteres.</small>
                 </div>
@@ -101,7 +101,7 @@
         <form id="delete-form" method="POST" action="{{ route('fotos.store', ['categoria'=>'pacote_id', 'id'=>$pacote->id]) }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <label for="fotos">Fotos</label>
+                <label for="fotos">Fotos <a class="required">*</a></label>
                 <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" accept="image/x-png, image/gif, image/jpeg, image/jpg" multiple required/>
                 <small id="fotosHelp" class="form-text text-muted">Arquivos nos formatos: gif, png, jpg e jpeg.</small>
             </div>
@@ -122,7 +122,7 @@
                             @csrf
                             @method('put')
                             <div class="form-group">
-                                <label for="nomeFoto">Nome da Foto</label>
+                                <label for="nomeFoto">Nome da Foto <a class="required">*</a></label>
                                 <input type="text" placeholder="Nome da Foto - Legenda e Alt da foto." name="nomeFoto" value="{{$foto->nome}}" class="form-control" maxlength="50" required>
                                 <small id="nomeFotoHelp" class="form-text text-muted">Máximo 50 caracteres.</small>
                             </div>

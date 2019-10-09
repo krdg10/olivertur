@@ -10,12 +10,12 @@
             <form method="POST" action="{{ route('posts.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label for="titulo">Título</label>
+                    <label for="titulo">Título <a class="required">*</a></label>
                     <input type="text" placeholder="Título do post." name="titulo" class="form-control" maxlength="30" required>
                     <small id="tituloHelp" class="form-text text-muted">Obrigatório. Máximo 30 caracteres.</small>
                 </div>
                 <div class="form-group">
-                    <label for="tag">Categoria</label>
+                    <label for="tag">Categoria <a class="required">*</a></label>
                     <select name="tag" class="form-control" required>
                         <option selected>Selecione Uma Categoria</option> 
                         <option value="Turismo Ecológico">Turismo Ecológico</option>
@@ -31,17 +31,17 @@
                     <small id="tagHelp" class="form-text text-muted">Obrigatório.</small>
                 </div>
                 <div class="form-group">
-                    <label for="previa">Prévia</label>
+                    <label for="previa">Prévia <a class="required">*</a></label>
                     <textarea type="text" placeholder="Prévia - Textinho que vai ficar na listagem de todos os posts." name="previa" class="form-control" maxlength="120" required rows="10"></textarea>
                     <small id="previaHelp" class="form-text text-muted">Obrigatório. Máximo 120 caracteres.</small>
                 </div>
                 <div class="form-group">
-                    <label for="texto">Texto</label>
+                    <label for="texto">Texto <a class="required">*</a></label>
                     <textarea type="text" placeholder="Texto - O conteúdo do post." name="texto" class="form-control" required rows="10"></textarea>
                     <small id="textoHelp" class="form-text text-muted">Obrigatório.</small>
                 </div>
                 <div class="form-group">
-                    <label for="fotos">Fotos</label>
+                    <label for="fotos">Fotos <a class="required">*</a></label>
                     <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" accept="image/x-png, image/gif, image/jpeg, image/jpg" multiple required />
                     <small id="fotosHelp" class="form-text text-muted">Obrigatório. Arquivos nos formatos: gif, png, jpg e jpeg.</small>
                 </div>

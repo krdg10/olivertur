@@ -16,12 +16,12 @@
                 @csrf
                 @method('put')
                 <div class="form-group">
-                    <label for="titulo">Título</label>
+                    <label for="titulo">Título <a class="required">*</a></label>
                     <input type="text" placeholder="Título do post." name="titulo" value="{{$post->titulo}}" class="form-control" maxlength="30" required>
                     <small id="tituloHelp" class="form-text text-muted">Obrigatório. Máximo 30 caracteres.</small>
                 </div>
                 <div class="form-group tag">
-                    <label for="tag">Categoria</label>
+                    <label for="tag">Categoria <a class="required">*</a></label>
                     <select name="tag" class="form-control" id="tag" required>
                         <option value="Turismo Ecológico">Turismo Ecológico</option>
                         <option value="Excursão">Excursão</option>
@@ -36,12 +36,12 @@
                     <small id="tagHelp" class="form-text text-muted">Obrigatório.</small>
                 </div>
                 <div class="form-group">
-                    <label for="previa">Prévia</label>
+                    <label for="previa">Prévia <a class="required">*</a></label>
                     <textarea type="text" placeholder="Prévia - Textinho que vai ficar na listagem de todos os posts." name="previa" class="form-control" maxlength="120" required rows="10">{{$post->previa}}</textarea>
                     <small id="previaHelp" class="form-text text-muted">Obrigatório. Máximo 120 caracteres.</small>
                 </div>
                 <div class="form-group">
-                    <label for="texto">Texto</label>
+                    <label for="texto">Texto <a class="required">*</a></label>
                     <textarea type="text" placeholder="Texto - O conteúdo do post." name="texto" class="form-control" required rows="10">{{$post->texto}}</textarea>
                     <small id="textoHelp" class="form-text text-muted">Obrigatório.</small>
                 </div>
@@ -68,7 +68,7 @@
         <form id="delete-form" method="POST" action="{{ route('fotos.store', ['categoria'=>'post_id', 'id'=>$post->id]) }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <label for="fotos">Fotos</label>
+                <label for="fotos">Fotos <a class="required">*</a></label>
                 <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" accept="image/x-png, image/gif, image/jpeg, image/jpg" multiple required/>
                 <small id="fotosHelp" class="form-text text-muted">Arquivos nos formatos: gif, png, jpg e jpeg.</small>
             </div>
@@ -89,7 +89,7 @@
                             @csrf
                             @method('put')
                             <div class="form-group">
-                                <label for="nomeFoto">Nome da Foto</label>
+                                <label for="nomeFoto">Nome da Foto <a class="required">*</a></label>
                                 <input type="text" placeholder="Nome da Foto - Legenda e Alt da foto." name="nomeFoto" value="{{$foto->nome}}" class="form-control" maxlength="50" required>
                                 <small id="nomeFotoHelp" class="form-text text-muted">Máximo 50 caracteres.</small>
                             </div>
