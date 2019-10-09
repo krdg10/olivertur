@@ -118,12 +118,6 @@ class PacotesController extends Controller
         ];
     }
 
-    public function rulesPacotesUpdate(){
-        $rules = PacotesController::rulesPacotes();
-        unset($rules['fotos'], $rules['fotos.*']);
-        return $rules;
-    }
-
     public function messagesPacotes(){
         return [
             'nome.required' => 'O campo Nome é obrigatório.',
@@ -153,6 +147,12 @@ class PacotesController extends Controller
             'fotos.required' => 'O campo Fotos é obrigatório.',
             'fotos.*.image' => 'O campo Fotos deve conter apenas imagens.'
         ];
+    }
+
+    public function rulesPacotesUpdate(){
+        $rules = PacotesController::rulesPacotes();
+        unset($rules['fotos'], $rules['fotos.*']);
+        return $rules;
     }
     
 }
