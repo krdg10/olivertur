@@ -65,7 +65,7 @@
     <h2 class="d-flex justify-content-center text-white">Adicionar Foto</h2>
     <hr>
     <div class="col-lg-12 d-flex justify-content-center">
-        <form id="delete-form" method="POST" action="{{ route('fotos.store_post', $post->id) }}" enctype="multipart/form-data">
+        <form id="delete-form" method="POST" action="{{ route('fotos.store', ['categoria'=>'post_id', 'id'=>$post->id]) }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="fotos">Fotos</label>

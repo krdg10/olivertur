@@ -64,7 +64,6 @@ Route::group(['middleware' => ['auth']], function () {
   Route::get('/blog/edit/{id}', 'PostsController@edit')->name('posts.edit');
   Route::put('/blog/edit/{id}', 'PostsController@update')->name('posts.update');
   Route::delete('/blog/edit/{id}', 'PostsController@destroy')->name('posts.destroy');
-  Route::post('/store/fotoPost/{id}', 'FotosController@store_post')->name('fotos.store_post');
   Route::get('/blogAdm', 'PostsController@indexAdm')->name('posts.indexAdm');
   Route::get('/blogAdm/{categoria}', 'PostsController@indexAdmFilter')->name('posts.indexAdmFilter');
 
@@ -72,12 +71,13 @@ Route::group(['middleware' => ['auth']], function () {
   Route::get('/pacotes/edit/{id}', 'PacotesController@edit')->name('pacotes.edit');
   Route::put('/pacotes/edit/{id}', 'PacotesController@update')->name('pacotes.update');
   Route::delete('/pacotes/edit/{id}', 'PacotesController@destroy')->name('pacotes.destroy');
-  Route::post('/store/fotoPacote/{id}', 'FotosController@store_pacote')->name('fotos.store_pacote');
   Route::get('/pacotesAdm', 'PacotesController@indexAdm')->name('pacotes.indexAdm');
 
   //foto edit e delete
   Route::put('/edit/foto/{id}', 'FotosController@update')->name('fotos.update');
   Route::delete('/edit/foto/{id}', 'FotosController@destroy')->name('fotos.destroy');
+  Route::post('/store/foto/{categoria}/{id}', 'FotosController@store')->name('fotos.store');
+
   
 //register
   Route::get('register', [

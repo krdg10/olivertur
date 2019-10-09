@@ -98,7 +98,7 @@
     <h2 class="d-flex justify-content-center text-white text-white">Adicionar Foto</h2>
     <hr>
     <div class="col-lg-12 d-flex justify-content-center">
-        <form id="delete-form" method="POST" action="{{ route('fotos.store_pacote', $pacote->id) }}" enctype="multipart/form-data">
+        <form id="delete-form" method="POST" action="{{ route('fotos.store', ['categoria'=>'pacote_id', 'id'=>$pacote->id]) }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="fotos">Fotos</label>
@@ -115,7 +115,7 @@
     <div class="row">
         @foreach($fotos as $foto)
             <div class="col-md-4">
-                <div class="card">
+                <div class="card marginCard">
                     <img class="card-img-top img-thumbnail img-fluid" src="/storage/{{ $foto->url }}" alt="{{ $foto->nome }}">
                     <div class="card-body">
                         <form method="POST" action="{{ route('fotos.update', $foto->id) }}" enctype="multipart/form-data">
