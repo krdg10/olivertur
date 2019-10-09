@@ -6,31 +6,7 @@
     <hr>
     <div class="col-lg-12 justify-content-center">
         <div id="formContent">
-            <div class="container d-flex justify-content-center">
-                <div class="col">
-                    @if ($errors->any())
-                        @foreach ($errors->all() as $error)
-                            <span class="badge badge-danger badge-pill">
-                                {{ $error }}
-                            </span>
-                        @endforeach
-                    @endif
-                    @if( \Session::has('error') )
-                        @foreach(session()->get('error') as $key => $ms)
-                            <span id="{{ $key }}error" class="badge badge-danger badge-pill">
-                                {{ $ms }}
-                                <a id="excluir" onClick="excluirElement('{{ $key }}error')"><i class="fa fa-times" aria-hidden="true"></i></a>
-                            </span>
-                        @endforeach
-                    @endif
-                    @if( \Session::has('message') )
-                        <span id="success" class="badge badge-success badge-pill">
-                            {{ \Session::get('message') }}
-                                <a id="excluir" onClick="excluirElement('success')"><i class="fa fa-times" aria-hidden="true"></i></a>
-                        </span>
-                    @endif
-                </div>
-            </div>
+            @include('layouts.messages')
             <form method="POST" action="{{ route('pacotes.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
