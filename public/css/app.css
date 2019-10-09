@@ -10897,3 +10897,6 @@ body.mobile-nav-active #mobile-nav {
     display: block;
   }
 }
+.required{
+  color: red !important;
+}

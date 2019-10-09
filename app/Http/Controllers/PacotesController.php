@@ -5,137 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Foto;
 use App\Pacote;
+use Illuminate\Support\Facades\Validator;
 
 class PacotesController extends Controller
 {
     public function store(Request $request){
+        $validator = Validator::make($request->all(), PacotesController::rulesPacotes(), PacotesController::messagesPacotes());
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator);
+        }
+
         $pacote = new Pacote;
-        $allowedfileExtension=['jpg','png','gif','jpeg'];
-        if(!$request->nome){
-            $error[] = 'Insira o nome!';//pensar num jeito do texto voltar em caso de erro
-        }
-        else{
-            if(strlen($request->nome)>30){
-                $error[] = 'Insira nome do pacote com no máximo 30 caracteres!';
-            }
-        }
-
-        if(!$request->condicoes){
-            $error[] = 'Insira as condições!';
-        }
-        else{
-            if(strlen($request->condicoes)>600){
-                $error[] = 'Insira as condições do pacote com no máximo 600 caracteres!';
-            }
-        }
-
-        if(!$request->inclui){
-            $error[] = 'Insira o que o pacote inclui!';
-        }
-        else{
-            if(strlen($request->inclui)>600){
-                $error[] = 'Insira o que o pacote inclui com no máximo 600 caracteres!';
-            }
-        }
-
-        if(!$request->n_inclui){
-            $error[] = 'Insira o que o pacote não inclui!';
-        }
-        else{
-            if(strlen($request->n_inclui)>600){
-                $error[] = 'Insira o que o pacote não inclui com no máximo 600 caracteres!';
-            }
-        }
-
-        if(!$request->maisinformacoes){
-            $error[] = 'Insira mais informações!';
-        }
-        else{
-            if(strlen($request->maisinformacoes)>600){
-                $error[] = 'Insira mais informações do pacote com no máximo 600 caracteres!';
-            }
-        }
-
-        if(!$request->preco){
-            $error[] = 'Insira o preço!';
-        }
-        else{
-            if(is_numeric($request->preco)){
-                if($request->preco < 0){
-                    $error[] = 'Insira apenas números positivos ou zero no preço!';
-                }
-                else if($request->preco > 1000000){
-                    $error[] = 'Insira apenas números abaixo de um milhão no preço!';
-                }
-            }
-            else{
-                $error[] = 'Insira apenas números no preço!';
-            }
-        }
-        
-        if(!$request->parcelas){
-            $error[] = 'Insira a quantidade de parcelas!';
-        }
-        else{
-            if(is_numeric($request->parcelas)){
-                if($request->preco < 0){
-                    $error[] = 'Insira apenas números positivos ou zero nas parcelas!';
-                }
-                else if($request->preco > 1000000){
-                    $error[] = 'Insira apenas números abaixo de um milhão nas parcelas!';
-                }
-            }
-            else{
-                $error[] = 'Insira apenas números no preço!';
-            }
-        }
-        if($request->pagamento){
-            if(strlen($request->pagamento)>150){
-                $error[] = 'Insira pagamento do pacote com no máximo 150 caracteres!';
-            }
-        }
-
-        if($request->data){
-            if(strlen($request->data)>50){
-                $error[] = 'Insira data do pacote com no máximo 50 caracteres!';
-            }
-        }
-
-        if($request->caracteristica1){
-            if(strlen($request->caracteristica1)>30){
-                $error[] = 'Insira característica 1 do pacote com no máximo 30 caracteres!';
-            }
-        }
-
-        if($request->caracteristica2){
-            if(strlen($request->caracteristica2)>30){
-                $error[] = 'Insira característica 2 do pacote com no máximo 30 caracteres!';
-            }
-        }
-
-        if($request->caracteristica3){
-            if(strlen($request->caracteristica3)>30){
-                $error[] = 'Insira característica 3 do pacote com no máximo 30 caracteres!';
-            }
-        }
-       
-        if(!$request->hasFile('fotos')){
-            $error[] =  'Insira pelo menos um arquivo!'; 
-        }
-        else{
-            foreach($request->file('fotos') as $file){
-                $filename = $file->getClientOriginalName();
-                $extension = $file->getClientOriginalExtension();
-                $check=in_array($extension,$allowedfileExtension);
-                //dd($check);
-                if(!$check){
-                    $error[] =  'Insira somente arquivos válidos! As extensões aceitas são jpg, png e gif.';
-                }
-            }
-        }
-        if(isset($error)){
-            return redirect()->back()->with('error', $error);
-        }
         $pacote->nome = $request->nome;
         $pacote->condicoes = $request->condicoes;
         $pacote->inclui = $request->inclui;
@@ -150,27 +30,22 @@ class PacotesController extends Controller
         $pacote->caracteristica3 = $request->caracteristica3;
        
         $pacote->save();
-        $this->validate($request, [
-            'fotos' => 'required'
-        ]);
-        if($request->hasFile('fotos')){
-            $files = $request->file('fotos');
-            foreach($files as $file){
-                $filename = $file->getClientOriginalName();
-                $extension = $file->getClientOriginalExtension();
-                $without_extension = basename($filename, ".$extension");
-                $check=in_array($extension,$allowedfileExtension);
+       
+        $files = $request->file('fotos');
+        foreach($files as $file){
+            $filename = $file->getClientOriginalName();
+            $extension = $file->getClientOriginalExtension();
+            $without_extension = basename($filename, ".$extension");
 
-                if($check){
-                    $filename = $file->store('fotos');
-                    Foto::create([
-                        'pacote_id' => $pacote->id,
-                        'nome' => $without_extension,
-                        'url' => $filename
-                    ]);
-                }
-            }
+            $filename = $file->store('fotos');
+            Foto::create([
+                'pacote_id' => $pacote->id,
+                'nome' => $without_extension,
+                'url' => $filename
+            ]);
+            
         }
+        
         return redirect()->back()->with('message', 'Sucesso ao cadastrar pacote!');
 
     }
@@ -326,6 +201,56 @@ class PacotesController extends Controller
         $pacote = Pacote::findOrFail($id);
         $pacote->delete();
         return redirect()->route('pacotes.index');
+    }
+
+    public function rulesPacotes(){
+        return [
+            'nome' => 'required|max:30',
+            'condicoes' => 'required|max:600',
+            'inclui' => 'required|max:600',
+            'n_inclui' => 'required|max:600',
+            'maisinformacoes' => 'required|max:600',
+            'preco' => 'required|numeric|max:1000000|min:0.01',
+            'parcelas' => 'required|numeric|max:1000000|integer|min:1',
+            'pagamento' => 'max:150',
+            'data' => 'max:50',
+            'caracteristica1' => 'max:30',
+            'caracteristica2' => 'max:30',
+            'caracteristica' => 'max:30',
+            'fotos' => 'required',
+            'fotos.*' => 'image'
+        ];
+    }
+
+    public function messagesPacotes(){
+        return [
+            'nome.required' => 'O campo Nome é obrigatório.',
+            'nome.max' => 'O campo Nome deve ter no máximo 30 caracteres.',
+            'condicoes.required' => 'O campo Condições é obrigatório.',
+            'condicoes.max' => 'O campo Condições deve ter no máximo 600 caracteres.',
+            'inclui.required' => 'O campo Inclui é obrigatório.',
+            'inclui.max' => 'O campo Inclui deve ter no máximo 600 caracteres.',
+            'n_inclui.required' => 'O campo Não Inclui é obrigatório.',
+            'n_inclui.max' => 'O campo Não Inclui deve ter no máximo 600 caracteres.',
+            'maisinformacoes.required' => 'O campo Mais Informações é obrigatório.',
+            'maisinformacoes.max' => 'O campo Mais Informações deve ter no máximo 600 caracteres.',
+            'preco.required' => 'O campo Preço é obrigatório.',
+            'preco.numeric' => 'O campo Preço deve ter apenas números.',
+            'preco.max' => 'O campo Preço deve ter valor de no máximo 1 Milhão.',
+            'preco.min' => 'O campo Preço deve ter valor de no mínimo 0.01.',
+            'parcelas.required' => 'O campo Parcelas é obrigatório.',
+            'parcelas.numeric' => 'O campo Parcelas deve ter apenas números.',
+            'parcelas.max' => 'O campo Parcelas deve ter valor de no máximo 1 Milhão.',
+            'parcelas.integer' => 'O campo Parcelas deve ter apenas número inteiro.',
+            'parcelas.min' => 'O campo Parcelas deve ter valor de no mínimo 0.01.',
+            'pagamento.max' => 'O campo Pagamento deve ter no máximo 150 caracteres.',
+            'data.max' => 'O campo Data deve ter no máximo 50 caracteres.',
+            'caracteristica1.max' => 'O campo Característica1 deve ter no máximo 30 caracteres.',
+            'caracteristica2.max' => 'O campo Característica2 deve ter no máximo 30 caracteres.',
+            'caracteristica3.max' => 'O campo Característica3 deve ter no máximo 30 caracteres.',
+            'fotos.required' => 'O campo Fotos é obrigatório.',
+            'fotos.*.image' => 'O campo Fotos deve conter apenas imagens.'
+        ];
     }
     
 }

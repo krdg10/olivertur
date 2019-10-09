@@ -6,27 +6,37 @@
     <hr>
     <div class="col-lg-12 justify-content-center">
         <div id="formContent">
-            {{-- Exibe mensagem de sucesso ou de erro caso haja. --}}
-            @if( \Session::has('error') )
-                @foreach(session()->get('error') as $key => $ms)
-                    <span id="{{ $key }}error" class="badge badge-danger badge-pill">
-                        {{ $ms }}
-                        <a id="excluir" onClick="excluirElement('{{ $key }}error')"><i class="fa fa-times" aria-hidden="true"></i></a>
-                    </span>
-                @endforeach
-            @endif
-            @if( \Session::has('message') )
-                <span id="success" class="badge badge-success badge-pill">
-                    {{ \Session::get('message') }}
-                        <a id="excluir" onClick="excluirElement('success')"><i class="fa fa-times" aria-hidden="true"></i></a>
-                </span>
-            @endif
+            <div class="container d-flex justify-content-center">
+                <div class="col">
+                    @if ($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <span class="badge badge-danger badge-pill">
+                                {{ $error }}
+                            </span>
+                        @endforeach
+                    @endif
+                    @if( \Session::has('error') )
+                        @foreach(session()->get('error') as $key => $ms)
+                            <span id="{{ $key }}error" class="badge badge-danger badge-pill">
+                                {{ $ms }}
+                                <a id="excluir" onClick="excluirElement('{{ $key }}error')"><i class="fa fa-times" aria-hidden="true"></i></a>
+                            </span>
+                        @endforeach
+                    @endif
+                    @if( \Session::has('message') )
+                        <span id="success" class="badge badge-success badge-pill">
+                            {{ \Session::get('message') }}
+                                <a id="excluir" onClick="excluirElement('success')"><i class="fa fa-times" aria-hidden="true"></i></a>
+                        </span>
+                    @endif
+                </div>
+            </div>
             <form method="POST" action="{{ route('pacotes.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
                     <div class="col-lg-6 justify-content-center">
                         <div class="form-group">
-                            <label for="nome">Nome</label>
+                            <label for="nome">Nome <a class="required">*</a></label>
                             <input type="text" placeholder="Nome - Título do Pacote" name="nome" class="form-control" maxlength="30" required>
                             <small id="nomeHelp" class="form-text text-muted">Campo obrigatório. Máximo 30 caracteres.</small>
                         </div>
@@ -36,12 +46,12 @@
                             <small id="pagamentoHelp" class="form-text text-muted">Máximo 150 caracteres.</small>
                         </div>
                         <div class="form-group">
-                            <label for="preco">Preço</label>
+                            <label for="preco">Preço <a class="required">*</a></label>
                             <input type="number" placeholder="Preço - Valor do pacote. Não colocar R$" name="preco" step="any" class="form-control" required min="0" max="1000000">
                             <small id="precoHelp" class="form-text text-muted">Campo obrigatório. Apenas números positivos. Não colocar R$.</small>
                         </div>
                         <div class="form-group">
-                            <label for="parcelas">Quantidade de Parcelas</label>
+                            <label for="parcelas">Quantidade de Parcelas <a class="required">*</a></label>
                             <input type="number" placeholder="Parcelas - Quantia de parcelas." name="parcelas" class="form-control" required min="0" max="1000000">
                             <small id="parcelasHelp" class="form-text text-muted">Campo obrigatório. Apenas números positivos.</small>
                         </div>
@@ -70,27 +80,27 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="condicoes">Condições</label>
+                    <label for="condicoes">Condições <a class="required">*</a></label>
                     <textarea type="text" placeholder="Condições - As condições gerais. O que ele tem, vai fazer, etc." name="condicoes" class="form-control" maxlength="600" required rows="5"></textarea>
                     <small id="condicoesHelp" class="form-text text-muted">Campo obrigatório. Máximo 600 caracteres.</small>
                 </div>
                 <div class="form-group">
-                    <label for="inclui">Inclui</label>
+                    <label for="inclui">Inclui <a class="required">*</a></label>
                     <textarea type="text" placeholder="Inclui - Os benefícios do pacote." name="inclui" class="form-control" maxlength="600" required rows="5"></textarea>
                     <small id="incluiHelp" class="form-text text-muted">Campo obrigatório. Máximo 600 caracteres.</small>
                 </div>
                 <div class="form-group">
-                    <label for="n_inclui">Não Inclui</label>
+                    <label for="n_inclui">Não Inclui <a class="required">*</a></label>
                     <textarea type="text" placeholder="Não Inclui - Coisas que ele não tem." name="n_inclui" class="form-control" maxlength="600" required rows="5"></textarea>
                     <small id="n_incluiHelp" class="form-text text-muted">Campo obrigatório. Máximo 600 caracteres.</small>
                 </div>
                 <div class="form-group">
-                    <label for="maisinformacoes">Mais Informações</label>
+                    <label for="maisinformacoes">Mais Informações <a class="required">*</a></label>
                     <textarea type="text" placeholder="Mais informações - mais informações relacionadas a viagem mas não relacionada ao pacote." name="maisinformacoes" class="form-control" maxlength="600" required rows="5"></textarea>
                     <small id="maisinformacoesHelp" class="form-text text-muted">Campo Obrigatório. Máximo 600 caracteres.</small>
                 </div>
                 <div class="form-group">
-                    <label for="fotos">Fotos</label>
+                    <label for="fotos">Fotos <a class="required">*</a></label>
                     <input type="file" aria-label="foto" id="foto" name="fotos[]" class="form-control" accept="image/x-png, image/gif, image/jpeg, image/jpg" multiple required />
                     <small id="fotosHelp" class="form-text text-muted">Campo obrigatório. Arquivos nos formatos: gif, png, jpg e jpeg.</small>
                 </div>
