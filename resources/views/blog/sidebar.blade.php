@@ -23,7 +23,7 @@
                             <a href="{{ route('posts.categoria', ['categoria'=>'Bonito Tour']) }}">Bonito Tour</a>
                         </li>
                         <li class="categoria">
-                            <a href="{{ route('posts.categoria', ['categoria'=>'Trilhas']) }}">Trilhas</a>
+                            <a href="{{ route('posts.categoria', ['categoria'=>'Trilhas']) }}">Dicas de Viagem</a>
 
                         </li>
                     </ul>

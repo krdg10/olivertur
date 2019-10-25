@@ -3,7 +3,7 @@
 <div class="container card" id="containerPacote">
     <div class="row">
       <!-- Post Content Column -->
-        <div class="col-12 col-sm-12 col-md-5 col-lg-6"> 
+        <div class="col-12 col-sm-12 col-md-7 col-lg-6">
             <h2>Sobre Nós</h2>
                 <div class="row">
                     <div class="col">
@@ -23,14 +23,23 @@
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                        <div class="carousel-item active">
-                            <img class="img-fluid rounded" style="height: 300px; width: 900px;" src="#" alt="alt">
+                            <img class="img-fluid rounded" style="height: 300px; width: 900px;" src="LogoOficial.jpg" alt="alt">
                         </div>
                         <div class="carousel-item">
-                            <img class="img-fluid rounded" style="height: 300px; width: 900px;" src="#" alt="alt">
+                            <img class="img-fluid rounded" style="height: 300px; width: 900px;" src="empresa1.jpeg" alt="alt">
                         </div>
                         <div class="carousel-item">
-                            <img class="img-fluid rounded" style="height: 300px; width: 900px;" src="#" alt="alt">
-                        </div>  
+                            <img class="img-fluid rounded" style="height: 300px; width: 900px;" src="empresa2.jpeg" alt="alt">
+                        </div> 
+                        <div class="carousel-item">
+                            <img class="img-fluid rounded" style="height: 300px; width: 900px;" src="empresa3.jpeg" alt="alt">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid rounded" style="height: 300px; width: 900px;" src="empresa4.jpeg" alt="alt">
+                        </div> 
+                        <div class="carousel-item">
+                            <img class="img-fluid rounded" style="height: 300px; width: 900px;" src="empresa5.jpeg" alt="alt">
+                        </div>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#slidePacote" data-slide="prev">
@@ -41,11 +50,33 @@
                 </a>
             </div>
         </div>
+        <br></br>
     </div>
     
     <div class="tab-content">
         <h2>Equipe</h2>
-        texto
+        <br> Erlon Gomes </br> 
+        <br> Lídia Pedrosa </br>
+        <br> Francisco Pedrosa </br>
+        <br> Marlon de Oliveira </br>
+        <br> Jaime Gomes </br>
+        <br> Ruth Pedrosa </br>
+        <br> Marianella Ortiz </br>
+        <br> Waldir Padilha </br>
+
+<br></br>
+    </div>
+
+    <div class="tab-content">
+        <h2>Parceiros</h2>
+        <br>  <a href="http://www.ibama.gov.br/ ">  Ibama  </a></br>
+        <br>  <a href="https://www.embrapa.br/ ">  Embrapa  </a></br>
+        <br>  <a href="https://www.imasul.ms.gov.br/ ">  IMASUL   </a></br>
+        <br>  <a href=" http://www.eb.mil.br/web/centro-de-comunicacao-social-do-exercito/271">  17<code>°</code> BFront  </a></br>
+        <br>  <a href=" https://www.guiamais.com.br/corumba-ms/associacoes-e-organizacoes/associacoes-de-classe/14278348-2/acert-associacao-corumbaense-das-empresas-de-turismo">  Acert  </a></br>
+        <br>  <a href="http://www.abav.com.br/ ">  ABAV  </a></br>
+        <br>  <a href="http://www.embratur.gov.br/ ">  Embratur  </a></br>
+
     </div>
 </div>
 @include('layouts.footer')
