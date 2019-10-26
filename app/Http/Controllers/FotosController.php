@@ -57,6 +57,24 @@ class FotosController extends Controller
         }
         return;
     }
+     /* no server:  foreach($files as $file){
+            $filename = $file->getClientOriginalName();
+            $extension = $file->getClientOriginalExtension();
+            $without_extension = basename($filename, ".$extension");
+            $newFileName = uniqid('', true).'.'.$extension;
+            $url = 'fotos/'.$newFileName;
+
+       
+            Foto::create([
+                $categoria => $id,
+                'nome' => $without_extension,
+                'url' => $url
+            ]);
+            $file->move(
+                base_path() . '/../public_html/storage/fotos/', $newFileName
+            );
+                
+        }*/
 
     public function rulesNomeFoto(){
         return [
