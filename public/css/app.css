@@ -4147,8 +4147,8 @@
   
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
-    color: #495057;
-    background-color: #fff;
+    color: white;
+    background-color: #BD5E00;
     border-color: #dee2e6 #dee2e6 #fff;
   }
   
@@ -10899,4 +10899,8 @@ body.mobile-nav-active #mobile-nav {
 }
 .required{
   color: red !important;
+}
+
+.margin{
+  margin-bottom: 15px;
 }

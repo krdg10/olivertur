@@ -4,7 +4,7 @@
 @endphp
 @include('layouts.header_mini')
 <div class="container card" id="containerPacote">
-    <div class="row">
+    <div class="row margin">
       <!-- Post Content Column -->
         <div class="col-12 col-sm-12 col-md-5 col-lg-6"> 
             <h2>{{$pacote->nome}}</h2>
@@ -55,7 +55,7 @@
     </div>
     <!-- /.row -->
     <nav>
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <div class="nav nav-tabs margin" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active" id="nav-condicoes" data-toggle="tab" href="#condicoes" role="tab" aria-controls="condicoes" aria-selected="true">Condições Gerais</a>
             <a class="nav-item nav-link" id="nav-inclui" data-toggle="tab" href="#inclui" role="tab" aria-controls="inclui" aria-selected="false">Inclui</a>
             <a class="nav-item nav-link" id="nav-maisinformacoes" data-toggle="tab" href="#maisinformacoes" role="tab" aria-controls="maisinformacoes" aria-selected="false">Mais Informações</a>
@@ -63,14 +63,14 @@
     </nav>
     <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="condicoes" role="tabpanel" aria-labelledby="nav-condicoes">
-            <h5>Condições Gerais:</h5> <p align="justify" class="lead">{!! nl2br(e($pacote->condicoes)) !!}</p>
+            <p align="justify" class="lead">{!! nl2br(e($pacote->condicoes)) !!}</p>
         </div>
         <div class="tab-pane fade" id="inclui" role="tabpanel" aria-labelledby="nav-inclui">
             <h5>Inclui:</h5> <p align="justify" class="lead">{!! nl2br(e($pacote->inclui)) !!}</p>
             <h5>Não Inclui:</h5> <p align="justify" class="lead">{!! nl2br(e($pacote->n_inclui)) !!}</p>
         </div>
         <div class="tab-pane fade" id="maisinformacoes" role="tabpanel" aria-labelledby="nav-maisinformacoes">
-            <h5>Mais Informações:</h5> <p align="justify" class="lead">{!! nl2br(e($pacote->maisinformacoes)) !!}</p>
+            <p align="justify" class="lead">{!! nl2br(e($pacote->maisinformacoes)) !!}</p>
         </div>
     </div>
 </div>
