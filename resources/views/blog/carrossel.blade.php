@@ -2,7 +2,7 @@
 @php
     $cont=0;
 @endphp
-<div id="demo" class="carousel slide" data-ride="carousel">
+<div id="demo{{$post->id}}" class="carousel slide" data-ride="carousel">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             @foreach ($post->fotos as $fotos)
@@ -21,10 +21,10 @@
             @endforeach
         </div>
     </div>
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <a class="carousel-control-prev" href="#demo{{$post->id}}" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
     </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
+    <a class="carousel-control-next" href="#demo{{$post->id}}" data-slide="next">
         <span class="carousel-control-next-icon"></span>
     </a>
 </div>

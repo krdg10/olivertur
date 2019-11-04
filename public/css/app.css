@@ -10904,3 +10904,7 @@ body.mobile-nav-active #mobile-nav {
 .margin{
   margin-bottom: 15px;
 }
+
+a h1.text-white:active, a h1.text-white:hover {
+  color: #BD5E00 !important;
+}

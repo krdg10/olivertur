@@ -78,7 +78,7 @@
 
   <section id="signup" class="signup-section bgSignUp">
     <div class="container">
-      <h1 class="text-white mb-5 text-center">Blog</h1>
+      <a href="{{ url('/blog') }}"><h1 class="text-white mb-5 text-center">Blog</h1></a>
       <div class="row">
         @foreach($posts as $post)
           <div class="col-md-4 marginCard">
